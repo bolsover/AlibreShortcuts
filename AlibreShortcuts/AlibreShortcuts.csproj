@@ -67,6 +67,7 @@
     </Reference>
     <Reference Include="generics_NET">
       <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\generics_NET.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="System" />

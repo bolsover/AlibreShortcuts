@@ -34,11 +34,11 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 [Files]
 ; Source: "D:\Repository\Jetbrains\Bolsover\UtilitiesForAlibre\UtilitiesForAlibre\bin\Release\AboutForm.resx"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\Copyright and License.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\generics_NET.dll"; DestDir: "{app}"; Flags: ignoreversion
- Source: "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\System.Drawing.Common.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\DocumentFormat.OpenXml.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\System.Drawing.Common.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\System.IO.Packaging.dll"; DestDir: "{app}"; Flags: ignoreversion
+;Source: "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\generics_NET.dll"; DestDir: "{app}"; Flags: ignoreversion
+;Source: "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\System.Drawing.Common.dll"; DestDir: "{app}"; Flags: ignoreversion
+;Source: "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\DocumentFormat.OpenXml.dll"; DestDir: "{app}"; Flags: ignoreversion
+;Source: "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\System.Drawing.Common.dll"; DestDir: "{app}"; Flags: ignoreversion
+;Source: "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\System.IO.Packaging.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\AlibreShortcuts.adc"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\AlibreShortcuts.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\AlibreShortcuts.pdb"; DestDir: "{app}"; Flags: ignoreversion
