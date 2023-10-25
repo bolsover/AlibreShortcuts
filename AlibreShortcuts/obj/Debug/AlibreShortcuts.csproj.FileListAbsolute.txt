@@ -1,0 +1,24 @@
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Debug\AlibreShortcuts.dll
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Debug\AlibreShortcuts.adc
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Debug\nexus.ico
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Debug\AlibreShortcuts.dll.config
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Debug\AlibreShortcuts.pdb
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Debug\generics_NET.dll
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Debug\System.Drawing.Common.dll
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Debug\System.IO.Packaging.dll
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Debug\System.IO.Packaging.xml
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\obj\Debug\AlibreShortcuts.csproj.AssemblyReference.cache
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\obj\Debug\Shortcuts.Properties.Resources.resources
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\obj\Debug\Shortcuts.Sample.SampleUserControl.resources
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\obj\Debug\AlibreShortcuts.csproj.GenerateResource.cache
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\obj\Debug\AlibreShortcuts.csproj.CoreCompileInputs.cache
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\obj\Debug\AlibreShortcuts.csproj.CopyComplete
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\obj\Debug\AlibreShortcuts.dll
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\obj\Debug\AlibreShortcuts.pdb
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\obj\Debug\Shortcuts.Shortcuts.View.KeyboardControl.resources
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\obj\Debug\Shortcuts.Shortcuts.View.KeyboardShortcutForm.resources
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Debug\shortcuts.ico
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Debug\shortcuts.svg
+D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Debug\Copyright and License.txt
