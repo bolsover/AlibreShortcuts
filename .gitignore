@@ -11,7 +11,7 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
-
+/UnitTests/*.*
 
 # User-specific files
 *.suo
@@ -139,3 +139,17 @@ project.lock.json
 
 # packages
 /packages/
+UnitTests/bin/Debug/UnitTests.dll
+UnitTests/bin/Debug/UnitTests.pdb
+UnitTests/bin/Release/UnitTests.dll
+UnitTests/bin/Release/UnitTests.pdb
+UnitTests/obj/Debug/UnitTests.csproj.AssemblyReference.cache
+UnitTests/obj/Debug/UnitTests.csproj.CoreCompileInputs.cache
+UnitTests/obj/Debug/UnitTests.csproj.FileListAbsolute.txt
+UnitTests/obj/Debug/UnitTests.dll
+UnitTests/obj/Debug/UnitTests.pdb
+UnitTests/obj/Release/UnitTests.csproj.AssemblyReference.cache
+UnitTests/obj/Release/UnitTests.csproj.CoreCompileInputs.cache
+UnitTests/obj/Release/UnitTests.csproj.FileListAbsolute.txt
+UnitTests/obj/Release/UnitTests.dll
+UnitTests/obj/Release/UnitTests.pdb
