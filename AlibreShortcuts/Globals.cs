@@ -6,7 +6,7 @@ namespace Shortcuts
     public class Globals
     {
         public static string InstallPath = (string) Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Alibre Design Add-Ons\",
-            "{331d2798-21bf-4173-a33f-6b4f58e015bb}", null);
+            "{90170D0D-AF9B-4893-8967-91C980203EA2}", null);
 
         public static Icon Icon = new Icon(InstallPath + "\\shortcuts.ico");
         

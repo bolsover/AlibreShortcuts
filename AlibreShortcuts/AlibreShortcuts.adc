@@ -6,6 +6,6 @@
    <Menu text="Shortcuts"/>
    <Description>Alibre Shortcuts</Description> 
    <Workspace type="Always"/>
-   <Property name="Identifier" value="{331d2798-21bf-4173-a33f-5a4f58e015bb}"/>
+   <Property name="Identifier" value="{90170D0D-AF9B-4893-8967-91C980203EA2}"/>
 </AlibreDesignAddOn>
 
