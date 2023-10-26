@@ -83,6 +83,12 @@
     <ItemGroup>
       <None Include="packages.config" />
     </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\AlibreShortcuts\AlibreShortcuts.csproj">
+        <Project>{331d2798-21bf-4173-a33f-5a4f58e0158a}</Project>
+        <Name>AlibreShortcuts</Name>
+      </ProjectReference>
+    </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
       <PropertyGroup>

@@ -4,13 +4,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
 using System.Windows.Forms;
 using com.alibre.client;
 using com.alibre.executive.locale;
 using com.alibre.ui;
 using com.alibre.utils;
-using Shortcuts.Model;
 using Shortcut = Shortcuts.Model.Shortcut;
 
 namespace Shortcuts.Shortcuts.Calculator
@@ -41,21 +39,11 @@ namespace Shortcuts.Shortcuts.Calculator
             return userShortcutList;
         }
 
-        private Dictionary<string, Shortcut> UserShortcuts()
-        {
-            Dictionary<string, Shortcut> userShortcuts = new();
-            foreach (Shortcut sc in RetrieveUserShortcuts())
-            {
-                userShortcuts.Add(sc.Profile + "." + sc.Command, sc);
-            }
 
-            return userShortcuts;
-        }
-
-        private Dictionary<string, Shortcut> StandardShortcuts()
+        public Dictionary<string, Shortcut> ShortcutsDictionary(ArrayList shortcuts)
         {
             Dictionary<string, Shortcut> standardShorcuts = new();
-            foreach (Shortcut sc in RetrieveStandardShortcuts())
+            foreach (Shortcut sc in shortcuts)
             {
                 standardShorcuts.Add(sc.Profile + "." + sc.Command, sc);
             }
@@ -63,100 +51,7 @@ namespace Shortcuts.Shortcuts.Calculator
             return standardShorcuts;
         }
 
-
-        public string ToAbbreviatedTable(ArrayList shortcuts)
-        {
-            Dictionary<string, Shortcut> standardShortcuts = StandardShortcuts();
-            StringBuilder sb = new StringBuilder();
-            Shortcut priorShortcut = null;
-
-            foreach (Shortcut sc in shortcuts)
-            {
-                Shortcut standardShortcut = null;
-                if (standardShortcuts.ContainsKey(sc.Profile + "." + sc.Command))
-                {
-                    standardShortcut = standardShortcuts[sc.Profile + "." + sc.Command];
-                }
-
-                if (standardShortcut != null && standardShortcut.KeyChar == sc.KeyChar)
-                {
-                    sc.ShortcutType = ShortcutType.Default;
-                }
-
-                if (standardShortcut != null && standardShortcut.KeyChar != sc.KeyChar)
-                {
-                    sc.ShortcutType = ShortcutType.Override;
-                }
-
-                if (standardShortcut == null)
-                {
-                    sc.ShortcutType = ShortcutType.Custom;
-                }
-
-
-                if (priorShortcut == null | (priorShortcut != null && priorShortcut.Profile != sc.Profile))
-                {
-                    sb.Append("<table>");
-                    sb.Append("<tr>");
-                    sb.Append("<th colspan=\"2\">");
-                    sb.Append(sc.Profile);
-                    sb.Append("</th>");
-                    sb.Append("</tr>");
-                    sb.Append("<tr>");
-                    sb.Append("<th>");
-                    sb.Append("Hint");
-                    sb.Append("</th>");
-                    sb.Append("<th>");
-                    sb.Append("Shortcut");
-                    sb.Append("</th>");
-                    sb.Append("</tr>");
-                }
-                else
-                {
-                    if (!string.IsNullOrEmpty(sc.Hint))
-                    {
-                        switch (sc.ShortcutType)
-                        {
-                            case ShortcutType.Default:
-                                sb.Append("<tr>");
-                                break;
-                            case ShortcutType.Custom:
-                                sb.Append("<tr style=\"color:#0000ff\">");
-                                break;
-                            case ShortcutType.Override:
-                                sb.Append("<tr style=\"color:#ff0000\">");
-                                break;
-                        }
-
-                        sb.Append("<td>");
-                        sb.Append(sc.Hint);
-                        sb.Append("</td>");
-                        sb.Append("<td>");
-                        sb.Append(sc.KeyChar);
-                        sb.Append("</td>");
-                        sb.Append("</tr>");
-                    }
-                }
-
-                priorShortcut = sc;
-                if (priorShortcut.Profile != sc.Profile)
-                {
-                    sb.Append("</table>");
-                    sb.Append("<p></p>");
-                    sb.Append("<p></p>");
-                }
-            }
-            return sb.ToString();
-        }
-
-
-        public string AddHtmlHeaderFooter(string html)
-        {
-            var header =
-                @"<html><head><style>  table, th, td {  border: 1px solid black;  border-collapse: collapse;  }  th, td {  padding: 5px;  text-align: left;  }  </style></head><body>";
-            var footer = @"</body></html>";
-            return header + html + footer;
-        }
+        
 
 
         public ArrayList RetrieveUserShortcutsByProfile(string profile)
@@ -278,21 +173,7 @@ namespace Shortcuts.Shortcuts.Calculator
             return (Profile) ReadObjectFromFile(fileStream);
         }
 
-        public ArrayList StandardProfiles()
-        {
-            var profiles = new ArrayList();
-            profiles.Add(PartStandardShortcuts());
-            profiles.Add(BomStandardShortcuts());
-            profiles.Add(CommandCenterStandardShortcuts());
-            profiles.Add(AssemblyStandardShortcuts());
-            profiles.Add(AssemblyExplodedViewStandardShortcuts());
-            profiles.Add(DesignBooleanStandardShortcuts());
-            profiles.Add(SheetMetalStandardShortcuts());
-            profiles.Add(DrawingStandardShortcuts());
-            profiles.Add(GlobalParamStandardShortcuts());
-            return profiles;
-        }
-
+       
         private Profile PartStandardShortcuts()
         {
             return _mediator.PartStandardShortcuts;

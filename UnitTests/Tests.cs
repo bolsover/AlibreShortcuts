@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
@@ -14,6 +15,7 @@ using com.alibre.globalParam.app;
 using com.alibre.ui;
 using NUnit.Framework;
 using com.alibre.utils;
+using Shortcuts;
 using Array = System.Array;
 
 namespace UnitTests
@@ -235,6 +237,12 @@ namespace UnitTests
             io.WriteLine("xxx");
         }
 
+        [Test]
+        public void TestInstallPath()
+        {
+            io.WriteLine(""+136/35);
+            io.WriteLine(Globals.InstallPath);
+        }
         
     }
 }

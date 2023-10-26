@@ -98,9 +98,8 @@
     <Compile Include="Globals.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sample\SampleUserControl.cs" />
-    <Compile Include="Sample\SampleUserControl.Designer.cs" />
     <Compile Include="Shortcuts\Calculator\ShortcutsCalculator.cs" />
+    <Compile Include="Shortcuts\Calculator\ShortcutsHtmlReport.cs" />
     <Compile Include="Shortcuts\Model\Shortcut.cs" />
     <Compile Include="Shortcuts\View\KeyboardControl.cs">
       <SubType>UserControl</SubType>
@@ -123,7 +122,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Sample\SampleUserControl.resx" />
     <EmbeddedResource Include="Shortcuts\View\KeyboardControl.resx">
       <DependentUpon>KeyboardControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,9 +159,6 @@
     <Content Include="shortcuts.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Shortcuts\Presenter\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
