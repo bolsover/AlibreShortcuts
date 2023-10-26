@@ -8,7 +8,7 @@
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{331d2798-21bf-4173-a33f-6b4f58e015bb}
+AppId={{3D9113C4-060D-4C88-9ED4-3248E1E3211A}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -53,4 +53,4 @@ Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
 
 [Registry]
 Root: HKLM; Subkey: "SOFTWARE\Alibre Design Add-Ons"; Flags: uninsdeletekeyifempty; Check: IsAdminInstallMode
-Root: HKLM; Subkey: "SOFTWARE\Alibre Design Add-Ons"; ValueType: string; ValueName: "{{331d2798-21bf-4173-a33f-6b4f58e015bb}"; ValueData: "{autopf}\{#MyAppName}"; Check: IsAdminInstallMode
+Root: HKLM; Subkey: "SOFTWARE\Alibre Design Add-Ons"; ValueType: string; ValueName: "{{90170D0D-AF9B-4893-8967-91C980203EA2}"; ValueData: "{autopf}\{#MyAppName}"; Check: IsAdminInstallMode
