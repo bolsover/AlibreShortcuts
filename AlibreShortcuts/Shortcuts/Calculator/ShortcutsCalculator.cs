@@ -17,7 +17,7 @@ namespace Shortcuts.Shortcuts.Calculator
     {
         private readonly KeyboardShortcutsMediator _mediator = new();
 
-        public ArrayList RetrieveUserShortcuts()
+        private ArrayList RetrieveUserShortcuts()
         {
             var userShortcutList = new ArrayList();
             var userProfile = RetrieveUserProfile();
@@ -131,7 +131,7 @@ namespace Shortcuts.Shortcuts.Calculator
             }
         }
 
-        public object ReadObjectFromFile(FileStream fileStream)
+        private object ReadObjectFromFile(FileStream fileStream)
         {
             BinaryFormatter formatter = new BinaryFormatter();
             formatter.Context = new StreamingContext(StreamingContextStates.All);
@@ -143,26 +143,43 @@ namespace Shortcuts.Shortcuts.Calculator
             return obj;
         }
 
-        public string ProfilePath()
+        private string RoamingProfilePath()
         {
             var productRoamingDirectory = ClientContext.ProductRoamingDirectory;
             var userProfileCurrentVersionFileName = ClientContext.Singleton.UserProfileCurrentVersionFileName;
-            var profilePath = Path.Combine(productRoamingDirectory.FullName + "\\default user", userProfileCurrentVersionFileName);
+            var productRoamingProfilePath = Path.Combine(productRoamingDirectory.FullName + "\\default user", userProfileCurrentVersionFileName);
+            return productRoamingProfilePath;
+        }
 
-            return profilePath;
+        private string NonRoamingProfilePath()
+        {
+            var currentUserNonRoamingDirectory = ClientContext.Singleton.getCurrentUserNonRoamingDirectory(true);
+            var userProfileCurrentVersionFileName = ClientContext.Singleton.UserProfileCurrentVersionFileName;
+            var nonRoamingProfilePath = Path.Combine(currentUserNonRoamingDirectory.FullName, userProfileCurrentVersionFileName);
+            return nonRoamingProfilePath;
         }
 
 
         private Profile RetrieveUserProfile()
         {
-            var profilePath = ProfilePath();
+            Profile profile = null;
+
+            var profilePath = RoamingProfilePath();
 
             if (File.Exists(profilePath))
             {
-                return ReadProfileFromFile(profilePath);
+                profile = ReadProfileFromFile(profilePath);
             }
+            // else
+            // {
+            //     profilePath = NonRoamingProfilePath();
+            //     if (File.Exists(profilePath))
+            //     {
+            //         profile = ReadProfileFromFile(profilePath);
+            //     }
+            // }
 
-            return null;
+            return profile;
         }
 
         private Profile ReadProfileFromFile(string profilePath)

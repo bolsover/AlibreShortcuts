@@ -51,7 +51,7 @@ namespace Shortcuts.Shortcuts.Calculator
                 throw new Exception("No table found in the provided XML");
 
             var rows = tableNode.ChildNodes;
-            var rowsPerTable = (int) Math.Ceiling((double) (rows.Count - 1) / n); // Subtract 2 for the two header rows
+            var rowsPerTable = (int) Math.Ceiling((double) (rows.Count - 1) / n); // Subtract 1 for the  header row
             var tables = new List<XmlElement>();
 
             for (var i = 0; i < n; i++)
@@ -59,16 +59,15 @@ namespace Shortcuts.Shortcuts.Calculator
                 XmlDocument doc = new XmlDocument();
                 var newTable = (XmlElement) doc.AppendChild(doc.CreateElement("Table"));
 
-                // Add the top two rows to each new table
+                // Add the top row to each new table
                 if (rows.Count > 0)
                 {
                     var cloneRow1 = rows[0].CloneNode(true);
-                    // var cloneRow2 = rows[1].CloneNode(true);
+
                     newTable.AppendChild(doc.ImportNode(cloneRow1, true));
-                    // newTable.AppendChild(doc.ImportNode(cloneRow2, true));
                 }
 
-                for (var j = i * rowsPerTable + 1; j < (i + 1) * rowsPerTable + 1 && j < rows.Count; j++) // Start at row 3 for each new table
+                for (var j = i * rowsPerTable + 1; j < (i + 1) * rowsPerTable + 1 && j < rows.Count; j++) // Start at row 2 for each new table
                 {
                     var cloneRow = rows[j].CloneNode(true);
                     newTable.AppendChild(doc.ImportNode(cloneRow, true));
@@ -113,11 +112,6 @@ namespace Shortcuts.Shortcuts.Calculator
                 if (priorShortcut == null | (priorShortcut != null && priorShortcut.Profile != sc.Profile))
                 {
                     sb.Append("<table>");
-                    // sb.Append("<tr>");
-                    // sb.Append("<th colspan=\"2\">");
-                    // sb.Append(sc.Profile);
-                    // sb.Append("</th>");
-                    // sb.Append("</tr>");
                     sb.Append("<tr>");
                     sb.Append("<th>");
                     sb.Append("Hint");

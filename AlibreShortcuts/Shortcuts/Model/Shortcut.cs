@@ -23,31 +23,7 @@ namespace Shortcuts.Model
         public ShortcutType ShortcutType { get; set; }
 
         
-        public string ToTableRow()
-    {
-        StringBuilder sb = new StringBuilder();
-        sb.Append("<tr>");
-        sb.Append("<td>");
-        sb.Append(Profile);
-        sb.Append("</td>");
-        sb.Append("<td>");
-        sb.Append(Command);
-        sb.Append("</td>");
-        sb.Append("<td>");
-        sb.Append(Hint);
-        sb.Append("</td>");
-        sb.Append("<td>");
-        sb.Append(Keycode);
-        sb.Append("</td>");
-        sb.Append("<td>");
-        sb.Append(KeyChar);
-        sb.Append("</td>");
-        sb.Append("</tr>");
-        
-        return sb.ToString();
-    }
-
-   
+  
     }
     public enum ShortcutType
     {

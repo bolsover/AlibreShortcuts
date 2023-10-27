@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 using com.alibre.client;
 using com.alibre.ui;
-using com.objectspace.jgl;
 using Shortcuts.Shortcuts.Calculator;
 
 namespace Shortcuts.Shortcuts.View
@@ -13,7 +12,7 @@ namespace Shortcuts.Shortcuts.View
         private readonly ShortcutsHtmlReport _shortcutsHtmlReport = new();
 
 
-        public KeyboardShortcutForm()
+        private KeyboardShortcutForm()
         {
             InitializeComponent();
             Icon = Globals.Icon;
