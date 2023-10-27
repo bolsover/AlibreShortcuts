@@ -51,8 +51,6 @@ namespace Shortcuts.Shortcuts.Calculator
             return standardShorcuts;
         }
 
-        
-
 
         public ArrayList RetrieveUserShortcutsByProfile(string profile)
         {
@@ -173,7 +171,7 @@ namespace Shortcuts.Shortcuts.Calculator
             return (Profile) ReadObjectFromFile(fileStream);
         }
 
-       
+
         private Profile PartStandardShortcuts()
         {
             return _mediator.PartStandardShortcuts;

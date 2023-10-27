@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
+using com.alibre.client;
+using com.alibre.ui;
+using com.objectspace.jgl;
 using Shortcuts.Shortcuts.Calculator;
 
 namespace Shortcuts.Shortcuts.View
@@ -9,16 +12,32 @@ namespace Shortcuts.Shortcuts.View
         private static KeyboardShortcutForm _instance;
         private readonly ShortcutsHtmlReport _shortcutsHtmlReport = new();
 
+
         public KeyboardShortcutForm()
         {
             InitializeComponent();
             Icon = Globals.Icon;
+            InitDropDown();
+
 
             FormClosing += (sender, args) =>
             {
                 ((KeyboardShortcutForm) sender).Visible = false;
                 args.Cancel = true;
             };
+        }
+
+
+        /// <summary>
+        /// Retrieves the list of workspace prefixes from the KeyboardShortcutsMediator and populates the drop down
+        /// The list depends on user license type (Atom or Pro)
+        /// </summary>
+        private void InitDropDown()
+        {
+            var workspacePrefixes = ClientContext.Singleton.IsAtom
+                ? KeyboardShortcutsMediator.ATOM_WORKSPACE_PREFIXES
+                : KeyboardShortcutsMediator.ALL_WORKSPACE_PREFIXES;
+            comboBox1.Items.AddRange(workspacePrefixes);
         }
 
         public static KeyboardShortcutForm Instance()
@@ -51,6 +70,5 @@ namespace Shortcuts.Shortcuts.View
         {
             webBrowser1.ShowSaveAsDialog();
         }
-
-   }
+    }
 }

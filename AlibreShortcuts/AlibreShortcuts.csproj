@@ -70,6 +70,10 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="mscorlib" />
+    <Reference Include="SupportClass">
+      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\SupportClass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -150,6 +154,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="nexus.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="settings-user.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="shortcuts.ico">

@@ -1,8 +1,6 @@
 ﻿using System;
-
 using AlibreAddOn;
 using AlibreX;
-
 using Shortcuts.Shortcuts.View;
 using Array = System.Array;
 
@@ -12,8 +10,8 @@ namespace Shortcuts
     public class AlibreShortcuts : IAlibreAddOn
     {
         private const int MenuIdRoot = 401;
-        private readonly bool _useSvgIcons;
-
+        private const int MenuIdShortcuts = 402;
+        private int[] _menuIdsRoot;
 
         private IADRoot _alibreRoot;
         private IntPtr _parentWinHandle;
@@ -22,13 +20,18 @@ namespace Shortcuts
         {
             _alibreRoot = alibreRoot;
             _parentWinHandle = parentWinHandle;
-            var version = _alibreRoot.Version.Replace("PRODUCTVERSION ", "");
-            var versionarr = version.Split(',');
-            var majorVersion = int.Parse(versionarr[0]);
-            _useSvgIcons = majorVersion > 25;
+            BuildMenu();
         }
 
         #region Menus
+
+        private void BuildMenu()
+        {
+            _menuIdsRoot = new int[1]
+            {
+                MenuIdShortcuts
+            };
+        }
 
         /// <summary>
         /// Returns the menu ID of the add-on's root menu item
@@ -43,7 +46,13 @@ namespace Shortcuts
         /// <returns></returns>
         public bool HasSubMenus(int menuId)
         {
-            return menuId == MenuIdRoot;
+            switch (menuId)
+            {
+                case MenuIdRoot:
+                    return true;
+            }
+
+            return false;
         }
 
         /// <summary>
@@ -53,6 +62,12 @@ namespace Shortcuts
         /// <returns></returns>
         public Array SubMenuItems(int menuId)
         {
+            switch (menuId)
+            {
+                case MenuIdRoot:
+                    return _menuIdsRoot;
+            }
+
             return null;
         }
 
@@ -63,7 +78,14 @@ namespace Shortcuts
         /// <returns></returns>
         public string MenuItemText(int menuId)
         {
-            return "Shortcuts";
+            switch (menuId)
+            {
+                case MenuIdRoot:
+                    return "Shortcuts";
+                case MenuIdShortcuts: return "Shortcuts";
+            }
+
+            return "";
         }
 
         /// <summary>
@@ -110,7 +132,7 @@ namespace Shortcuts
         /// <returns></returns>
         public string MenuIcon(int menuId)
         {
-            return _useSvgIcons ? "shortcuts.svg" : "shortcuts.ico";
+            return "shortcuts.svg";
         }
 
         /// <summary>
@@ -132,8 +154,13 @@ namespace Shortcuts
         public IAlibreAddOnCommand InvokeCommand(int menuId, string sessionIdentifier)
         {
             var session = _alibreRoot.Sessions.Item(sessionIdentifier);
+            switch (menuId)
+            {
+                case MenuIdShortcuts:
+                    return DoShortcuts(session);
+            }
 
-            return DoShortcuts(session);
+            return null;
         }
 
         #endregion
@@ -141,12 +168,23 @@ namespace Shortcuts
 
         #region Shortcuts
 
+        private KeyboardShortcutForm keyboardShortcutForm;
+
         private IAlibreAddOnCommand DoShortcuts(IADSession session)
         {
-            KeyboardShortcutForm keyboardShortcutForm = KeyboardShortcutForm.Instance();
+            if (keyboardShortcutForm == null)
+            {
+                keyboardShortcutForm = KeyboardShortcutForm.Instance();
+                keyboardShortcutForm.comboBox1.SelectedIndex = 0;
+            }
+            else
+            {
+                keyboardShortcutForm.Visible = true;
+            }
+            // KeyboardShortcutForm keyboardShortcutForm = KeyboardShortcutForm.Instance();
+            //
+            // keyboardShortcutForm.Visible = true;
 
-            keyboardShortcutForm.Visible = true;
-            keyboardShortcutForm.comboBox1.SelectedIndex = 0;
             return null;
         }
 

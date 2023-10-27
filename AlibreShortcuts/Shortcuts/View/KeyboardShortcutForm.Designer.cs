@@ -84,10 +84,6 @@ namespace Shortcuts.Shortcuts.View
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[]
-            {
-                "Design Part Browser", "Design Sheet Metal Browser", "Design Boolean Browser", "Design Assembly Browser", "Design Assembly Exploded View Browser", "Drawing Browser", "BOM Editor", "GlobalParam Editor", "Command Center Browser"
-            });
             this.comboBox1.Location = new System.Drawing.Point(209, 8);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(330, 24);

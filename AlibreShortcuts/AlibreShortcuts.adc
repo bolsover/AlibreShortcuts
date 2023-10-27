@@ -2,7 +2,7 @@
 <Author name="David Bolsover" link="https://github.com/bolsover/AlibreShortcuts"/>
    <Copyright>Copyright (c) 2023. David Bolsover</Copyright>
    <DLL type="Managed" loadedWhen="Startup" location="AlibreShortcuts.dll"/>
-   <Icon location="shortcuts.ico"/> 
+   <Icon location="shortcuts.svg"/> 
    <Menu text="Shortcuts"/>
    <Description>Alibre Shortcuts</Description> 
    <Workspace type="Always"/>
