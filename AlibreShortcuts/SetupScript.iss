@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "AlibreShortcuts"
-#define MyAppVersion "1.1.0.0"
+#define MyAppVersion "1.2.0.0"
 #define MyAppPublisher "David Bolsover"
 
 [Setup]
@@ -44,7 +44,7 @@ Source: "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Re
 Source: "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\AlibreShortcuts.pdb"; DestDir: "{app}"; Flags: ignoreversion
 Source:  "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\shortcuts.svg";  DestDir: "{app}"; Flags: ignoreversion
 Source:  "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\shortcuts.ico";  DestDir: "{app}"; Flags: ignoreversion
-Source:  "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\nexus.ico";  DestDir: "{app}"; Flags: ignoreversion
+;Source:  "D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\nexus.ico";  DestDir: "{app}"; Flags: ignoreversion
 
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
