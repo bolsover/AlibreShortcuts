@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "AlibreShortcuts"
-#define MyAppVersion "1.2.0.0"
+#define MyAppVersion "1.3.0.0"
 #define MyAppPublisher "David Bolsover"
 
 [Setup]
@@ -18,7 +18,7 @@ DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 PrivilegesRequired=admin
-;PrivilegesRequiredOverridesAllowed=dialog
+PrivilegesRequiredOverridesAllowed=dialog
 OutputDir=D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Setup
 OutputBaseFilename=AlibreShortcutsSetup
 SetupIconFile=D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\AlibreShortcuts\bin\Release\shortcuts.ico
@@ -54,3 +54,7 @@ Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
 [Registry]
 Root: HKLM; Subkey: "SOFTWARE\Alibre Design Add-Ons"; Flags: uninsdeletekeyifempty; Check: IsAdminInstallMode
 Root: HKLM; Subkey: "SOFTWARE\Alibre Design Add-Ons"; ValueType: string; ValueName: "{{90170D0D-AF9B-4893-8967-91C980203EA2}"; ValueData: "{autopf}\{#MyAppName}"; Check: IsAdminInstallMode
+
+;[Run]
+;Filename: "{app}\AlibreShortcutsSetup.exe"; Description: "{cm:LaunchProgram,MyApp}"; Flags: runascurrentuser nowait postinstall skipifsilent; Check: returnTrue()
+;Filename: "{app}\AlibreShortcutsSetup.exe"; Flags: runascurrentuser; Parameters: "-install -svcName ""AlibreShortcutsSetup"" -svcDesc ""AlibreShortcutsSetup"" -mainExe ""AlibreShortcutsSetup.exe""  "; Check: returnFalse()
