@@ -114,12 +114,15 @@
     <Compile Include="Shortcuts\View\KeyboardControl.Designer.cs">
       <DependentUpon>KeyboardControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Shortcuts\View\KeyBoardLayout.cs" />
     <Compile Include="Shortcuts\View\KeyboardShortcutForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Shortcuts\View\KeyboardShortcutForm.Designer.cs">
       <DependentUpon>KeyboardShortcutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Shortcuts\View\KeyCodes.cs" />
+    <Compile Include="Shortcuts\View\KeyProperty.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

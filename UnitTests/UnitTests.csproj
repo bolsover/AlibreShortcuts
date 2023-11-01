@@ -72,11 +72,19 @@
         <Reference Include="System" />
         <Reference Include="System.Core" />
         <Reference Include="System.Data" />
+        <Reference Include="System.Drawing" />
         <Reference Include="System.Windows.Forms" />
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="ConsoleIO.cs" />
+        <Compile Include="KeyboardTests.cs" />
+        <Compile Include="TestKeyboardForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="TestKeyboardForm.Designer.cs">
+          <DependentUpon>TestKeyboardForm.cs</DependentUpon>
+        </Compile>
         <Compile Include="Tests.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
@@ -88,6 +96,11 @@
         <Project>{331d2798-21bf-4173-a33f-5a4f58e0158a}</Project>
         <Name>AlibreShortcuts</Name>
       </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="TestKeyboardForm.resx">
+        <DependentUpon>TestKeyboardForm.cs</DependentUpon>
+      </EmbeddedResource>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

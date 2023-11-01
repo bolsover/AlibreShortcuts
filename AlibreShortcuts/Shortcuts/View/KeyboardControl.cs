@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace Shortcuts.Shortcuts.View
 {
@@ -8,5 +9,8 @@ namespace Shortcuts.Shortcuts.View
         {
             InitializeComponent();
         }
+
+
+        
     }
 }

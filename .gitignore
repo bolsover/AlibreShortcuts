@@ -139,8 +139,8 @@ project.lock.json
 
 # packages
 /packages/
-/UnitTests/bin/Debug/**
-/UnitTests/bin/Release/**
+/UnitTests/bin/Debug/*.*
+/UnitTests/bin/Release/*.*
 UnitTests/bin/Debug/UnitTests.dll
 UnitTests/bin/Debug/UnitTests.dll
 UnitTests/bin/Debug/UnitTests.pdb
