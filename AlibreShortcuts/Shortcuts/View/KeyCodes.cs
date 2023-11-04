@@ -1,7 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Shortcuts.Shortcuts.View
+namespace Bolsover.Shortcuts.View
 {
     public class KeyCodes
     {
@@ -20,10 +21,7 @@ namespace Shortcuts.Shortcuts.View
             return sb.ToString();
         }
 
-      
-
-
-        public static Dictionary<string, KeyCodes> KeyCodesDictionary() =>  new ()
+        public static Dictionary<string, KeyCodes> KeyCodesDictionary() => new()
         {
             {"Backspace", new KeyCodes() {KeyCode = 8, KeyName = "Backspace", Code = "Backspace", Description = "Backspace"}},
             {"Tab", new KeyCodes() {KeyCode = 9, KeyName = "Tab", Code = "Tab", Description = "Tab"}},
@@ -127,7 +125,44 @@ namespace Shortcuts.Shortcuts.View
             {"CloseBracket", new KeyCodes() {KeyCode = 221, KeyName = "CloseBracket", Code = "CloseBracket", Description = "CloseBracket"}},
             {"SingleQuote", new KeyCodes() {KeyCode = 222, KeyName = "SingleQuote", Code = "SingleQuote", Description = "SingleQuote"}}
         };
-        
+
+        public static ArrayList DeconstructKeyCode(int keycode)
+        {
+            const int meta = 1048576;
+            const int alt = 262144;
+            const int ctrl = 131072;
+            const int shift = 65536;
+
+            ArrayList keycodes = new ArrayList();
+            if (keycode >= meta)
+            {
+                keycodes.Add(91); // Keycode for Windows/Command key
+                keycode -= meta;
+            }
+
+            if (keycode >= alt)
+            {
+                keycodes.Add(18); // Keycode for Alt
+                keycode -= alt;
+            }
+
+            if (keycode >= ctrl)
+            {
+                keycodes.Add(17); // Keycode for Control
+                keycode -= ctrl;
+            }
+
+            if (keycode >= shift)
+            {
+                keycodes.Add(16); // Keycode for Shift
+                keycode -= shift;
+            }
+
+
+            // Remaining value is the ASCII value of the key pressed
+            keycodes.Add(keycode);
+
+            return keycodes;
+        }
     }
-        
 }

@@ -1,170 +1,180 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{331D2798-21BF-4173-A33F-5A4F58E0158A}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>Shortcuts</RootNamespace>
-    <AssemblyName>AlibreShortcuts</AssemblyName>
-    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
-    <LangVersion>9</LangVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x64</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>x64</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="alibre">
-      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="alibre-client">
-      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre-client.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="alibre-core">
-      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre-core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="alibre-executive">
-      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre-executive.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="alibre-resources">
-      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre-resources.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="AlibreAddOn">
-      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\AlibreAddOn.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="AlibreX">
-      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\AlibreX.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DocumentFormat.OpenXml, Version=2.11.3.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
-      <HintPath>..\packages\DocumentFormat.OpenXml.2.11.3\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="generics_NET">
-      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\generics_NET.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="mscorlib" />
-    <Reference Include="SupportClass">
-      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\SupportClass.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Drawing.Common.5.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.IO.Packaging.4.7.0\lib\net46\System.IO.Packaging.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AlibreAddOn.cs" />
-    <Compile Include="AlibreShortcuts.cs" />
-    <Compile Include="Globals.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Shortcuts\Calculator\ShortcutsCalculator.cs" />
-    <Compile Include="Shortcuts\Calculator\ShortcutsHtmlReport.cs" />
-    <Compile Include="Shortcuts\Model\Shortcut.cs" />
-    <Compile Include="Shortcuts\View\KeyboardControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Shortcuts\View\KeyboardControl.Designer.cs">
-      <DependentUpon>KeyboardControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Shortcuts\View\KeyBoardLayout.cs" />
-    <Compile Include="Shortcuts\View\KeyboardShortcutForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Shortcuts\View\KeyboardShortcutForm.Designer.cs">
-      <DependentUpon>KeyboardShortcutForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Shortcuts\View\KeyCodes.cs" />
-    <Compile Include="Shortcuts\View\KeyProperty.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Shortcuts\View\KeyboardControl.resx">
-      <DependentUpon>KeyboardControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Shortcuts\View\KeyboardShortcutForm.resx">
-      <DependentUpon>KeyboardShortcutForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="AlibreShortcuts.adc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Copyright and License.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="shortcuts.ico">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="shortcuts.svg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{331D2798-21BF-4173-A33F-5A4F58E0158A}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <RootNamespace>Bolsover</RootNamespace>
+        <AssemblyName>AlibreShortcuts</AssemblyName>
+        <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <Deterministic>true</Deterministic>
+        <LangVersion>9</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>x64</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>x64</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="alibre">
+            <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="alibre-client">
+            <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre-client.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="alibre-core">
+            <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre-core.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="alibre-executive">
+            <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre-executive.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="alibre-resources">
+            <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre-resources.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="AlibreAddOn">
+            <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\AlibreAddOn.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="AlibreX">
+            <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\AlibreX.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="DocumentFormat.OpenXml, Version=2.11.3.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+            <HintPath>..\packages\DocumentFormat.OpenXml.2.11.3\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="generics_NET">
+            <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\generics_NET.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="mscorlib"/>
+        <Reference Include="SupportClass">
+            <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\SupportClass.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+            <HintPath>..\packages\System.Drawing.Common.5.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+            <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+        </Reference>
+        <Reference Include="System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+            <HintPath>..\packages\System.IO.Packaging.4.7.0\lib\net46\System.IO.Packaging.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="System.Xml.Linq"/>
+        <Reference Include="System.Data.DataSetExtensions"/>
+        <Reference Include="Microsoft.CSharp"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Deployment"/>
+        <Reference Include="System.Drawing"/>
+        <Reference Include="System.Net.Http"/>
+        <Reference Include="System.Windows.Forms"/>
+        <Reference Include="System.Xml"/>
+        <Reference Include="WindowsBase"/>
+        <Reference Include="WpfMath, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\WpfMath.2.1.0\lib\net462\WpfMath.dll</HintPath>
+        </Reference>
+        <Reference Include="XamlMath.Shared, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\XamlMath.Shared.2.1.0\lib\net462\XamlMath.Shared.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="AlibreAddOn.cs"/>
+        <Compile Include="AlibreShortcuts.cs"/>
+        <Compile Include="Globals.cs"/>
+        <Compile Include="Program.cs"/>
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="Shortcuts\Calculator\ShortcutsCalculator.cs"/>
+        <Compile Include="Shortcuts\Calculator\ShortcutsHtmlReport.cs"/>
+        <Compile Include="Shortcuts\Model\KeyText.cs"/>
+        <Compile Include="Shortcuts\Model\Shortcut.cs"/>
+        <Compile Include="Shortcuts\Presenter\KeyboardPresenter.cs" />
+        <Compile Include="Shortcuts\Utils\LatexUtils.cs" />
+        <Compile Include="Shortcuts\View\KeyboardControl.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Shortcuts\View\KeyboardControl.Designer.cs">
+            <DependentUpon>KeyboardControl.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Shortcuts\View\KeyBoardLayout.cs" />
+        <Compile Include="Shortcuts\View\KeyboardShortcutForm.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Shortcuts\View\KeyboardShortcutForm.Designer.cs">
+            <DependentUpon>KeyboardShortcutForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Shortcuts\View\KeyCodes.cs" />
+        <Compile Include="Shortcuts\View\KeyProperty.cs" />
+        <Compile Include="Shortcuts\View\LatexStrings.cs" />
+        <EmbeddedResource Include="Properties\Resources.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+        <Compile Include="Properties\Resources.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Resources.resx</DependentUpon>
+        </Compile>
+        <EmbeddedResource Include="Shortcuts\View\KeyboardControl.resx">
+            <DependentUpon>KeyboardControl.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Shortcuts\View\KeyboardShortcutForm.resx">
+            <DependentUpon>KeyboardShortcutForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <None Include="packages.config" />
+        <None Include="Properties\Settings.settings">
+            <Generator>SettingsSingleFileGenerator</Generator>
+            <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+        </None>
+        <Compile Include="Properties\Settings.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Settings.settings</DependentUpon>
+            <DesignTimeSharedInput>True</DesignTimeSharedInput>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="App.config" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="AlibreShortcuts.adc">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Copyright and License.txt">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="shortcuts.ico">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="shortcuts.svg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 </Project>

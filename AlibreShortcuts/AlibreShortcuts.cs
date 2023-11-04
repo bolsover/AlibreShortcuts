@@ -4,7 +4,6 @@ using AlibreX;
 using Shortcuts.Shortcuts.View;
 using Array = System.Array;
 
-
 namespace Shortcuts
 {
     public class AlibreShortcuts : IAlibreAddOn
@@ -37,7 +36,6 @@ namespace Shortcuts
         /// Returns the menu ID of the add-on's root menu item
         /// </summary>
         public int RootMenuItem => MenuIdRoot;
-
 
         /// <summary>
         /// Description("Returns Whether the given Menu ID has any sub menus")
@@ -165,7 +163,6 @@ namespace Shortcuts
 
         #endregion
 
-
         #region Shortcuts
 
         private KeyboardShortcutForm keyboardShortcutForm;
@@ -189,7 +186,6 @@ namespace Shortcuts
         }
 
         #endregion
-
 
         /// <summary>
         /// Loads Data from AddOn

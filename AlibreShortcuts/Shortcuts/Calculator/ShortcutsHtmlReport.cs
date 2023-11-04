@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using System.Xml;
-using Shortcuts.Model;
+using Bolsover.Shortcuts.Model;
 
-namespace Shortcuts.Shortcuts.Calculator
+namespace Bolsover.Shortcuts.Calculator
 {
     public class ShortcutsHtmlReport
     {
@@ -41,7 +41,7 @@ namespace Shortcuts.Shortcuts.Calculator
             else
             {
                 ArrayList standardShortcuts = calculator.RetrieveStandardShortcutsByProfile(profile);
-                
+
                 int tables = standardShortcuts.Count / 20;
                 string table = ToAbbreviatedTable(standardShortcuts);
                 if (tables > 1)
@@ -63,9 +63,6 @@ namespace Shortcuts.Shortcuts.Calculator
 
             return html;
         }
-
-
-   
 
         private string ToAbbreviatedTable(ArrayList standardShortcuts)
         {
@@ -95,7 +92,6 @@ namespace Shortcuts.Shortcuts.Calculator
 
             return sb.ToString();
         }
-
 
         private List<XmlElement> SplitXmlTable(string xmlContent, int n)
         {
@@ -225,7 +221,7 @@ namespace Shortcuts.Shortcuts.Calculator
             var footer = @"</div></body></html>";
             return header + html + footer;
         }
-        
+
         private string AddStandardHtmlHeaderFooter(string html, string profile)
         {
             var header =

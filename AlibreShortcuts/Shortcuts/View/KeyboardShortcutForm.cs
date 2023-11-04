@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
+using Bolsover.Shortcuts.Calculator;
 using com.alibre.client;
 using com.alibre.ui;
-using Shortcuts.Shortcuts.Calculator;
 
 namespace Shortcuts.Shortcuts.View
 {
@@ -10,7 +10,6 @@ namespace Shortcuts.Shortcuts.View
     {
         private static KeyboardShortcutForm _instance;
         private readonly ShortcutsHtmlReport _shortcutsHtmlReport = new();
-
 
         private KeyboardShortcutForm()
         {
@@ -25,7 +24,6 @@ namespace Shortcuts.Shortcuts.View
                 args.Cancel = true;
             };
         }
-
 
         /// <summary>
         /// Retrieves the list of workspace prefixes from the KeyboardShortcutsMediator and populates the drop down
@@ -59,7 +57,6 @@ namespace Shortcuts.Shortcuts.View
             webBrowser1.DocumentText = html;
         }
 
-
         private void buttonPrint_Click(object sender, EventArgs e)
         {
             webBrowser1.ShowPrintDialog();
@@ -73,19 +70,19 @@ namespace Shortcuts.Shortcuts.View
             saveFileDialog1.ShowDialog();
 
             // If the file name is not an empty string open it for saving.
-            if(saveFileDialog1.FileName != "")
+            if (saveFileDialog1.FileName != "")
             {
                 // Saves the Image via a FileStream created by the OpenFile method.
                 System.IO.FileStream fs =
-                    (System.IO.FileStream)saveFileDialog1.OpenFile();
-                
+                    (System.IO.FileStream) saveFileDialog1.OpenFile();
+
                 System.IO.Stream documentStream = webBrowser1.DocumentStream;
                 if (documentStream != null)
                 {
                     documentStream.CopyTo(fs);
                     documentStream.Close();
                 }
-               
+
 
                 fs.Close();
             }

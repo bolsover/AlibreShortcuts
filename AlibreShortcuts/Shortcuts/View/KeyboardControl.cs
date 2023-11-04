@@ -1,15 +1,18 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using Bolsover.Shortcuts.Presenter;
 
-namespace Shortcuts.Shortcuts.View
+
+namespace Bolsover.Shortcuts.View
 {
     public partial class KeyboardControl : UserControl
     {
+    
         public KeyboardControl()
         {
             InitializeComponent();
+            new KeyboardPresenter(this);
+           
         }
-
 
         
     }

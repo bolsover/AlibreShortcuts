@@ -10,9 +10,9 @@ using com.alibre.client;
 using com.alibre.executive.locale;
 using com.alibre.ui;
 using com.alibre.utils;
-using Shortcut = Shortcuts.Model.Shortcut;
+using Shortcut = Bolsover.Shortcuts.Model.Shortcut;
 
-namespace Shortcuts.Shortcuts.Calculator
+namespace Bolsover.Shortcuts.Calculator
 {
     public class ShortcutsCalculator
     {
@@ -24,9 +24,10 @@ namespace Shortcuts.Shortcuts.Calculator
             var userProfile = RetrieveUserProfile();
             if (userProfile == null)
             {
-               // MessageBox.Show("No user profile found", "Error");
+                // MessageBox.Show("No user profile found", "Error");
                 return userShortcutList;
             }
+
             var mapping = userProfile.Mapping;
 
             foreach (var mappingPair in mapping.Pairs)
@@ -45,7 +46,6 @@ namespace Shortcuts.Shortcuts.Calculator
             return userShortcutList;
         }
 
-
         public Dictionary<string, Shortcut> ShortcutsDictionary(ArrayList shortcuts)
         {
             Dictionary<string, Shortcut> standardShorcuts = new();
@@ -57,11 +57,10 @@ namespace Shortcuts.Shortcuts.Calculator
             return standardShorcuts;
         }
 
-
         public ArrayList RetrieveUserShortcutsByProfile(string profile)
         {
             ArrayList shortcuts = RetrieveUserShortcuts();
-           // XElement xml = ProfileToXml(RetrieveUserProfile());
+            // XElement xml = ProfileToXml(RetrieveUserProfile());
             ArrayList profileShortcuts = new ArrayList();
             foreach (var sc in shortcuts)
             {
@@ -73,8 +72,6 @@ namespace Shortcuts.Shortcuts.Calculator
 
             return profileShortcuts;
         }
-        
-        
 
         public XElement ProfileToXml(Profile profile)
         {
@@ -111,26 +108,35 @@ namespace Shortcuts.Shortcuts.Calculator
             var standardShortcuts = new ArrayList();
             switch (profile)
             {
-                 case "Design Part Browser": DumpStandardProfile(PartStandardShortcuts(), "Design Part Browser", standardShortcuts);
-                     break;
-                 case "BOM Editor": DumpStandardProfile(BomStandardShortcuts(), "BOM Editor", standardShortcuts);
-                     break;
-                 case "Command Center Browser": DumpStandardProfile(CommandCenterStandardShortcuts(), "Command Center Browser", standardShortcuts);
-                     break;
-                 case "Design Assembly Browser": DumpStandardProfile(AssemblyStandardShortcuts(), "Design Assembly Browser", standardShortcuts);
-                     break;
-                 case "Design Assembly Exploded View Browser": DumpStandardProfile(AssemblyExplodedViewStandardShortcuts(), "Design Assembly Exploded View Browser", standardShortcuts);
-                     break;
-                 case "Design Boolean Browser": DumpStandardProfile(DesignBooleanStandardShortcuts(), "Design Boolean Browser", standardShortcuts);
-                     break;
-                 case "Design Sheet Metal Browser": DumpStandardProfile(SheetMetalStandardShortcuts(), "Design Sheet Metal Browser", standardShortcuts);
-                     break;
-                 case "Drawing Browser": DumpStandardProfile(DrawingStandardShortcuts(), "Drawing Browser", standardShortcuts);
-                     break;
-                 case "GlobalParam Editor": DumpStandardProfile(GlobalParamStandardShortcuts(), "GlobalParam Editor", standardShortcuts);
-                     break;
+                case "Design Part Browser":
+                    DumpStandardProfile(PartStandardShortcuts(), "Design Part Browser", standardShortcuts);
+                    break;
+                case "BOM Editor":
+                    DumpStandardProfile(BomStandardShortcuts(), "BOM Editor", standardShortcuts);
+                    break;
+                case "Command Center Browser":
+                    DumpStandardProfile(CommandCenterStandardShortcuts(), "Command Center Browser", standardShortcuts);
+                    break;
+                case "Design Assembly Browser":
+                    DumpStandardProfile(AssemblyStandardShortcuts(), "Design Assembly Browser", standardShortcuts);
+                    break;
+                case "Design Assembly Exploded View Browser":
+                    DumpStandardProfile(AssemblyExplodedViewStandardShortcuts(), "Design Assembly Exploded View Browser", standardShortcuts);
+                    break;
+                case "Design Boolean Browser":
+                    DumpStandardProfile(DesignBooleanStandardShortcuts(), "Design Boolean Browser", standardShortcuts);
+                    break;
+                case "Design Sheet Metal Browser":
+                    DumpStandardProfile(SheetMetalStandardShortcuts(), "Design Sheet Metal Browser", standardShortcuts);
+                    break;
+                case "Drawing Browser":
+                    DumpStandardProfile(DrawingStandardShortcuts(), "Drawing Browser", standardShortcuts);
+                    break;
+                case "GlobalParam Editor":
+                    DumpStandardProfile(GlobalParamStandardShortcuts(), "GlobalParam Editor", standardShortcuts);
+                    break;
             }
-            
+
             var withoutNullOrEmptyHint = new ArrayList();
             foreach (Shortcut sc in standardShortcuts)
             {
@@ -139,10 +145,9 @@ namespace Shortcuts.Shortcuts.Calculator
                     withoutNullOrEmptyHint.Add(sc);
                 }
             }
-            
+
             return withoutNullOrEmptyHint;
         }
-
 
         public ArrayList RetrieveStandardShortcuts()
         {
@@ -160,7 +165,6 @@ namespace Shortcuts.Shortcuts.Calculator
 
             return standardShortcuts;
         }
-
 
         private void DumpStandardProfile(Profile profile, string profileName, ArrayList shortcuts)
         {
@@ -235,7 +239,6 @@ namespace Shortcuts.Shortcuts.Calculator
             return nonRoamingProfilePath;
         }
 
-
         private Profile RetrieveUserProfile()
         {
             Profile profile = null;
@@ -246,7 +249,7 @@ namespace Shortcuts.Shortcuts.Calculator
             {
                 profile = ReadProfileFromFile(profilePath);
             }
-            
+
 
             return profile;
         }
@@ -257,12 +260,10 @@ namespace Shortcuts.Shortcuts.Calculator
             return (Profile) ReadObjectFromFile(fileStream);
         }
 
-
         private Profile PartStandardShortcuts()
         {
             return _mediator.PartStandardShortcuts;
         }
-
 
         private Profile BomStandardShortcuts()
         {

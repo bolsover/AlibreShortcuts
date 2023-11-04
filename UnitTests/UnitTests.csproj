@@ -75,6 +75,9 @@
         <Reference Include="System.Drawing" />
         <Reference Include="System.Windows.Forms" />
         <Reference Include="System.Xml" />
+        <Reference Include="XamlMath.Shared, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+          <HintPath>..\packages\XamlMath.Shared.2.1.0\lib\net462\XamlMath.Shared.dll</HintPath>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="ConsoleIO.cs" />

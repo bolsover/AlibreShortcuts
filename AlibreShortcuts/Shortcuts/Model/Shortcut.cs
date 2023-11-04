@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Text;
-
-namespace Shortcuts.Model
+﻿namespace Bolsover.Shortcuts.Model
 {
     public class Shortcut
     {
@@ -14,17 +11,14 @@ namespace Shortcuts.Model
             KeyChar = keyChar;
         }
 
-
         public string Profile { get; set; }
         public string Command { get; set; }
         public string Hint { get; set; }
         public int Keycode { get; set; }
         public string KeyChar { get; set; }
         public ShortcutType ShortcutType { get; set; }
-
-        
-  
     }
+
     public enum ShortcutType
     {
         Custom,

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using AlibreAddOn;
-
 using AlibreX;
 
 namespace AlibreAddOnAssembly
@@ -12,7 +11,6 @@ namespace AlibreAddOnAssembly
         private static IntPtr parentWinHandle;
         private static Shortcuts.AlibreShortcuts _alibreShortcuts;
 
-
         public static void AddOnLoad(IntPtr hwnd, IAutomationHook pAutomationHook, IntPtr unused)
         {
             alibreRoot = (IADRoot) pAutomationHook.Root;
@@ -21,8 +19,8 @@ namespace AlibreAddOnAssembly
             string[] versionarr = version.Split(',');
             int majorVersion = int.Parse(versionarr[0]);
             if (majorVersion < 27)
-                MessageBox.Show(Shortcuts.Globals.AppName +"requires a newer version of Alibre Design", "Error");
-               
+                MessageBox.Show(Shortcuts.Globals.AppName + "requires a newer version of Alibre Design", "Error");
+
             _alibreShortcuts = new Shortcuts.AlibreShortcuts(alibreRoot, parentWinHandle);
         }
 
@@ -41,7 +39,6 @@ namespace AlibreAddOnAssembly
         {
         }
 
-
         public static void AddOnUnload(
             IntPtr hwnd,
             bool forceUnload,
@@ -51,10 +48,9 @@ namespace AlibreAddOnAssembly
         {
         }
 
-
         public static IAlibreAddOn GetAddOnInterface()
         {
-            return (IAlibreAddOn)_alibreShortcuts;
+            return (IAlibreAddOn) _alibreShortcuts;
         }
     }
 }

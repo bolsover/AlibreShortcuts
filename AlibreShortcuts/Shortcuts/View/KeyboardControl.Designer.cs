@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Shortcuts.Shortcuts.View
+namespace Bolsover.Shortcuts.View
 {
     partial class KeyboardControl
     {
@@ -31,6 +31,7 @@ namespace Shortcuts.Shortcuts.View
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.QKey = new System.Windows.Forms.Button();
             this.WKey = new System.Windows.Forms.Button();
             this.EKey = new System.Windows.Forms.Button();
@@ -53,8 +54,8 @@ namespace Shortcuts.Shortcuts.View
             this.JKey = new System.Windows.Forms.Button();
             this.KKey = new System.Windows.Forms.Button();
             this.LKey = new System.Windows.Forms.Button();
-            this.SemiColonKey = new System.Windows.Forms.Button();
-            this.QuoteKey = new System.Windows.Forms.Button();
+            this.SemicolonKey = new System.Windows.Forms.Button();
+            this.ApostropheKey = new System.Windows.Forms.Button();
             this.ZKey = new System.Windows.Forms.Button();
             this.XKey = new System.Windows.Forms.Button();
             this.CKey = new System.Windows.Forms.Button();
@@ -63,12 +64,12 @@ namespace Shortcuts.Shortcuts.View
             this.NKey = new System.Windows.Forms.Button();
             this.MKey = new System.Windows.Forms.Button();
             this.CommaKey = new System.Windows.Forms.Button();
-            this.FullStopKey = new System.Windows.Forms.Button();
-            this.ForwardslashKey = new System.Windows.Forms.Button();
-            this.CapsLock = new System.Windows.Forms.Button();
-            this.LeftShiftKey = new System.Windows.Forms.Button();
+            this.PeriodKey = new System.Windows.Forms.Button();
+            this.SlashKey = new System.Windows.Forms.Button();
+            this.CapsLockKey = new System.Windows.Forms.CheckBox();
+            this.LeftShiftKey = new System.Windows.Forms.CheckBox();
             this.BackslashKey = new System.Windows.Forms.Button();
-            this.RightShiftKey = new System.Windows.Forms.Button();
+            this.RightShiftKey = new System.Windows.Forms.CheckBox();
             this.BackspaceKey = new System.Windows.Forms.Button();
             this.EnterKey = new System.Windows.Forms.Button();
             this.GraveKey = new System.Windows.Forms.Button();
@@ -83,7 +84,7 @@ namespace Shortcuts.Shortcuts.View
             this.ZeroKey = new System.Windows.Forms.Button();
             this.SevenKey = new System.Windows.Forms.Button();
             this.MinusKey = new System.Windows.Forms.Button();
-            this.EqualsKey = new System.Windows.Forms.Button();
+            this.EqualKey = new System.Windows.Forms.Button();
             this.Num4Key = new System.Windows.Forms.Button();
             this.Num5Key = new System.Windows.Forms.Button();
             this.Num6Key = new System.Windows.Forms.Button();
@@ -91,24 +92,24 @@ namespace Shortcuts.Shortcuts.View
             this.Num8Key = new System.Windows.Forms.Button();
             this.Num9Key = new System.Windows.Forms.Button();
             this.Num0Key = new System.Windows.Forms.Button();
-            this.NumPointKey = new System.Windows.Forms.Button();
+            this.NumDecimalKey = new System.Windows.Forms.Button();
             this.Num1Key = new System.Windows.Forms.Button();
             this.Num2Key = new System.Windows.Forms.Button();
             this.Num3Key = new System.Windows.Forms.Button();
-            this.NumLockKey = new System.Windows.Forms.Button();
+            this.NumLockKey = new System.Windows.Forms.CheckBox();
             this.NumDivideKey = new System.Windows.Forms.Button();
-            this.NumTimesKey = new System.Windows.Forms.Button();
+            this.NumMultiplyKey = new System.Windows.Forms.Button();
             this.NumMinusKey = new System.Windows.Forms.Button();
             this.NumPlusKey = new System.Windows.Forms.Button();
-            this.Enter2key = new System.Windows.Forms.Button();
+            this.NumEnterKey = new System.Windows.Forms.Button();
             this.SpaceKey = new System.Windows.Forms.Button();
-            this.WindowKey = new System.Windows.Forms.Button();
-            this.FnKey = new System.Windows.Forms.Button();
-            this.LeftAltKey = new System.Windows.Forms.Button();
-            this.RightCtrlKey = new System.Windows.Forms.Button();
-            this.AltGrKey = new System.Windows.Forms.Button();
-            this.LeftCtrlKey = new System.Windows.Forms.Button();
-            this.EscapeKey = new System.Windows.Forms.Button();
+            this.WindowKey = new System.Windows.Forms.CheckBox();
+            this.FnKey = new System.Windows.Forms.CheckBox();
+            this.LeftAltKey = new System.Windows.Forms.CheckBox();
+            this.RightCtrlKey = new System.Windows.Forms.CheckBox();
+            this.AltGrKey = new System.Windows.Forms.CheckBox();
+            this.LeftCtrlKey = new System.Windows.Forms.CheckBox();
+            this.EscapeKey = new System.Windows.Forms.CheckBox();
             this.HashKey = new System.Windows.Forms.Button();
             this.F1Key = new System.Windows.Forms.Button();
             this.F2Key = new System.Windows.Forms.Button();
@@ -122,24 +123,26 @@ namespace Shortcuts.Shortcuts.View
             this.F10Key = new System.Windows.Forms.Button();
             this.F11Key = new System.Windows.Forms.Button();
             this.F12Key = new System.Windows.Forms.Button();
-            this.LeftArrowKey = new System.Windows.Forms.Button();
-            this.DownArrowKey = new System.Windows.Forms.Button();
-            this.RightArrowKey = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
+            this.LeftKey = new System.Windows.Forms.Button();
+            this.DownKey = new System.Windows.Forms.Button();
+            this.RightKey = new System.Windows.Forms.Button();
+            this.UpKey = new System.Windows.Forms.Button();
             this.InsertKey = new System.Windows.Forms.Button();
             this.HomeKey = new System.Windows.Forms.Button();
             this.PageUpKey = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
+            this.DeleteKey = new System.Windows.Forms.Button();
+            this.EndKey = new System.Windows.Forms.Button();
+            this.PageDownKey = new System.Windows.Forms.Button();
             this.PrintScreenKey = new System.Windows.Forms.Button();
-            this.ScrollLockKey = new System.Windows.Forms.Button();
+            this.ScrollLockKey = new System.Windows.Forms.CheckBox();
             this.PauseBreakKey = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // QKey
             // 
-            this.QKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.QKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.QKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.QKey.Location = new System.Drawing.Point(105, 150);
             this.QKey.Name = "QKey";
             this.QKey.Size = new System.Drawing.Size(70, 70);
@@ -149,7 +152,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // WKey
             // 
-            this.WKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.WKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.WKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.WKey.Location = new System.Drawing.Point(175, 150);
             this.WKey.Name = "WKey";
             this.WKey.Size = new System.Drawing.Size(70, 70);
@@ -159,7 +163,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // EKey
             // 
-            this.EKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.EKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.EKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.EKey.Location = new System.Drawing.Point(245, 150);
             this.EKey.Name = "EKey";
             this.EKey.Size = new System.Drawing.Size(70, 70);
@@ -169,7 +174,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // RKey
             // 
-            this.RKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.RKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.RKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.RKey.Location = new System.Drawing.Point(315, 150);
             this.RKey.Name = "RKey";
             this.RKey.Size = new System.Drawing.Size(70, 70);
@@ -179,7 +185,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // TKey
             // 
-            this.TKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.TKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.TKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.TKey.Location = new System.Drawing.Point(385, 150);
             this.TKey.Name = "TKey";
             this.TKey.Size = new System.Drawing.Size(70, 70);
@@ -189,7 +196,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // YKey
             // 
-            this.YKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.YKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.YKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.YKey.Location = new System.Drawing.Point(455, 150);
             this.YKey.Name = "YKey";
             this.YKey.Size = new System.Drawing.Size(70, 70);
@@ -199,7 +207,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // UKey
             // 
-            this.UKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.UKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.UKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.UKey.Location = new System.Drawing.Point(525, 150);
             this.UKey.Name = "UKey";
             this.UKey.Size = new System.Drawing.Size(70, 70);
@@ -209,7 +218,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // IKey
             // 
-            this.IKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.IKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.IKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.IKey.Location = new System.Drawing.Point(595, 150);
             this.IKey.Name = "IKey";
             this.IKey.Size = new System.Drawing.Size(70, 70);
@@ -219,7 +229,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // OKey
             // 
-            this.OKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.OKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.OKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.OKey.Location = new System.Drawing.Point(665, 150);
             this.OKey.Name = "OKey";
             this.OKey.Size = new System.Drawing.Size(70, 70);
@@ -229,17 +240,20 @@ namespace Shortcuts.Shortcuts.View
             // 
             // PKey
             // 
-            this.PKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.PKey.Font = new System.Drawing.Font("Arial Narrow", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.PKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.PKey.Location = new System.Drawing.Point(735, 150);
             this.PKey.Name = "PKey";
             this.PKey.Size = new System.Drawing.Size(70, 70);
             this.PKey.TabIndex = 37;
-            this.PKey.Text = "P";
+            this.PKey.Text = "Toggle Planes/Axes/Points/Surfaces";
+            this.toolTip1.SetToolTip(this.PKey, "Tooltip text goes here");
             this.PKey.UseVisualStyleBackColor = true;
             // 
             // LeftBracketKey
             // 
             this.LeftBracketKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.LeftBracketKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.LeftBracketKey.Location = new System.Drawing.Point(805, 150);
             this.LeftBracketKey.Name = "LeftBracketKey";
             this.LeftBracketKey.Size = new System.Drawing.Size(70, 70);
@@ -250,6 +264,7 @@ namespace Shortcuts.Shortcuts.View
             // RightBracketKey
             // 
             this.RightBracketKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.RightBracketKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.RightBracketKey.Location = new System.Drawing.Point(875, 150);
             this.RightBracketKey.Name = "RightBracketKey";
             this.RightBracketKey.Size = new System.Drawing.Size(70, 70);
@@ -259,7 +274,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // TabKey
             // 
-            this.TabKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.TabKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.TabKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.TabKey.Location = new System.Drawing.Point(0, 150);
             this.TabKey.Name = "TabKey";
             this.TabKey.Size = new System.Drawing.Size(105, 70);
@@ -269,7 +285,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // AKey
             // 
-            this.AKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.AKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.AKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.AKey.Location = new System.Drawing.Point(120, 220);
             this.AKey.Name = "AKey";
             this.AKey.Size = new System.Drawing.Size(70, 70);
@@ -279,7 +296,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // SKey
             // 
-            this.SKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.SKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.SKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.SKey.Location = new System.Drawing.Point(190, 220);
             this.SKey.Name = "SKey";
             this.SKey.Size = new System.Drawing.Size(70, 70);
@@ -289,17 +307,20 @@ namespace Shortcuts.Shortcuts.View
             // 
             // DKey
             // 
-            this.DKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.DKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.DKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.DKey.Location = new System.Drawing.Point(260, 220);
             this.DKey.Name = "DKey";
             this.DKey.Size = new System.Drawing.Size(70, 70);
             this.DKey.TabIndex = 44;
-            this.DKey.Text = "D";
+            this.DKey.Text = "Auto Dimension Sketch";
+            this.DKey.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.DKey.UseVisualStyleBackColor = true;
             // 
             // FKey
             // 
-            this.FKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.FKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.FKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.FKey.Location = new System.Drawing.Point(330, 220);
             this.FKey.Name = "FKey";
             this.FKey.Size = new System.Drawing.Size(70, 70);
@@ -309,7 +330,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // GKey
             // 
-            this.GKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.GKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.GKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.GKey.Location = new System.Drawing.Point(400, 220);
             this.GKey.Name = "GKey";
             this.GKey.Size = new System.Drawing.Size(70, 70);
@@ -319,7 +341,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // HKey
             // 
-            this.HKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.HKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.HKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.HKey.Location = new System.Drawing.Point(470, 220);
             this.HKey.Name = "HKey";
             this.HKey.Size = new System.Drawing.Size(70, 70);
@@ -329,7 +352,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // JKey
             // 
-            this.JKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.JKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.JKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.JKey.Location = new System.Drawing.Point(540, 220);
             this.JKey.Name = "JKey";
             this.JKey.Size = new System.Drawing.Size(70, 70);
@@ -339,7 +363,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // KKey
             // 
-            this.KKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.KKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.KKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.KKey.Location = new System.Drawing.Point(610, 220);
             this.KKey.Name = "KKey";
             this.KKey.Size = new System.Drawing.Size(70, 70);
@@ -349,7 +374,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // LKey
             // 
-            this.LKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.LKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.LKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.LKey.Location = new System.Drawing.Point(680, 220);
             this.LKey.Name = "LKey";
             this.LKey.Size = new System.Drawing.Size(70, 70);
@@ -357,29 +383,32 @@ namespace Shortcuts.Shortcuts.View
             this.LKey.Text = "L";
             this.LKey.UseVisualStyleBackColor = true;
             // 
-            // SemiColonKey
+            // SemicolonKey
             // 
-            this.SemiColonKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
-            this.SemiColonKey.Location = new System.Drawing.Point(750, 220);
-            this.SemiColonKey.Name = "SemiColonKey";
-            this.SemiColonKey.Size = new System.Drawing.Size(70, 70);
-            this.SemiColonKey.TabIndex = 51;
-            this.SemiColonKey.Text = ";";
-            this.SemiColonKey.UseVisualStyleBackColor = true;
+            this.SemicolonKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.SemicolonKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.SemicolonKey.Location = new System.Drawing.Point(750, 220);
+            this.SemicolonKey.Name = "SemicolonKey";
+            this.SemicolonKey.Size = new System.Drawing.Size(70, 70);
+            this.SemicolonKey.TabIndex = 51;
+            this.SemicolonKey.Text = ";";
+            this.SemicolonKey.UseVisualStyleBackColor = true;
             // 
-            // QuoteKey
+            // ApostropheKey
             // 
-            this.QuoteKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
-            this.QuoteKey.Location = new System.Drawing.Point(820, 220);
-            this.QuoteKey.Name = "QuoteKey";
-            this.QuoteKey.Size = new System.Drawing.Size(70, 70);
-            this.QuoteKey.TabIndex = 52;
-            this.QuoteKey.Text = "\'";
-            this.QuoteKey.UseVisualStyleBackColor = true;
+            this.ApostropheKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.ApostropheKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.ApostropheKey.Location = new System.Drawing.Point(820, 220);
+            this.ApostropheKey.Name = "ApostropheKey";
+            this.ApostropheKey.Size = new System.Drawing.Size(70, 70);
+            this.ApostropheKey.TabIndex = 52;
+            this.ApostropheKey.Text = "\'";
+            this.ApostropheKey.UseVisualStyleBackColor = true;
             // 
             // ZKey
             // 
-            this.ZKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.ZKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.ZKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.ZKey.Location = new System.Drawing.Point(160, 290);
             this.ZKey.Name = "ZKey";
             this.ZKey.Size = new System.Drawing.Size(70, 70);
@@ -389,7 +418,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // XKey
             // 
-            this.XKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.XKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.XKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.XKey.Location = new System.Drawing.Point(230, 290);
             this.XKey.Name = "XKey";
             this.XKey.Size = new System.Drawing.Size(70, 70);
@@ -399,7 +429,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // CKey
             // 
-            this.CKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.CKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.CKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.CKey.Location = new System.Drawing.Point(300, 290);
             this.CKey.Name = "CKey";
             this.CKey.Size = new System.Drawing.Size(70, 70);
@@ -409,7 +440,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // VKey
             // 
-            this.VKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.VKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.VKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.VKey.Location = new System.Drawing.Point(370, 290);
             this.VKey.Name = "VKey";
             this.VKey.Size = new System.Drawing.Size(70, 70);
@@ -419,7 +451,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // BKey
             // 
-            this.BKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.BKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.BKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.BKey.Location = new System.Drawing.Point(440, 290);
             this.BKey.Name = "BKey";
             this.BKey.Size = new System.Drawing.Size(70, 70);
@@ -429,7 +462,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // NKey
             // 
-            this.NKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.NKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.NKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.NKey.Location = new System.Drawing.Point(510, 290);
             this.NKey.Name = "NKey";
             this.NKey.Size = new System.Drawing.Size(70, 70);
@@ -439,7 +473,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // MKey
             // 
-            this.MKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.MKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.MKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.MKey.Location = new System.Drawing.Point(580, 290);
             this.MKey.Name = "MKey";
             this.MKey.Size = new System.Drawing.Size(70, 70);
@@ -450,6 +485,7 @@ namespace Shortcuts.Shortcuts.View
             // CommaKey
             // 
             this.CommaKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.CommaKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.CommaKey.Location = new System.Drawing.Point(650, 290);
             this.CommaKey.Name = "CommaKey";
             this.CommaKey.Size = new System.Drawing.Size(70, 70);
@@ -457,39 +493,47 @@ namespace Shortcuts.Shortcuts.View
             this.CommaKey.Text = ",";
             this.CommaKey.UseVisualStyleBackColor = true;
             // 
-            // FullStopKey
+            // PeriodKey
             // 
-            this.FullStopKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
-            this.FullStopKey.Location = new System.Drawing.Point(720, 290);
-            this.FullStopKey.Name = "FullStopKey";
-            this.FullStopKey.Size = new System.Drawing.Size(70, 70);
-            this.FullStopKey.TabIndex = 64;
-            this.FullStopKey.Text = ".";
-            this.FullStopKey.UseVisualStyleBackColor = true;
+            this.PeriodKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.PeriodKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.PeriodKey.Location = new System.Drawing.Point(720, 290);
+            this.PeriodKey.Name = "PeriodKey";
+            this.PeriodKey.Size = new System.Drawing.Size(70, 70);
+            this.PeriodKey.TabIndex = 64;
+            this.PeriodKey.Text = ".";
+            this.PeriodKey.UseVisualStyleBackColor = true;
             // 
-            // ForwardslashKey
+            // SlashKey
             // 
-            this.ForwardslashKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
-            this.ForwardslashKey.Location = new System.Drawing.Point(790, 290);
-            this.ForwardslashKey.Name = "ForwardslashKey";
-            this.ForwardslashKey.Size = new System.Drawing.Size(70, 70);
-            this.ForwardslashKey.TabIndex = 65;
-            this.ForwardslashKey.Text = "/";
-            this.ForwardslashKey.UseVisualStyleBackColor = true;
+            this.SlashKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.SlashKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.SlashKey.Location = new System.Drawing.Point(790, 290);
+            this.SlashKey.Name = "SlashKey";
+            this.SlashKey.Size = new System.Drawing.Size(70, 70);
+            this.SlashKey.TabIndex = 65;
+            this.SlashKey.Text = "/";
+            this.SlashKey.UseVisualStyleBackColor = true;
             // 
-            // CapsLock
+            // CapsLockKey
             // 
-            this.CapsLock.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
-            this.CapsLock.Location = new System.Drawing.Point(0, 220);
-            this.CapsLock.Name = "CapsLock";
-            this.CapsLock.Size = new System.Drawing.Size(120, 70);
-            this.CapsLock.TabIndex = 41;
-            this.CapsLock.Text = "_\r\n↑\r\n";
-            this.CapsLock.UseVisualStyleBackColor = true;
+            this.CapsLockKey.Appearance = System.Windows.Forms.Appearance.Button;
+            this.CapsLockKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CapsLockKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.CapsLockKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.CapsLockKey.Location = new System.Drawing.Point(0, 220);
+            this.CapsLockKey.Name = "CapsLockKey";
+            this.CapsLockKey.Size = new System.Drawing.Size(120, 70);
+            this.CapsLockKey.TabIndex = 41;
+            this.CapsLockKey.Text = "_\r\n↑\r\n";
+            this.CapsLockKey.UseVisualStyleBackColor = true;
             // 
             // LeftShiftKey
             // 
-            this.LeftShiftKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.LeftShiftKey.Appearance = System.Windows.Forms.Appearance.Button;
+            this.LeftShiftKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LeftShiftKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.LeftShiftKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.LeftShiftKey.Location = new System.Drawing.Point(0, 290);
             this.LeftShiftKey.Name = "LeftShiftKey";
             this.LeftShiftKey.Size = new System.Drawing.Size(90, 70);
@@ -500,6 +544,7 @@ namespace Shortcuts.Shortcuts.View
             // BackslashKey
             // 
             this.BackslashKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.BackslashKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.BackslashKey.Location = new System.Drawing.Point(90, 290);
             this.BackslashKey.Name = "BackslashKey";
             this.BackslashKey.Size = new System.Drawing.Size(70, 70);
@@ -509,7 +554,10 @@ namespace Shortcuts.Shortcuts.View
             // 
             // RightShiftKey
             // 
-            this.RightShiftKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.RightShiftKey.Appearance = System.Windows.Forms.Appearance.Button;
+            this.RightShiftKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RightShiftKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.RightShiftKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.RightShiftKey.Location = new System.Drawing.Point(859, 290);
             this.RightShiftKey.Name = "RightShiftKey";
             this.RightShiftKey.Size = new System.Drawing.Size(189, 70);
@@ -519,7 +567,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // BackspaceKey
             // 
-            this.BackspaceKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.BackspaceKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.BackspaceKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.BackspaceKey.Location = new System.Drawing.Point(910, 80);
             this.BackspaceKey.Name = "BackspaceKey";
             this.BackspaceKey.Size = new System.Drawing.Size(140, 70);
@@ -529,7 +578,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // EnterKey
             // 
-            this.EnterKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.EnterKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.EnterKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.EnterKey.Location = new System.Drawing.Point(966, 150);
             this.EnterKey.Name = "EnterKey";
             this.EnterKey.Size = new System.Drawing.Size(84, 140);
@@ -540,6 +590,7 @@ namespace Shortcuts.Shortcuts.View
             // GraveKey
             // 
             this.GraveKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.GraveKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.GraveKey.Location = new System.Drawing.Point(0, 80);
             this.GraveKey.Name = "GraveKey";
             this.GraveKey.Size = new System.Drawing.Size(70, 70);
@@ -550,6 +601,7 @@ namespace Shortcuts.Shortcuts.View
             // OneKey
             // 
             this.OneKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.OneKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.OneKey.Location = new System.Drawing.Point(70, 80);
             this.OneKey.Name = "OneKey";
             this.OneKey.Size = new System.Drawing.Size(70, 70);
@@ -560,6 +612,7 @@ namespace Shortcuts.Shortcuts.View
             // TwoKey
             // 
             this.TwoKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.TwoKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.TwoKey.Location = new System.Drawing.Point(140, 80);
             this.TwoKey.Name = "TwoKey";
             this.TwoKey.Size = new System.Drawing.Size(70, 70);
@@ -570,6 +623,7 @@ namespace Shortcuts.Shortcuts.View
             // ThreeKey
             // 
             this.ThreeKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.ThreeKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.ThreeKey.Location = new System.Drawing.Point(210, 80);
             this.ThreeKey.Name = "ThreeKey";
             this.ThreeKey.Size = new System.Drawing.Size(70, 70);
@@ -580,6 +634,7 @@ namespace Shortcuts.Shortcuts.View
             // FourKey
             // 
             this.FourKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.FourKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.FourKey.Location = new System.Drawing.Point(280, 80);
             this.FourKey.Name = "FourKey";
             this.FourKey.Size = new System.Drawing.Size(70, 70);
@@ -590,6 +645,7 @@ namespace Shortcuts.Shortcuts.View
             // FiveKey
             // 
             this.FiveKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.FiveKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.FiveKey.Location = new System.Drawing.Point(350, 80);
             this.FiveKey.Name = "FiveKey";
             this.FiveKey.Size = new System.Drawing.Size(70, 70);
@@ -600,6 +656,7 @@ namespace Shortcuts.Shortcuts.View
             // SixKey
             // 
             this.SixKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.SixKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.SixKey.Location = new System.Drawing.Point(420, 80);
             this.SixKey.Name = "SixKey";
             this.SixKey.Size = new System.Drawing.Size(70, 70);
@@ -610,6 +667,7 @@ namespace Shortcuts.Shortcuts.View
             // EightKey
             // 
             this.EightKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.EightKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.EightKey.Location = new System.Drawing.Point(560, 80);
             this.EightKey.Name = "EightKey";
             this.EightKey.Size = new System.Drawing.Size(70, 70);
@@ -620,6 +678,7 @@ namespace Shortcuts.Shortcuts.View
             // NineKey
             // 
             this.NineKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.NineKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.NineKey.Location = new System.Drawing.Point(630, 80);
             this.NineKey.Name = "NineKey";
             this.NineKey.Size = new System.Drawing.Size(70, 70);
@@ -630,6 +689,7 @@ namespace Shortcuts.Shortcuts.View
             // ZeroKey
             // 
             this.ZeroKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.ZeroKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.ZeroKey.Location = new System.Drawing.Point(700, 80);
             this.ZeroKey.Name = "ZeroKey";
             this.ZeroKey.Size = new System.Drawing.Size(70, 70);
@@ -640,6 +700,7 @@ namespace Shortcuts.Shortcuts.View
             // SevenKey
             // 
             this.SevenKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.SevenKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.SevenKey.Location = new System.Drawing.Point(490, 80);
             this.SevenKey.Name = "SevenKey";
             this.SevenKey.Size = new System.Drawing.Size(70, 70);
@@ -650,6 +711,7 @@ namespace Shortcuts.Shortcuts.View
             // MinusKey
             // 
             this.MinusKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.MinusKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.MinusKey.Location = new System.Drawing.Point(770, 80);
             this.MinusKey.Name = "MinusKey";
             this.MinusKey.Size = new System.Drawing.Size(70, 70);
@@ -657,19 +719,21 @@ namespace Shortcuts.Shortcuts.View
             this.MinusKey.Text = "-";
             this.MinusKey.UseVisualStyleBackColor = true;
             // 
-            // EqualsKey
+            // EqualKey
             // 
-            this.EqualsKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
-            this.EqualsKey.Location = new System.Drawing.Point(840, 80);
-            this.EqualsKey.Name = "EqualsKey";
-            this.EqualsKey.Size = new System.Drawing.Size(70, 70);
-            this.EqualsKey.TabIndex = 25;
-            this.EqualsKey.Text = "=";
-            this.EqualsKey.UseVisualStyleBackColor = true;
+            this.EqualKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.EqualKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.EqualKey.Location = new System.Drawing.Point(840, 80);
+            this.EqualKey.Name = "EqualKey";
+            this.EqualKey.Size = new System.Drawing.Size(70, 70);
+            this.EqualKey.TabIndex = 25;
+            this.EqualKey.Text = "=";
+            this.EqualKey.UseVisualStyleBackColor = true;
             // 
             // Num4Key
             // 
-            this.Num4Key.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.Num4Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.Num4Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num4Key.Location = new System.Drawing.Point(1308, 220);
             this.Num4Key.Name = "Num4Key";
             this.Num4Key.Size = new System.Drawing.Size(70, 70);
@@ -679,7 +743,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // Num5Key
             // 
-            this.Num5Key.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.Num5Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.Num5Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num5Key.Location = new System.Drawing.Point(1378, 220);
             this.Num5Key.Name = "Num5Key";
             this.Num5Key.Size = new System.Drawing.Size(70, 70);
@@ -689,7 +754,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // Num6Key
             // 
-            this.Num6Key.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.Num6Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.Num6Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num6Key.Location = new System.Drawing.Point(1448, 220);
             this.Num6Key.Name = "Num6Key";
             this.Num6Key.Size = new System.Drawing.Size(70, 70);
@@ -699,7 +765,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // Num7Key
             // 
-            this.Num7Key.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.Num7Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.Num7Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num7Key.Location = new System.Drawing.Point(1308, 150);
             this.Num7Key.Name = "Num7Key";
             this.Num7Key.Size = new System.Drawing.Size(70, 70);
@@ -709,7 +776,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // Num8Key
             // 
-            this.Num8Key.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.Num8Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.Num8Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num8Key.Location = new System.Drawing.Point(1378, 150);
             this.Num8Key.Name = "Num8Key";
             this.Num8Key.Size = new System.Drawing.Size(70, 70);
@@ -719,7 +787,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // Num9Key
             // 
-            this.Num9Key.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.Num9Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.Num9Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num9Key.Location = new System.Drawing.Point(1448, 150);
             this.Num9Key.Name = "Num9Key";
             this.Num9Key.Size = new System.Drawing.Size(70, 70);
@@ -729,7 +798,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // Num0Key
             // 
-            this.Num0Key.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.Num0Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.Num0Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num0Key.Location = new System.Drawing.Point(1308, 360);
             this.Num0Key.Name = "Num0Key";
             this.Num0Key.Size = new System.Drawing.Size(140, 70);
@@ -737,19 +807,21 @@ namespace Shortcuts.Shortcuts.View
             this.Num0Key.Text = "0";
             this.Num0Key.UseVisualStyleBackColor = true;
             // 
-            // NumPointKey
+            // NumDecimalKey
             // 
-            this.NumPointKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
-            this.NumPointKey.Location = new System.Drawing.Point(1448, 360);
-            this.NumPointKey.Name = "NumPointKey";
-            this.NumPointKey.Size = new System.Drawing.Size(70, 70);
-            this.NumPointKey.TabIndex = 103;
-            this.NumPointKey.Text = ".";
-            this.NumPointKey.UseVisualStyleBackColor = true;
+            this.NumDecimalKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.NumDecimalKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.NumDecimalKey.Location = new System.Drawing.Point(1448, 360);
+            this.NumDecimalKey.Name = "NumDecimalKey";
+            this.NumDecimalKey.Size = new System.Drawing.Size(70, 70);
+            this.NumDecimalKey.TabIndex = 103;
+            this.NumDecimalKey.Text = ".";
+            this.NumDecimalKey.UseVisualStyleBackColor = true;
             // 
             // Num1Key
             // 
-            this.Num1Key.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.Num1Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.Num1Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num1Key.Location = new System.Drawing.Point(1308, 290);
             this.Num1Key.Name = "Num1Key";
             this.Num1Key.Size = new System.Drawing.Size(70, 70);
@@ -759,7 +831,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // Num2Key
             // 
-            this.Num2Key.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.Num2Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.Num2Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num2Key.Location = new System.Drawing.Point(1378, 290);
             this.Num2Key.Name = "Num2Key";
             this.Num2Key.Size = new System.Drawing.Size(70, 70);
@@ -769,7 +842,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // Num3Key
             // 
-            this.Num3Key.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.Num3Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.Num3Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num3Key.Location = new System.Drawing.Point(1449, 290);
             this.Num3Key.Name = "Num3Key";
             this.Num3Key.Size = new System.Drawing.Size(70, 70);
@@ -779,7 +853,10 @@ namespace Shortcuts.Shortcuts.View
             // 
             // NumLockKey
             // 
+            this.NumLockKey.Appearance = System.Windows.Forms.Appearance.Button;
+            this.NumLockKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NumLockKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.NumLockKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.NumLockKey.Location = new System.Drawing.Point(1308, 80);
             this.NumLockKey.Name = "NumLockKey";
             this.NumLockKey.Size = new System.Drawing.Size(70, 70);
@@ -789,7 +866,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // NumDivideKey
             // 
-            this.NumDivideKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.NumDivideKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.NumDivideKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.NumDivideKey.Location = new System.Drawing.Point(1378, 80);
             this.NumDivideKey.Name = "NumDivideKey";
             this.NumDivideKey.Size = new System.Drawing.Size(70, 70);
@@ -797,19 +875,21 @@ namespace Shortcuts.Shortcuts.View
             this.NumDivideKey.Text = "/";
             this.NumDivideKey.UseVisualStyleBackColor = true;
             // 
-            // NumTimesKey
+            // NumMultiplyKey
             // 
-            this.NumTimesKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
-            this.NumTimesKey.Location = new System.Drawing.Point(1448, 80);
-            this.NumTimesKey.Name = "NumTimesKey";
-            this.NumTimesKey.Size = new System.Drawing.Size(70, 70);
-            this.NumTimesKey.TabIndex = 89;
-            this.NumTimesKey.Text = "*";
-            this.NumTimesKey.UseVisualStyleBackColor = true;
+            this.NumMultiplyKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.NumMultiplyKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.NumMultiplyKey.Location = new System.Drawing.Point(1448, 80);
+            this.NumMultiplyKey.Name = "NumMultiplyKey";
+            this.NumMultiplyKey.Size = new System.Drawing.Size(70, 70);
+            this.NumMultiplyKey.TabIndex = 89;
+            this.NumMultiplyKey.Text = "*";
+            this.NumMultiplyKey.UseVisualStyleBackColor = true;
             // 
             // NumMinusKey
             // 
-            this.NumMinusKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.NumMinusKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.NumMinusKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.NumMinusKey.Location = new System.Drawing.Point(1518, 80);
             this.NumMinusKey.Name = "NumMinusKey";
             this.NumMinusKey.Size = new System.Drawing.Size(70, 70);
@@ -819,7 +899,8 @@ namespace Shortcuts.Shortcuts.View
             // 
             // NumPlusKey
             // 
-            this.NumPlusKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.NumPlusKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.NumPlusKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.NumPlusKey.Location = new System.Drawing.Point(1518, 150);
             this.NumPlusKey.Name = "NumPlusKey";
             this.NumPlusKey.Size = new System.Drawing.Size(70, 140);
@@ -827,19 +908,21 @@ namespace Shortcuts.Shortcuts.View
             this.NumPlusKey.Text = "+";
             this.NumPlusKey.UseVisualStyleBackColor = true;
             // 
-            // Enter2key
+            // NumEnterKey
             // 
-            this.Enter2key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
-            this.Enter2key.Location = new System.Drawing.Point(1518, 290);
-            this.Enter2key.Name = "Enter2key";
-            this.Enter2key.Size = new System.Drawing.Size(70, 140);
-            this.Enter2key.TabIndex = 101;
-            this.Enter2key.Text = "Enter";
-            this.Enter2key.UseVisualStyleBackColor = true;
+            this.NumEnterKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.NumEnterKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.NumEnterKey.Location = new System.Drawing.Point(1518, 290);
+            this.NumEnterKey.Name = "NumEnterKey";
+            this.NumEnterKey.Size = new System.Drawing.Size(70, 140);
+            this.NumEnterKey.TabIndex = 101;
+            this.NumEnterKey.Text = "Enter";
+            this.NumEnterKey.UseVisualStyleBackColor = true;
             // 
             // SpaceKey
             // 
-            this.SpaceKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.SpaceKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.SpaceKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.SpaceKey.Location = new System.Drawing.Point(285, 360);
             this.SpaceKey.Name = "SpaceKey";
             this.SpaceKey.Size = new System.Drawing.Size(415, 70);
@@ -848,7 +931,10 @@ namespace Shortcuts.Shortcuts.View
             // 
             // WindowKey
             // 
-            this.WindowKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.WindowKey.Appearance = System.Windows.Forms.Appearance.Button;
+            this.WindowKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.WindowKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.WindowKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.WindowKey.Location = new System.Drawing.Point(105, 360);
             this.WindowKey.Name = "WindowKey";
             this.WindowKey.Size = new System.Drawing.Size(90, 70);
@@ -858,7 +944,10 @@ namespace Shortcuts.Shortcuts.View
             // 
             // FnKey
             // 
-            this.FnKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.FnKey.Appearance = System.Windows.Forms.Appearance.Button;
+            this.FnKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FnKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.FnKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.FnKey.Location = new System.Drawing.Point(790, 360);
             this.FnKey.Name = "FnKey";
             this.FnKey.Size = new System.Drawing.Size(120, 70);
@@ -868,7 +957,10 @@ namespace Shortcuts.Shortcuts.View
             // 
             // LeftAltKey
             // 
-            this.LeftAltKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.LeftAltKey.Appearance = System.Windows.Forms.Appearance.Button;
+            this.LeftAltKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LeftAltKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.LeftAltKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.LeftAltKey.Location = new System.Drawing.Point(195, 360);
             this.LeftAltKey.Name = "LeftAltKey";
             this.LeftAltKey.Size = new System.Drawing.Size(90, 70);
@@ -878,7 +970,10 @@ namespace Shortcuts.Shortcuts.View
             // 
             // RightCtrlKey
             // 
-            this.RightCtrlKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.RightCtrlKey.Appearance = System.Windows.Forms.Appearance.Button;
+            this.RightCtrlKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RightCtrlKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.RightCtrlKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.RightCtrlKey.Location = new System.Drawing.Point(910, 360);
             this.RightCtrlKey.Name = "RightCtrlKey";
             this.RightCtrlKey.Size = new System.Drawing.Size(138, 70);
@@ -888,7 +983,10 @@ namespace Shortcuts.Shortcuts.View
             // 
             // AltGrKey
             // 
-            this.AltGrKey.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.AltGrKey.Appearance = System.Windows.Forms.Appearance.Button;
+            this.AltGrKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AltGrKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.AltGrKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.AltGrKey.Location = new System.Drawing.Point(700, 359);
             this.AltGrKey.Name = "AltGrKey";
             this.AltGrKey.Size = new System.Drawing.Size(90, 70);
@@ -898,17 +996,24 @@ namespace Shortcuts.Shortcuts.View
             // 
             // LeftCtrlKey
             // 
-            this.LeftCtrlKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.LeftCtrlKey.Appearance = System.Windows.Forms.Appearance.Button;
+            this.LeftCtrlKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LeftCtrlKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.LeftCtrlKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.LeftCtrlKey.Location = new System.Drawing.Point(0, 360);
             this.LeftCtrlKey.Name = "LeftCtrlKey";
             this.LeftCtrlKey.Size = new System.Drawing.Size(105, 70);
             this.LeftCtrlKey.TabIndex = 67;
             this.LeftCtrlKey.Text = "Ctrl";
+            this.LeftCtrlKey.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LeftCtrlKey.UseVisualStyleBackColor = true;
             // 
             // EscapeKey
             // 
-            this.EscapeKey.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.EscapeKey.Appearance = System.Windows.Forms.Appearance.Button;
+            this.EscapeKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EscapeKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.EscapeKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.EscapeKey.Location = new System.Drawing.Point(0, 0);
             this.EscapeKey.Name = "EscapeKey";
             this.EscapeKey.Size = new System.Drawing.Size(70, 70);
@@ -919,6 +1024,7 @@ namespace Shortcuts.Shortcuts.View
             // HashKey
             // 
             this.HashKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.HashKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.HashKey.Location = new System.Drawing.Point(890, 220);
             this.HashKey.Name = "HashKey";
             this.HashKey.Size = new System.Drawing.Size(70, 70);
@@ -929,6 +1035,7 @@ namespace Shortcuts.Shortcuts.View
             // F1Key
             // 
             this.F1Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.F1Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F1Key.Location = new System.Drawing.Point(116, 0);
             this.F1Key.Name = "F1Key";
             this.F1Key.Size = new System.Drawing.Size(70, 70);
@@ -939,6 +1046,7 @@ namespace Shortcuts.Shortcuts.View
             // F2Key
             // 
             this.F2Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.F2Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F2Key.Location = new System.Drawing.Point(186, 0);
             this.F2Key.Name = "F2Key";
             this.F2Key.Size = new System.Drawing.Size(70, 70);
@@ -949,6 +1057,7 @@ namespace Shortcuts.Shortcuts.View
             // F3Key
             // 
             this.F3Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.F3Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F3Key.Location = new System.Drawing.Point(256, 0);
             this.F3Key.Name = "F3Key";
             this.F3Key.Size = new System.Drawing.Size(70, 70);
@@ -959,6 +1068,7 @@ namespace Shortcuts.Shortcuts.View
             // F4Key
             // 
             this.F4Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.F4Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F4Key.Location = new System.Drawing.Point(326, 0);
             this.F4Key.Name = "F4Key";
             this.F4Key.Size = new System.Drawing.Size(70, 70);
@@ -969,6 +1079,7 @@ namespace Shortcuts.Shortcuts.View
             // F5Key
             // 
             this.F5Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.F5Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F5Key.Location = new System.Drawing.Point(442, 0);
             this.F5Key.Name = "F5Key";
             this.F5Key.Size = new System.Drawing.Size(70, 70);
@@ -979,6 +1090,7 @@ namespace Shortcuts.Shortcuts.View
             // F6Key
             // 
             this.F6Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.F6Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F6Key.Location = new System.Drawing.Point(512, 0);
             this.F6Key.Name = "F6Key";
             this.F6Key.Size = new System.Drawing.Size(70, 70);
@@ -989,6 +1101,7 @@ namespace Shortcuts.Shortcuts.View
             // F7Key
             // 
             this.F7Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.F7Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F7Key.Location = new System.Drawing.Point(582, 0);
             this.F7Key.Name = "F7Key";
             this.F7Key.Size = new System.Drawing.Size(70, 70);
@@ -999,6 +1112,7 @@ namespace Shortcuts.Shortcuts.View
             // F8Key
             // 
             this.F8Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.F8Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F8Key.Location = new System.Drawing.Point(652, 0);
             this.F8Key.Name = "F8Key";
             this.F8Key.Size = new System.Drawing.Size(70, 70);
@@ -1009,6 +1123,7 @@ namespace Shortcuts.Shortcuts.View
             // F9Key
             // 
             this.F9Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.F9Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F9Key.Location = new System.Drawing.Point(768, 0);
             this.F9Key.Name = "F9Key";
             this.F9Key.Size = new System.Drawing.Size(70, 70);
@@ -1019,6 +1134,7 @@ namespace Shortcuts.Shortcuts.View
             // F10Key
             // 
             this.F10Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.F10Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F10Key.Location = new System.Drawing.Point(838, 0);
             this.F10Key.Name = "F10Key";
             this.F10Key.Size = new System.Drawing.Size(70, 70);
@@ -1029,6 +1145,7 @@ namespace Shortcuts.Shortcuts.View
             // F11Key
             // 
             this.F11Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.F11Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F11Key.Location = new System.Drawing.Point(908, 0);
             this.F11Key.Name = "F11Key";
             this.F11Key.Size = new System.Drawing.Size(70, 70);
@@ -1039,6 +1156,7 @@ namespace Shortcuts.Shortcuts.View
             // F12Key
             // 
             this.F12Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.F12Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F12Key.Location = new System.Drawing.Point(978, 0);
             this.F12Key.Name = "F12Key";
             this.F12Key.Size = new System.Drawing.Size(70, 70);
@@ -1046,49 +1164,54 @@ namespace Shortcuts.Shortcuts.View
             this.F12Key.Text = "F12";
             this.F12Key.UseVisualStyleBackColor = true;
             // 
-            // LeftArrowKey
+            // LeftKey
             // 
-            this.LeftArrowKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
-            this.LeftArrowKey.Location = new System.Drawing.Point(1073, 360);
-            this.LeftArrowKey.Name = "LeftArrowKey";
-            this.LeftArrowKey.Size = new System.Drawing.Size(70, 70);
-            this.LeftArrowKey.TabIndex = 84;
-            this.LeftArrowKey.Text = "◄";
-            this.LeftArrowKey.UseVisualStyleBackColor = true;
+            this.LeftKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.LeftKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.LeftKey.Location = new System.Drawing.Point(1073, 360);
+            this.LeftKey.Name = "LeftKey";
+            this.LeftKey.Size = new System.Drawing.Size(70, 70);
+            this.LeftKey.TabIndex = 84;
+            this.LeftKey.Text = "◄";
+            this.LeftKey.UseVisualStyleBackColor = true;
             // 
-            // DownArrowKey
+            // DownKey
             // 
-            this.DownArrowKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
-            this.DownArrowKey.Location = new System.Drawing.Point(1143, 361);
-            this.DownArrowKey.Name = "DownArrowKey";
-            this.DownArrowKey.Size = new System.Drawing.Size(70, 70);
-            this.DownArrowKey.TabIndex = 85;
-            this.DownArrowKey.Text = "▼";
-            this.DownArrowKey.UseVisualStyleBackColor = true;
+            this.DownKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.DownKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.DownKey.Location = new System.Drawing.Point(1143, 361);
+            this.DownKey.Name = "DownKey";
+            this.DownKey.Size = new System.Drawing.Size(70, 70);
+            this.DownKey.TabIndex = 85;
+            this.DownKey.Text = "▼";
+            this.DownKey.UseVisualStyleBackColor = true;
             // 
-            // RightArrowKey
+            // RightKey
             // 
-            this.RightArrowKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
-            this.RightArrowKey.Location = new System.Drawing.Point(1213, 360);
-            this.RightArrowKey.Name = "RightArrowKey";
-            this.RightArrowKey.Size = new System.Drawing.Size(70, 70);
-            this.RightArrowKey.TabIndex = 86;
-            this.RightArrowKey.Text = "►";
-            this.RightArrowKey.UseVisualStyleBackColor = true;
+            this.RightKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.RightKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.RightKey.Location = new System.Drawing.Point(1213, 360);
+            this.RightKey.Name = "RightKey";
+            this.RightKey.Size = new System.Drawing.Size(70, 70);
+            this.RightKey.TabIndex = 86;
+            this.RightKey.Text = "►";
+            this.RightKey.UseVisualStyleBackColor = true;
             // 
-            // button21
+            // UpKey
             // 
-            this.button21.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
-            this.button21.Location = new System.Drawing.Point(1143, 290);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(70, 70);
-            this.button21.TabIndex = 83;
-            this.button21.Text = "▲";
-            this.button21.UseVisualStyleBackColor = true;
+            this.UpKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.UpKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.UpKey.Location = new System.Drawing.Point(1143, 290);
+            this.UpKey.Name = "UpKey";
+            this.UpKey.Size = new System.Drawing.Size(70, 70);
+            this.UpKey.TabIndex = 83;
+            this.UpKey.Text = "▲";
+            this.UpKey.UseVisualStyleBackColor = true;
             // 
             // InsertKey
             // 
             this.InsertKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.InsertKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.InsertKey.Location = new System.Drawing.Point(1073, 80);
             this.InsertKey.Name = "InsertKey";
             this.InsertKey.Size = new System.Drawing.Size(70, 70);
@@ -1099,6 +1222,7 @@ namespace Shortcuts.Shortcuts.View
             // HomeKey
             // 
             this.HomeKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.HomeKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.HomeKey.Location = new System.Drawing.Point(1143, 80);
             this.HomeKey.Name = "HomeKey";
             this.HomeKey.Size = new System.Drawing.Size(70, 70);
@@ -1109,6 +1233,7 @@ namespace Shortcuts.Shortcuts.View
             // PageUpKey
             // 
             this.PageUpKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.PageUpKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.PageUpKey.Location = new System.Drawing.Point(1213, 80);
             this.PageUpKey.Name = "PageUpKey";
             this.PageUpKey.Size = new System.Drawing.Size(70, 70);
@@ -1116,39 +1241,43 @@ namespace Shortcuts.Shortcuts.View
             this.PageUpKey.Text = "Page\r\nUp";
             this.PageUpKey.UseVisualStyleBackColor = true;
             // 
-            // button25
+            // DeleteKey
             // 
-            this.button25.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
-            this.button25.Location = new System.Drawing.Point(1073, 150);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(70, 70);
-            this.button25.TabIndex = 80;
-            this.button25.Text = "Delete";
-            this.button25.UseVisualStyleBackColor = true;
+            this.DeleteKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.DeleteKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.DeleteKey.Location = new System.Drawing.Point(1073, 150);
+            this.DeleteKey.Name = "DeleteKey";
+            this.DeleteKey.Size = new System.Drawing.Size(70, 70);
+            this.DeleteKey.TabIndex = 80;
+            this.DeleteKey.Text = "Delete";
+            this.DeleteKey.UseVisualStyleBackColor = true;
             // 
-            // button26
+            // EndKey
             // 
-            this.button26.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
-            this.button26.Location = new System.Drawing.Point(1143, 150);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(70, 70);
-            this.button26.TabIndex = 81;
-            this.button26.Text = "End";
-            this.button26.UseVisualStyleBackColor = true;
+            this.EndKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.EndKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.EndKey.Location = new System.Drawing.Point(1143, 150);
+            this.EndKey.Name = "EndKey";
+            this.EndKey.Size = new System.Drawing.Size(70, 70);
+            this.EndKey.TabIndex = 81;
+            this.EndKey.Text = "End";
+            this.EndKey.UseVisualStyleBackColor = true;
             // 
-            // button27
+            // PageDownKey
             // 
-            this.button27.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
-            this.button27.Location = new System.Drawing.Point(1213, 150);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(70, 70);
-            this.button27.TabIndex = 82;
-            this.button27.Text = "Page\r\nDown";
-            this.button27.UseVisualStyleBackColor = true;
+            this.PageDownKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.PageDownKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.PageDownKey.Location = new System.Drawing.Point(1213, 150);
+            this.PageDownKey.Name = "PageDownKey";
+            this.PageDownKey.Size = new System.Drawing.Size(70, 70);
+            this.PageDownKey.TabIndex = 82;
+            this.PageDownKey.Text = "Page\r\nDown";
+            this.PageDownKey.UseVisualStyleBackColor = true;
             // 
             // PrintScreenKey
             // 
             this.PrintScreenKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.PrintScreenKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.PrintScreenKey.Location = new System.Drawing.Point(1073, 0);
             this.PrintScreenKey.Name = "PrintScreenKey";
             this.PrintScreenKey.Size = new System.Drawing.Size(70, 70);
@@ -1158,7 +1287,10 @@ namespace Shortcuts.Shortcuts.View
             // 
             // ScrollLockKey
             // 
+            this.ScrollLockKey.Appearance = System.Windows.Forms.Appearance.Button;
+            this.ScrollLockKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ScrollLockKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.ScrollLockKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.ScrollLockKey.Location = new System.Drawing.Point(1143, 0);
             this.ScrollLockKey.Name = "ScrollLockKey";
             this.ScrollLockKey.Size = new System.Drawing.Size(70, 70);
@@ -1169,6 +1301,7 @@ namespace Shortcuts.Shortcuts.View
             // PauseBreakKey
             // 
             this.PauseBreakKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
+            this.PauseBreakKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.PauseBreakKey.Location = new System.Drawing.Point(1213, 0);
             this.PauseBreakKey.Name = "PauseBreakKey";
             this.PauseBreakKey.Size = new System.Drawing.Size(70, 70);
@@ -1183,16 +1316,16 @@ namespace Shortcuts.Shortcuts.View
             this.Controls.Add(this.PauseBreakKey);
             this.Controls.Add(this.ScrollLockKey);
             this.Controls.Add(this.PrintScreenKey);
-            this.Controls.Add(this.button27);
-            this.Controls.Add(this.button26);
-            this.Controls.Add(this.button25);
+            this.Controls.Add(this.PageDownKey);
+            this.Controls.Add(this.EndKey);
+            this.Controls.Add(this.DeleteKey);
             this.Controls.Add(this.PageUpKey);
             this.Controls.Add(this.HomeKey);
             this.Controls.Add(this.InsertKey);
-            this.Controls.Add(this.button21);
-            this.Controls.Add(this.RightArrowKey);
-            this.Controls.Add(this.DownArrowKey);
-            this.Controls.Add(this.LeftArrowKey);
+            this.Controls.Add(this.UpKey);
+            this.Controls.Add(this.RightKey);
+            this.Controls.Add(this.DownKey);
+            this.Controls.Add(this.LeftKey);
             this.Controls.Add(this.F12Key);
             this.Controls.Add(this.F11Key);
             this.Controls.Add(this.F10Key);
@@ -1214,16 +1347,16 @@ namespace Shortcuts.Shortcuts.View
             this.Controls.Add(this.FnKey);
             this.Controls.Add(this.WindowKey);
             this.Controls.Add(this.SpaceKey);
-            this.Controls.Add(this.Enter2key);
+            this.Controls.Add(this.NumEnterKey);
             this.Controls.Add(this.NumPlusKey);
             this.Controls.Add(this.NumMinusKey);
-            this.Controls.Add(this.NumTimesKey);
+            this.Controls.Add(this.NumMultiplyKey);
             this.Controls.Add(this.NumDivideKey);
             this.Controls.Add(this.NumLockKey);
             this.Controls.Add(this.Num3Key);
             this.Controls.Add(this.Num2Key);
             this.Controls.Add(this.Num1Key);
-            this.Controls.Add(this.NumPointKey);
+            this.Controls.Add(this.NumDecimalKey);
             this.Controls.Add(this.Num0Key);
             this.Controls.Add(this.Num9Key);
             this.Controls.Add(this.Num8Key);
@@ -1231,7 +1364,7 @@ namespace Shortcuts.Shortcuts.View
             this.Controls.Add(this.Num6Key);
             this.Controls.Add(this.Num5Key);
             this.Controls.Add(this.Num4Key);
-            this.Controls.Add(this.EqualsKey);
+            this.Controls.Add(this.EqualKey);
             this.Controls.Add(this.MinusKey);
             this.Controls.Add(this.SevenKey);
             this.Controls.Add(this.ZeroKey);
@@ -1249,9 +1382,9 @@ namespace Shortcuts.Shortcuts.View
             this.Controls.Add(this.RightShiftKey);
             this.Controls.Add(this.BackslashKey);
             this.Controls.Add(this.LeftShiftKey);
-            this.Controls.Add(this.CapsLock);
-            this.Controls.Add(this.ForwardslashKey);
-            this.Controls.Add(this.FullStopKey);
+            this.Controls.Add(this.CapsLockKey);
+            this.Controls.Add(this.SlashKey);
+            this.Controls.Add(this.PeriodKey);
             this.Controls.Add(this.CommaKey);
             this.Controls.Add(this.MKey);
             this.Controls.Add(this.NKey);
@@ -1260,8 +1393,8 @@ namespace Shortcuts.Shortcuts.View
             this.Controls.Add(this.CKey);
             this.Controls.Add(this.XKey);
             this.Controls.Add(this.ZKey);
-            this.Controls.Add(this.QuoteKey);
-            this.Controls.Add(this.SemiColonKey);
+            this.Controls.Add(this.ApostropheKey);
+            this.Controls.Add(this.SemicolonKey);
             this.Controls.Add(this.LKey);
             this.Controls.Add(this.KKey);
             this.Controls.Add(this.JKey);
@@ -1289,118 +1422,111 @@ namespace Shortcuts.Shortcuts.View
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Button PrintScreenKey;
-        private System.Windows.Forms.Button ScrollLockKey;
-        private System.Windows.Forms.Button PauseBreakKey;
-
-        private System.Windows.Forms.Button InsertKey;
-        private System.Windows.Forms.Button HomeKey;
-        private System.Windows.Forms.Button PageUpKey;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button27;
-
-        private System.Windows.Forms.Button button21;
-
-        private System.Windows.Forms.Button LeftArrowKey;
-        private System.Windows.Forms.Button DownArrowKey;
-        private System.Windows.Forms.Button RightArrowKey;
-
-        private System.Windows.Forms.Button F1Key;
-        private System.Windows.Forms.Button F2Key;
-        private System.Windows.Forms.Button F3Key;
-        private System.Windows.Forms.Button F4Key;
-        private System.Windows.Forms.Button F5Key;
-        private System.Windows.Forms.Button F6Key;
-        private System.Windows.Forms.Button F7Key;
-        private System.Windows.Forms.Button F8Key;
-        private System.Windows.Forms.Button F9Key;
-        private System.Windows.Forms.Button F10Key;
-        private System.Windows.Forms.Button F11Key;
-        private System.Windows.Forms.Button F12Key;
-
-        private System.Windows.Forms.Button EscapeKey;
-        private System.Windows.Forms.Button HashKey;
-
-        private System.Windows.Forms.Button LeftCtrlKey;
-
+        public System.Windows.Forms.ToolTip toolTip1;
+        public System.Windows.Forms.Button PrintScreenKey;
+        public System.Windows.Forms.CheckBox ScrollLockKey;
+        public System.Windows.Forms.Button PauseBreakKey;
+        public System.Windows.Forms.Button InsertKey;
+        public System.Windows.Forms.Button HomeKey;
+        public System.Windows.Forms.Button PageUpKey;
+        public System.Windows.Forms.Button DeleteKey;
+        public System.Windows.Forms.Button EndKey;
+        public System.Windows.Forms.Button PageDownKey;
+        public System.Windows.Forms.Button UpKey;
+        public System.Windows.Forms.Button LeftKey;
+        public System.Windows.Forms.Button DownKey;
+        public System.Windows.Forms.Button RightKey;
+        public System.Windows.Forms.Button F1Key;
+        public System.Windows.Forms.Button F2Key;
+        public System.Windows.Forms.Button F3Key;
+        public System.Windows.Forms.Button F4Key;
+        public System.Windows.Forms.Button F5Key;
+        public System.Windows.Forms.Button F6Key;
+        public System.Windows.Forms.Button F7Key;
+        public System.Windows.Forms.Button F8Key;
+        public System.Windows.Forms.Button F9Key;
+        public System.Windows.Forms.Button F10Key;
+        public System.Windows.Forms.Button F11Key;
+        public System.Windows.Forms.Button F12Key;
+        public System.Windows.Forms.CheckBox EscapeKey;
+        public System.Windows.Forms.Button HashKey;
+        public System.Windows.Forms.CheckBox LeftCtrlKey;
+        public System.Windows.Forms.Button QKey;
+        public System.Windows.Forms.Button WKey;
+        public System.Windows.Forms.Button EKey;
+        public System.Windows.Forms.Button RKey;
+        public System.Windows.Forms.Button TKey;
+        public System.Windows.Forms.Button YKey;
+        public System.Windows.Forms.Button RightBracketKey;
+        public System.Windows.Forms.Button LeftBracketKey;
+        public System.Windows.Forms.Button PKey;
+        public System.Windows.Forms.Button OKey;
+        public System.Windows.Forms.Button IKey;
+        public System.Windows.Forms.Button UKey;
+        public System.Windows.Forms.Button TabKey;
+        public System.Windows.Forms.Button ApostropheKey;
+        public System.Windows.Forms.Button SemicolonKey;
+        public System.Windows.Forms.Button LKey;
+        public System.Windows.Forms.Button KKey;
+        public System.Windows.Forms.Button JKey;
+        public System.Windows.Forms.Button HKey;
+        public System.Windows.Forms.Button GKey;
+        public System.Windows.Forms.Button FKey;
+        public System.Windows.Forms.Button DKey;
+        public System.Windows.Forms.Button SKey;
+        public System.Windows.Forms.Button AKey;
+        public System.Windows.Forms.Button SlashKey;
+        public System.Windows.Forms.Button PeriodKey;
+        public System.Windows.Forms.Button CommaKey;
+        public System.Windows.Forms.Button MKey;
+        public System.Windows.Forms.Button NKey;
+        public System.Windows.Forms.Button BKey;
+        public System.Windows.Forms.Button VKey;
+        public System.Windows.Forms.Button CKey;
+        public System.Windows.Forms.Button XKey;
+        public System.Windows.Forms.Button ZKey;
+        public System.Windows.Forms.CheckBox CapsLockKey;
+        public System.Windows.Forms.CheckBox LeftShiftKey;
+        public System.Windows.Forms.Button BackslashKey;
+        public System.Windows.Forms.CheckBox RightShiftKey;
+        public System.Windows.Forms.Button BackspaceKey;
+        public System.Windows.Forms.Button EnterKey;
+        public System.Windows.Forms.Button GraveKey;
+        public System.Windows.Forms.Button ZeroKey;
+        public System.Windows.Forms.Button NineKey;
+        public System.Windows.Forms.Button EightKey;
+        public System.Windows.Forms.Button SixKey;
+        public System.Windows.Forms.Button FiveKey;
+        public System.Windows.Forms.Button FourKey;
+        public System.Windows.Forms.Button ThreeKey;
+        public System.Windows.Forms.Button TwoKey;
+        public System.Windows.Forms.Button OneKey;
+        public System.Windows.Forms.Button SevenKey;
+        public System.Windows.Forms.Button EqualKey;
+        public System.Windows.Forms.Button MinusKey;
+        public System.Windows.Forms.Button Num4Key;
+        public System.Windows.Forms.Button Num5Key;
+        public System.Windows.Forms.Button Num6Key;
+        public System.Windows.Forms.Button Num9Key;
+        public System.Windows.Forms.Button Num8Key;
+        public System.Windows.Forms.Button Num7Key;
+        public System.Windows.Forms.Button NumDecimalKey;
+        public System.Windows.Forms.Button Num0Key;
+        public System.Windows.Forms.Button Num3Key;
+        public System.Windows.Forms.Button Num2Key;
+        public System.Windows.Forms.Button Num1Key;
+        public System.Windows.Forms.Button NumMultiplyKey;
+        public System.Windows.Forms.Button NumDivideKey;
+        public System.Windows.Forms.Button NumMinusKey;
+        public System.Windows.Forms.Button NumPlusKey;
+        public System.Windows.Forms.Button NumEnterKey;
+        public System.Windows.Forms.Button SpaceKey;
+        public System.Windows.Forms.CheckBox WindowKey;
+        public System.Windows.Forms.CheckBox FnKey;
+        public System.Windows.Forms.CheckBox LeftAltKey;
+        public System.Windows.Forms.CheckBox RightCtrlKey;
+        public System.Windows.Forms.CheckBox AltGrKey;
+        public System.Windows.Forms.CheckBox NumLockKey;
         #endregion
-        private System.Windows.Forms.Button QKey;
-        private System.Windows.Forms.Button WKey;
-        private System.Windows.Forms.Button EKey;
-        private System.Windows.Forms.Button RKey;
-        private System.Windows.Forms.Button TKey;
-        private System.Windows.Forms.Button YKey;
-        private System.Windows.Forms.Button RightBracketKey;
-        private System.Windows.Forms.Button LeftBracketKey;
-        private System.Windows.Forms.Button PKey;
-        private System.Windows.Forms.Button OKey;
-        private System.Windows.Forms.Button IKey;
-        private System.Windows.Forms.Button UKey;
-        private System.Windows.Forms.Button TabKey;
-        private System.Windows.Forms.Button QuoteKey;
-        private System.Windows.Forms.Button SemiColonKey;
-        private System.Windows.Forms.Button LKey;
-        private System.Windows.Forms.Button KKey;
-        private System.Windows.Forms.Button JKey;
-        private System.Windows.Forms.Button HKey;
-        private System.Windows.Forms.Button GKey;
-        private System.Windows.Forms.Button FKey;
-        private System.Windows.Forms.Button DKey;
-        private System.Windows.Forms.Button SKey;
-        private System.Windows.Forms.Button AKey;
-        private System.Windows.Forms.Button ForwardslashKey;
-        private System.Windows.Forms.Button FullStopKey;
-        private System.Windows.Forms.Button CommaKey;
-        private System.Windows.Forms.Button MKey;
-        private System.Windows.Forms.Button NKey;
-        private System.Windows.Forms.Button BKey;
-        private System.Windows.Forms.Button VKey;
-        private System.Windows.Forms.Button CKey;
-        private System.Windows.Forms.Button XKey;
-        private System.Windows.Forms.Button ZKey;
-        private System.Windows.Forms.Button CapsLock;
-        private System.Windows.Forms.Button LeftShiftKey;
-        private System.Windows.Forms.Button BackslashKey;
-        private System.Windows.Forms.Button RightShiftKey;
-        private System.Windows.Forms.Button BackspaceKey;
-        private System.Windows.Forms.Button EnterKey;
-        private System.Windows.Forms.Button GraveKey;
-        private System.Windows.Forms.Button ZeroKey;
-        private System.Windows.Forms.Button NineKey;
-        private System.Windows.Forms.Button EightKey;
-        private System.Windows.Forms.Button SixKey;
-        private System.Windows.Forms.Button FiveKey;
-        private System.Windows.Forms.Button FourKey;
-        private System.Windows.Forms.Button ThreeKey;
-        private System.Windows.Forms.Button TwoKey;
-        private System.Windows.Forms.Button OneKey;
-        private System.Windows.Forms.Button SevenKey;
-        private System.Windows.Forms.Button EqualsKey;
-        private System.Windows.Forms.Button MinusKey;
-        private System.Windows.Forms.Button Num4Key;
-        private System.Windows.Forms.Button Num5Key;
-        private System.Windows.Forms.Button Num6Key;
-        private System.Windows.Forms.Button Num9Key;
-        private System.Windows.Forms.Button Num8Key;
-        private System.Windows.Forms.Button Num7Key;
-        private System.Windows.Forms.Button NumPointKey;
-        private System.Windows.Forms.Button Num0Key;
-        private System.Windows.Forms.Button Num3Key;
-        private System.Windows.Forms.Button Num2Key;
-        private System.Windows.Forms.Button Num1Key;
-       
-        private System.Windows.Forms.Button NumTimesKey;
-        private System.Windows.Forms.Button NumDivideKey;
-        private System.Windows.Forms.Button NumMinusKey;
-        private System.Windows.Forms.Button NumPlusKey;
-        private System.Windows.Forms.Button Enter2key;
-        private System.Windows.Forms.Button SpaceKey;
-        private System.Windows.Forms.Button WindowKey;
-        private System.Windows.Forms.Button FnKey;
-        private System.Windows.Forms.Button LeftAltKey;
-        private System.Windows.Forms.Button RightCtrlKey;
-        private System.Windows.Forms.Button AltGrKey;
-        private System.Windows.Forms.Button NumLockKey;
     }
 }

@@ -1,7 +1,7 @@
 using System.Drawing;
-using Shortcuts.Model;
+using Bolsover.Shortcuts.Model;
 
-namespace Shortcuts.Shortcuts.View
+namespace Bolsover.Shortcuts.View
 {
     public class KeyProperties
     {
@@ -11,6 +11,6 @@ namespace Shortcuts.Shortcuts.View
         public Color KeyColor { get; set; }
         public Color TextColor { get; set; }
         public bool IsEnabled { get; set; }
-        public Shortcut Shortcut { get; set; }     
+        public Shortcut Shortcut { get; set; }
     }
 }
