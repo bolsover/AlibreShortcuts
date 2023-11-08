@@ -62,9 +62,8 @@
             <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\AlibreX.dll</HintPath>
             <Private>False</Private>
         </Reference>
-        <Reference Include="DocumentFormat.OpenXml, Version=2.11.3.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
-            <HintPath>..\packages\DocumentFormat.OpenXml.2.11.3\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
-            <Private>False</Private>
+        <Reference Include="DocumentFormat.OpenXml, Version=2.20.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+          <HintPath>..\packages\DocumentFormat.OpenXml.2.20.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
         </Reference>
         <Reference Include="generics_NET">
             <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\generics_NET.dll</HintPath>
@@ -77,9 +76,9 @@
         </Reference>
         <Reference Include="System"/>
         <Reference Include="System.Core"/>
-        <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-            <HintPath>..\packages\System.Drawing.Common.5.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
-            <Private>False</Private>
+        <Reference Include="System.Drawing.Common, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+          <HintPath>..\packages\System.Drawing.Common.7.0.0\lib\net462\System.Drawing.Common.dll</HintPath>
+          <Private>False</Private>
         </Reference>
         <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
             <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
@@ -100,9 +99,11 @@
         <Reference Include="WindowsBase"/>
         <Reference Include="WpfMath, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
             <HintPath>..\packages\WpfMath.2.1.0\lib\net462\WpfMath.dll</HintPath>
+            <Private>False</Private>
         </Reference>
         <Reference Include="XamlMath.Shared, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
             <HintPath>..\packages\XamlMath.Shared.2.1.0\lib\net462\XamlMath.Shared.dll</HintPath>
+            <Private>False</Private>
         </Reference>
     </ItemGroup>
     <ItemGroup>
@@ -113,26 +114,30 @@
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <Compile Include="Shortcuts\Calculator\ShortcutsCalculator.cs"/>
         <Compile Include="Shortcuts\Calculator\ShortcutsHtmlReport.cs"/>
+        <Compile Include="Shortcuts\Model\KeyButtons.cs" />
+        <Compile Include="Shortcuts\Model\KeyCodes.cs" />
+        <Compile Include="Shortcuts\Model\KeyColor.cs" />
+        <Compile Include="Shortcuts\Model\KeyStrings.cs" />
         <Compile Include="Shortcuts\Model\KeyText.cs"/>
         <Compile Include="Shortcuts\Model\Shortcut.cs"/>
+        <Compile Include="Shortcuts\Model\ShortcutLists.cs" />
         <Compile Include="Shortcuts\Presenter\KeyboardPresenter.cs" />
-        <Compile Include="Shortcuts\Utils\LatexUtils.cs" />
+        <Compile Include="Shortcuts\Utils\StringImageUtils.cs" />
         <Compile Include="Shortcuts\View\KeyboardControl.cs">
             <SubType>UserControl</SubType>
         </Compile>
         <Compile Include="Shortcuts\View\KeyboardControl.Designer.cs">
             <DependentUpon>KeyboardControl.cs</DependentUpon>
         </Compile>
-        <Compile Include="Shortcuts\View\KeyBoardLayout.cs" />
         <Compile Include="Shortcuts\View\KeyboardShortcutForm.cs">
             <SubType>Form</SubType>
         </Compile>
         <Compile Include="Shortcuts\View\KeyboardShortcutForm.Designer.cs">
             <DependentUpon>KeyboardShortcutForm.cs</DependentUpon>
         </Compile>
-        <Compile Include="Shortcuts\View\KeyCodes.cs" />
         <Compile Include="Shortcuts\View\KeyProperty.cs" />
-        <Compile Include="Shortcuts\View\LatexStrings.cs" />
+        <Compile Include="Shortcuts\View\KeyboardForm.cs" />
+        <Compile Include="Shortcuts\View\KeyboardForm.Designer.cs" />
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
             <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -148,6 +153,7 @@
         <EmbeddedResource Include="Shortcuts\View\KeyboardShortcutForm.resx">
             <DependentUpon>KeyboardShortcutForm.cs</DependentUpon>
         </EmbeddedResource>
+        <EmbeddedResource Include="Shortcuts\View\KeyboardForm.resx" />
         <None Include="packages.config" />
         <None Include="Properties\Settings.settings">
             <Generator>SettingsSingleFileGenerator</Generator>

@@ -1,9 +1,7 @@
-namespace Bolsover.Shortcuts.View
+namespace Bolsover.Shortcuts.Model
 {
-    public class LatexStrings
+    public static class KeyStrings
     {
-       
-
         public const string A = @"A";
         public const string B = @"B";
         public const string C = @"C";
@@ -40,12 +38,8 @@ namespace Bolsover.Shortcuts.View
         public const string Eight = @"8";
         public const string Nine = @"9";
         public const string Zero = @"0";
-        public const string Ctrl = @"Ctrl";
-        public const string Shift = @"Shift";
-        public const string Alt = @"Alt";
         public const string Tab = @"Tab";
         public const string Enter = @"Enter";
-        public const string Esc = @"Esc";
         public const string Space = @"Space";
         public const string Backspace = @"Backspace";
         public const string Delete = @"Delete";
@@ -54,10 +48,10 @@ namespace Bolsover.Shortcuts.View
         public const string End = @"End";
         public const string PageUp = @"PgUp";
         public const string PageDown = @"PgDown";
-        public const string Up = @"Up";
-        public const string Down = @"Down";
-        public const string Left = @"Left";
-        public const string Right = @"Right";
+        public const string Up = @"▲";
+        public const string Down = @"▼";
+        public const string Left = @"◄";
+        public const string Right = @"►";
         public const string NumLock = @"NumLck";
         public const string NumPad0 = @"0";
         public const string NumPad1 = @"1";
@@ -79,7 +73,6 @@ namespace Bolsover.Shortcuts.View
         public const string PauseBreak = @"Break";
         public const string ScrollLock = @"ScrlLck";
         public const string CapsLock = @"CapsLck";
-
         public const string F1 = @"F1";
         public const string F2 = @"F2";
         public const string F3 = @"F3";
@@ -92,7 +85,6 @@ namespace Bolsover.Shortcuts.View
         public const string F10 = @"F10";
         public const string F11 = @"F11";
         public const string F12 = @"F12";
-
         public const string Escape = @"Esc";
         public const string LeftShift = @"Shift";
         public const string RightShift = @"Shift";
@@ -100,19 +92,19 @@ namespace Bolsover.Shortcuts.View
         public const string RightCtrl = @"Ctrl";
         public const string LeftAlt = @"Alt";
         public const string AltGr = @"AltGr";
-        public const string Grave = @"grave";
+        public const string Grave = @"`";
         public const string Minus = @"-";
         public const string Equal = @"=";
         public const string LeftBracket = @"[";
         public const string RightBracket = @"]";
-        public const string Backslash = @"\backslash";
+        public const string Backslash = @"\";
         public const string Semicolon = @";";
-        public const string Apostrophe = @"apos";
+        public const string Apostrophe = @"'";
         public const string Comma = @",";
         public const string Period = @".";
         public const string Slash = @"/";
-        public const string Hash = @"hash";
+        public const string Hash = @"#";
         public const string Fn = @"Fn";
-        public const string Win = @"Win";
+        public const string Win = @"Os";
     }
 }

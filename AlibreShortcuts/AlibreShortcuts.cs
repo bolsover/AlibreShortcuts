@@ -1,6 +1,7 @@
 ﻿using System;
 using AlibreAddOn;
 using AlibreX;
+using Bolsover.Shortcuts.View;
 using Shortcuts.Shortcuts.View;
 using Array = System.Array;
 
@@ -10,6 +11,7 @@ namespace Shortcuts
     {
         private const int MenuIdRoot = 401;
         private const int MenuIdShortcuts = 402;
+        private const int MenuIdKeyboard = 403;
         private int[] _menuIdsRoot;
 
         private IADRoot _alibreRoot;
@@ -26,9 +28,9 @@ namespace Shortcuts
 
         private void BuildMenu()
         {
-            _menuIdsRoot = new int[1]
+            _menuIdsRoot = new int[2]
             {
-                MenuIdShortcuts
+                MenuIdShortcuts, MenuIdKeyboard
             };
         }
 
@@ -81,6 +83,7 @@ namespace Shortcuts
                 case MenuIdRoot:
                     return "Shortcuts";
                 case MenuIdShortcuts: return "Shortcuts";
+                case MenuIdKeyboard: return "Keyboard";
             }
 
             return "";
@@ -156,12 +159,31 @@ namespace Shortcuts
             {
                 case MenuIdShortcuts:
                     return DoShortcuts(session);
+                case MenuIdKeyboard:
+                    return DoKeyboard(session);
             }
 
             return null;
         }
 
         #endregion
+        
+        private KeyboardForm keyboardForm;
+
+        private IAlibreAddOnCommand DoKeyboard(IADSession session)
+        {
+            if (keyboardForm == null)
+            {
+                keyboardForm = KeyboardForm.Instance();
+                keyboardForm.keyboardControl1.ProfileComboBox.SelectedIndex = 0;
+            }
+            else
+            {
+                keyboardForm.Visible = true;
+            }
+            return null;
+        }
+
 
         #region Shortcuts
 
@@ -178,10 +200,6 @@ namespace Shortcuts
             {
                 keyboardShortcutForm.Visible = true;
             }
-            // KeyboardShortcutForm keyboardShortcutForm = KeyboardShortcutForm.Instance();
-            //
-            // keyboardShortcutForm.Visible = true;
-
             return null;
         }
 

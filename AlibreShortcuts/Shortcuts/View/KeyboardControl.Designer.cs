@@ -66,10 +66,10 @@ namespace Bolsover.Shortcuts.View
             this.CommaKey = new System.Windows.Forms.Button();
             this.PeriodKey = new System.Windows.Forms.Button();
             this.SlashKey = new System.Windows.Forms.Button();
-            this.CapsLockKey = new System.Windows.Forms.CheckBox();
-            this.LeftShiftKey = new System.Windows.Forms.CheckBox();
+            this.CapsLockKey = new System.Windows.Forms.Button();
+            this.LeftShiftKey = new System.Windows.Forms.Button();
             this.BackslashKey = new System.Windows.Forms.Button();
-            this.RightShiftKey = new System.Windows.Forms.CheckBox();
+            this.RightShiftKey = new System.Windows.Forms.Button();
             this.BackspaceKey = new System.Windows.Forms.Button();
             this.EnterKey = new System.Windows.Forms.Button();
             this.GraveKey = new System.Windows.Forms.Button();
@@ -96,20 +96,20 @@ namespace Bolsover.Shortcuts.View
             this.Num1Key = new System.Windows.Forms.Button();
             this.Num2Key = new System.Windows.Forms.Button();
             this.Num3Key = new System.Windows.Forms.Button();
-            this.NumLockKey = new System.Windows.Forms.CheckBox();
+            this.NumLockKey = new System.Windows.Forms.Button();
             this.NumDivideKey = new System.Windows.Forms.Button();
             this.NumMultiplyKey = new System.Windows.Forms.Button();
             this.NumMinusKey = new System.Windows.Forms.Button();
             this.NumPlusKey = new System.Windows.Forms.Button();
             this.NumEnterKey = new System.Windows.Forms.Button();
             this.SpaceKey = new System.Windows.Forms.Button();
-            this.WindowKey = new System.Windows.Forms.CheckBox();
-            this.FnKey = new System.Windows.Forms.CheckBox();
-            this.LeftAltKey = new System.Windows.Forms.CheckBox();
-            this.RightCtrlKey = new System.Windows.Forms.CheckBox();
-            this.AltGrKey = new System.Windows.Forms.CheckBox();
-            this.LeftCtrlKey = new System.Windows.Forms.CheckBox();
-            this.EscapeKey = new System.Windows.Forms.CheckBox();
+            this.WindowKey = new System.Windows.Forms.Button();
+            this.FnKey = new System.Windows.Forms.Button();
+            this.LeftAltKey = new System.Windows.Forms.Button();
+            this.RightCtrlKey = new System.Windows.Forms.Button();
+            this.AltGrKey = new System.Windows.Forms.Button();
+            this.LeftCtrlKey = new System.Windows.Forms.Button();
+            this.EscapeKey = new System.Windows.Forms.Button();
             this.HashKey = new System.Windows.Forms.Button();
             this.F1Key = new System.Windows.Forms.Button();
             this.F2Key = new System.Windows.Forms.Button();
@@ -134,9 +134,10 @@ namespace Bolsover.Shortcuts.View
             this.EndKey = new System.Windows.Forms.Button();
             this.PageDownKey = new System.Windows.Forms.Button();
             this.PrintScreenKey = new System.Windows.Forms.Button();
-            this.ScrollLockKey = new System.Windows.Forms.CheckBox();
+            this.ScrollLockKey = new System.Windows.Forms.Button();
             this.PauseBreakKey = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.ProfileComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // QKey
@@ -240,13 +241,13 @@ namespace Bolsover.Shortcuts.View
             // 
             // PKey
             // 
-            this.PKey.Font = new System.Drawing.Font("Arial Narrow", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.PKey.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.PKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.PKey.Location = new System.Drawing.Point(735, 150);
             this.PKey.Name = "PKey";
             this.PKey.Size = new System.Drawing.Size(70, 70);
             this.PKey.TabIndex = 37;
-            this.PKey.Text = "Toggle Planes/Axes/Points/Surfaces";
+            this.PKey.Text = "P";
             this.toolTip1.SetToolTip(this.PKey, "Tooltip text goes here");
             this.PKey.UseVisualStyleBackColor = true;
             // 
@@ -308,13 +309,11 @@ namespace Bolsover.Shortcuts.View
             // DKey
             // 
             this.DKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
-            this.DKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.DKey.Location = new System.Drawing.Point(260, 220);
             this.DKey.Name = "DKey";
             this.DKey.Size = new System.Drawing.Size(70, 70);
             this.DKey.TabIndex = 44;
-            this.DKey.Text = "Auto Dimension Sketch";
-            this.DKey.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.DKey.Text = "D";
             this.DKey.UseVisualStyleBackColor = true;
             // 
             // FKey
@@ -517,8 +516,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // CapsLockKey
             // 
-            this.CapsLockKey.Appearance = System.Windows.Forms.Appearance.Button;
-            this.CapsLockKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CapsLockKey.Enabled = false;
             this.CapsLockKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.CapsLockKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.CapsLockKey.Location = new System.Drawing.Point(0, 220);
@@ -530,8 +528,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // LeftShiftKey
             // 
-            this.LeftShiftKey.Appearance = System.Windows.Forms.Appearance.Button;
-            this.LeftShiftKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LeftShiftKey.BackColor = System.Drawing.Color.Transparent;
             this.LeftShiftKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.LeftShiftKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.LeftShiftKey.Location = new System.Drawing.Point(0, 290);
@@ -539,10 +536,12 @@ namespace Bolsover.Shortcuts.View
             this.LeftShiftKey.Size = new System.Drawing.Size(90, 70);
             this.LeftShiftKey.TabIndex = 54;
             this.LeftShiftKey.Text = "↑\r\n";
-            this.LeftShiftKey.UseVisualStyleBackColor = true;
+            this.LeftShiftKey.UseVisualStyleBackColor = false;
+            this.LeftShiftKey.Click += new System.EventHandler(this.LeftShiftKey_Click);
             // 
             // BackslashKey
             // 
+            this.BackslashKey.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BackslashKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.BackslashKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.BackslashKey.Location = new System.Drawing.Point(90, 290);
@@ -554,8 +553,6 @@ namespace Bolsover.Shortcuts.View
             // 
             // RightShiftKey
             // 
-            this.RightShiftKey.Appearance = System.Windows.Forms.Appearance.Button;
-            this.RightShiftKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RightShiftKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.RightShiftKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.RightShiftKey.Location = new System.Drawing.Point(859, 290);
@@ -564,6 +561,7 @@ namespace Bolsover.Shortcuts.View
             this.RightShiftKey.TabIndex = 66;
             this.RightShiftKey.Text = "↑\r\n";
             this.RightShiftKey.UseVisualStyleBackColor = true;
+            this.RightShiftKey.Click += new System.EventHandler(this.RightShiftKey_Click);
             // 
             // BackspaceKey
             // 
@@ -853,8 +851,6 @@ namespace Bolsover.Shortcuts.View
             // 
             // NumLockKey
             // 
-            this.NumLockKey.Appearance = System.Windows.Forms.Appearance.Button;
-            this.NumLockKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NumLockKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.NumLockKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.NumLockKey.Location = new System.Drawing.Point(1308, 80);
@@ -931,8 +927,6 @@ namespace Bolsover.Shortcuts.View
             // 
             // WindowKey
             // 
-            this.WindowKey.Appearance = System.Windows.Forms.Appearance.Button;
-            this.WindowKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.WindowKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.WindowKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.WindowKey.Location = new System.Drawing.Point(105, 360);
@@ -944,8 +938,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // FnKey
             // 
-            this.FnKey.Appearance = System.Windows.Forms.Appearance.Button;
-            this.FnKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FnKey.Enabled = false;
             this.FnKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.FnKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.FnKey.Location = new System.Drawing.Point(790, 360);
@@ -957,8 +950,6 @@ namespace Bolsover.Shortcuts.View
             // 
             // LeftAltKey
             // 
-            this.LeftAltKey.Appearance = System.Windows.Forms.Appearance.Button;
-            this.LeftAltKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LeftAltKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.LeftAltKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.LeftAltKey.Location = new System.Drawing.Point(195, 360);
@@ -967,11 +958,10 @@ namespace Bolsover.Shortcuts.View
             this.LeftAltKey.TabIndex = 69;
             this.LeftAltKey.Text = "Alt";
             this.LeftAltKey.UseVisualStyleBackColor = true;
+            this.LeftAltKey.Click += new System.EventHandler(this.LeftAltKey_Click);
             // 
             // RightCtrlKey
             // 
-            this.RightCtrlKey.Appearance = System.Windows.Forms.Appearance.Button;
-            this.RightCtrlKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RightCtrlKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.RightCtrlKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.RightCtrlKey.Location = new System.Drawing.Point(910, 360);
@@ -980,11 +970,10 @@ namespace Bolsover.Shortcuts.View
             this.RightCtrlKey.TabIndex = 73;
             this.RightCtrlKey.Text = "Ctrl";
             this.RightCtrlKey.UseVisualStyleBackColor = true;
+            this.RightCtrlKey.Click += new System.EventHandler(this.RightCtrlKey_Click);
             // 
             // AltGrKey
             // 
-            this.AltGrKey.Appearance = System.Windows.Forms.Appearance.Button;
-            this.AltGrKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AltGrKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.AltGrKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.AltGrKey.Location = new System.Drawing.Point(700, 359);
@@ -993,11 +982,11 @@ namespace Bolsover.Shortcuts.View
             this.AltGrKey.TabIndex = 71;
             this.AltGrKey.Text = "AltGr";
             this.AltGrKey.UseVisualStyleBackColor = true;
+            this.AltGrKey.Click += new System.EventHandler(this.AltGrKey_Click);
             // 
             // LeftCtrlKey
             // 
-            this.LeftCtrlKey.Appearance = System.Windows.Forms.Appearance.Button;
-            this.LeftCtrlKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LeftCtrlKey.BackColor = System.Drawing.Color.Transparent;
             this.LeftCtrlKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.LeftCtrlKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.LeftCtrlKey.Location = new System.Drawing.Point(0, 360);
@@ -1005,13 +994,11 @@ namespace Bolsover.Shortcuts.View
             this.LeftCtrlKey.Size = new System.Drawing.Size(105, 70);
             this.LeftCtrlKey.TabIndex = 67;
             this.LeftCtrlKey.Text = "Ctrl";
-            this.LeftCtrlKey.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LeftCtrlKey.UseVisualStyleBackColor = true;
+            this.LeftCtrlKey.UseVisualStyleBackColor = false;
+            this.LeftCtrlKey.Click += new System.EventHandler(this.LeftCtrlKey_Click);
             // 
             // EscapeKey
             // 
-            this.EscapeKey.Appearance = System.Windows.Forms.Appearance.Button;
-            this.EscapeKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EscapeKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.EscapeKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.EscapeKey.Location = new System.Drawing.Point(0, 0);
@@ -1287,8 +1274,6 @@ namespace Bolsover.Shortcuts.View
             // 
             // ScrollLockKey
             // 
-            this.ScrollLockKey.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ScrollLockKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ScrollLockKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.ScrollLockKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.ScrollLockKey.Location = new System.Drawing.Point(1143, 0);
@@ -1309,10 +1294,20 @@ namespace Bolsover.Shortcuts.View
             this.PauseBreakKey.Text = "Pause\r\nBreak";
             this.PauseBreakKey.UseVisualStyleBackColor = true;
             // 
+            // ProfileComboBox
+            // 
+            this.ProfileComboBox.FormattingEnabled = true;
+            this.ProfileComboBox.Location = new System.Drawing.Point(1308, 31);
+            this.ProfileComboBox.Name = "ProfileComboBox";
+            this.ProfileComboBox.Size = new System.Drawing.Size(277, 24);
+            this.ProfileComboBox.TabIndex = 104;
+            this.ProfileComboBox.SelectedIndexChanged += new System.EventHandler(this.ProfileComboBox_SelectedIndexChanged);
+            // 
             // KeyboardControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.ProfileComboBox);
             this.Controls.Add(this.PauseBreakKey);
             this.Controls.Add(this.ScrollLockKey);
             this.Controls.Add(this.PrintScreenKey);
@@ -1422,9 +1417,11 @@ namespace Bolsover.Shortcuts.View
             this.ResumeLayout(false);
         }
 
+        public System.Windows.Forms.ComboBox ProfileComboBox;
+
         public System.Windows.Forms.ToolTip toolTip1;
         public System.Windows.Forms.Button PrintScreenKey;
-        public System.Windows.Forms.CheckBox ScrollLockKey;
+        public System.Windows.Forms.Button ScrollLockKey;
         public System.Windows.Forms.Button PauseBreakKey;
         public System.Windows.Forms.Button InsertKey;
         public System.Windows.Forms.Button HomeKey;
@@ -1448,9 +1445,9 @@ namespace Bolsover.Shortcuts.View
         public System.Windows.Forms.Button F10Key;
         public System.Windows.Forms.Button F11Key;
         public System.Windows.Forms.Button F12Key;
-        public System.Windows.Forms.CheckBox EscapeKey;
+        public System.Windows.Forms.Button EscapeKey;
         public System.Windows.Forms.Button HashKey;
-        public System.Windows.Forms.CheckBox LeftCtrlKey;
+        public System.Windows.Forms.Button LeftCtrlKey;
         public System.Windows.Forms.Button QKey;
         public System.Windows.Forms.Button WKey;
         public System.Windows.Forms.Button EKey;
@@ -1485,10 +1482,10 @@ namespace Bolsover.Shortcuts.View
         public System.Windows.Forms.Button CKey;
         public System.Windows.Forms.Button XKey;
         public System.Windows.Forms.Button ZKey;
-        public System.Windows.Forms.CheckBox CapsLockKey;
-        public System.Windows.Forms.CheckBox LeftShiftKey;
+        public System.Windows.Forms.Button CapsLockKey;
+        public System.Windows.Forms.Button LeftShiftKey;
         public System.Windows.Forms.Button BackslashKey;
-        public System.Windows.Forms.CheckBox RightShiftKey;
+        public System.Windows.Forms.Button RightShiftKey;
         public System.Windows.Forms.Button BackspaceKey;
         public System.Windows.Forms.Button EnterKey;
         public System.Windows.Forms.Button GraveKey;
@@ -1521,12 +1518,12 @@ namespace Bolsover.Shortcuts.View
         public System.Windows.Forms.Button NumPlusKey;
         public System.Windows.Forms.Button NumEnterKey;
         public System.Windows.Forms.Button SpaceKey;
-        public System.Windows.Forms.CheckBox WindowKey;
-        public System.Windows.Forms.CheckBox FnKey;
-        public System.Windows.Forms.CheckBox LeftAltKey;
-        public System.Windows.Forms.CheckBox RightCtrlKey;
-        public System.Windows.Forms.CheckBox AltGrKey;
-        public System.Windows.Forms.CheckBox NumLockKey;
+        public System.Windows.Forms.Button WindowKey;
+        public System.Windows.Forms.Button FnKey;
+        public System.Windows.Forms.Button LeftAltKey;
+        public System.Windows.Forms.Button RightCtrlKey;
+        public System.Windows.Forms.Button AltGrKey;
+        public System.Windows.Forms.Button NumLockKey;
         #endregion
     }
 }

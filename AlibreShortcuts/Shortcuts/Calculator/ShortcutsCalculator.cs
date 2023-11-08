@@ -231,13 +231,7 @@ namespace Bolsover.Shortcuts.Calculator
             return productRoamingProfilePath;
         }
 
-        private string NonRoamingProfilePath()
-        {
-            var currentUserNonRoamingDirectory = ClientContext.Singleton.getCurrentUserNonRoamingDirectory(true);
-            var userProfileCurrentVersionFileName = ClientContext.Singleton.UserProfileCurrentVersionFileName;
-            var nonRoamingProfilePath = Path.Combine(currentUserNonRoamingDirectory.FullName, userProfileCurrentVersionFileName);
-            return nonRoamingProfilePath;
-        }
+       
 
         private Profile RetrieveUserProfile()
         {
