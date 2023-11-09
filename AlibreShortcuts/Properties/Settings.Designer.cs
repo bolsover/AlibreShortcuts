@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlibreBOM.Properties {
+namespace AlibreShortcuts.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -19,6 +19,18 @@ namespace AlibreBOM.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Blue")]
+        public global::System.Drawing.Color Button1BgColor {
+            get {
+                return ((global::System.Drawing.Color)(this["Button1BgColor"]));
+            }
+            set {
+                this["Button1BgColor"] = value;
             }
         }
     }

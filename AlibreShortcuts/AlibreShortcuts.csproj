@@ -58,6 +58,9 @@
             <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\AlibreAddOn.dll</HintPath>
             <Private>False</Private>
         </Reference>
+        <Reference Include="AlibreShortcuts">
+          <HintPath>bin\Release\AlibreShortcuts.dll</HintPath>
+        </Reference>
         <Reference Include="AlibreX">
             <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\AlibreX.dll</HintPath>
             <Private>False</Private>
@@ -123,6 +126,18 @@
         <Compile Include="Shortcuts\Model\ShortcutLists.cs" />
         <Compile Include="Shortcuts\Presenter\KeyboardPresenter.cs" />
         <Compile Include="Shortcuts\Utils\StringImageUtils.cs" />
+        <Compile Include="Shortcuts\View\ColorPreferences.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Shortcuts\View\ColorPreferences.Designer.cs">
+          <DependentUpon>ColorPreferences.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Shortcuts\View\ColorPreferencesForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Shortcuts\View\ColorPreferencesForm.Designer.cs">
+          <DependentUpon>ColorPreferencesForm.cs</DependentUpon>
+        </Compile>
         <Compile Include="Shortcuts\View\KeyboardControl.cs">
             <SubType>UserControl</SubType>
         </Compile>
@@ -147,6 +162,12 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
+        <EmbeddedResource Include="Shortcuts\View\ColorPreferences.resx">
+          <DependentUpon>ColorPreferences.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Shortcuts\View\ColorPreferencesForm.resx">
+          <DependentUpon>ColorPreferencesForm.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Shortcuts\View\KeyboardControl.resx">
             <DependentUpon>KeyboardControl.cs</DependentUpon>
         </EmbeddedResource>

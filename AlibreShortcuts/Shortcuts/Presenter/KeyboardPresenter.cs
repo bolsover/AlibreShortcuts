@@ -2,14 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
-
 using System.Windows.Forms;
 using Bolsover.Shortcuts.Calculator;
 using Bolsover.Shortcuts.Model;
 using Bolsover.Shortcuts.Utils;
 using Bolsover.Shortcuts.View;
 using com.alibre.client;
-
 using com.alibre.ui;
 using Shortcut = Bolsover.Shortcuts.Model.Shortcut;
 
@@ -39,15 +37,52 @@ namespace Bolsover.Shortcuts.Presenter
             InitDropDown();
         }
 
+        /// <summary>
+        /// Clears any existing background colors and text from the keyboard buttons passed in the dictionary.
+        /// </summary>
+        /// <param name="buttonDictionary"></param>
+        private void ClearBackgroundColorsAndText(Dictionary<string, Button> buttonDictionary)
+        {
+            foreach (var key in buttonDictionary)
+            {
+                key.Value.BackColor = Color.Empty;
+                key.Value.Text = "";
+            }
+        }
+
+        /// <summary>
+        /// Adds the shortcut to the required shortcut list with the key being the keycode for the key button to be highlighted.
+        /// </summary>
+        /// <param name="shortcutList"></param>
+        /// <param name="nonModifierCode"></param>
+        /// <param name="sc"></param>
+        private static void AddShortcut(Dictionary<int, Shortcut> shortcutList, int nonModifierCode, Shortcut sc)
+        {
+            try
+            {
+                if (shortcutList.ContainsKey(nonModifierCode))
+                {
+                    shortcutList.Remove(nonModifierCode);
+                }
+                shortcutList.Add(nonModifierCode, sc);
+            }
+            catch (ArgumentException e1)
+            {
+               // Console.WriteLine(e1);
+                MessageBox.Show("Duplicate key code: " + nonModifierCode + " for shortcut: " + sc.Hint);    
+            }
+        }
+
         public void ProfileComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var profile = _view.ProfileComboBox.SelectedItem.ToString();
             ArrayList shortcuts = _shortcutsCalculator.RetrieveUserShortcutsByProfile(profile);
             // guard against null or empty list
-            if (shortcuts   == null || shortcuts.Count == 0)
+            if (shortcuts == null || shortcuts.Count == 0)
             {
                 shortcuts = _shortcutsCalculator.RetrieveStandardShortcutsByProfile(profile);
             }
+// initialize the shortcut lists
             _shortcutLists.AltShortcuts = new Dictionary<int, Shortcut>();
             _shortcutLists.AltShiftShortcuts = new Dictionary<int, Shortcut>();
             _shortcutLists.CtrlShortcuts = new Dictionary<int, Shortcut>();
@@ -56,16 +91,12 @@ namespace Bolsover.Shortcuts.Presenter
             _shortcutLists.CtrlShiftShortcuts = new Dictionary<int, Shortcut>();
             _shortcutLists.ShiftShortcuts = new Dictionary<int, Shortcut>();
             _shortcutLists.NoModifierShortcuts = new Dictionary<int, Shortcut>();
-            var dictionary = KeyCodes.KeyCodesDictionaryByIndex();
             // clear all selections except modifer keys
-            foreach (var key in KeyButtons.ButtonDictionaryExcModifiers(_view))
-            {
-                key.Value.BackColor = Color.Empty;
-                key.Value.Text = "";
-            }
+            ClearBackgroundColorsAndText(KeyButtons.ButtonDictionaryExcModifiers(_view));
 
             foreach (Shortcut sc in shortcuts)
             {
+                // omit any shortcuts that don't have a hint
                 if (sc.Hint == null)
                 {
                     continue;
@@ -75,116 +106,100 @@ namespace Bolsover.Shortcuts.Presenter
                 switch (shortcutModifierType)
                 {
                     case ShortcutModifierType.Alt:
-                        _shortcutLists.AltShortcuts.Add(nonModifierCode, sc);
+                        AddShortcut(_shortcutLists.AltShortcuts, nonModifierCode, sc);
                         break;
                     case ShortcutModifierType.AltShift:
-                        _shortcutLists.AltShiftShortcuts.Add(nonModifierCode, sc);
+                        AddShortcut(_shortcutLists.AltShiftShortcuts, nonModifierCode, sc);
                         break;
                     case ShortcutModifierType.Ctrl:
-                        _shortcutLists.CtrlShortcuts.Add(nonModifierCode, sc);
+                        AddShortcut(_shortcutLists.CtrlShortcuts, nonModifierCode, sc);
                         break;
                     case ShortcutModifierType.CtrlAlt:
-                        _shortcutLists.CtrlAltShortcuts.Add(nonModifierCode, sc);
+                        AddShortcut(_shortcutLists.CtrlAltShortcuts, nonModifierCode, sc);
                         break;
                     case ShortcutModifierType.CtrlAltShift:
-                        _shortcutLists.CtrlAltShiftShortcuts.Add(nonModifierCode, sc);
+                        AddShortcut(_shortcutLists.CtrlAltShiftShortcuts, nonModifierCode, sc);
                         break;
                     case ShortcutModifierType.CtrlShift:
-                        _shortcutLists.CtrlShiftShortcuts.Add(nonModifierCode, sc);
+                        AddShortcut(_shortcutLists.CtrlShiftShortcuts, nonModifierCode, sc);
                         break;
                     case ShortcutModifierType.Shift:
-                        _shortcutLists.ShiftShortcuts.Add(nonModifierCode, sc);
+                        AddShortcut(_shortcutLists.ShiftShortcuts, nonModifierCode, sc);
                         break;
                     case ShortcutModifierType.None:
-                        _shortcutLists.NoModifierShortcuts.Add(nonModifierCode, sc);
+                        AddShortcut(_shortcutLists.NoModifierShortcuts, nonModifierCode, sc);
                         break;
+                    case ShortcutModifierType.Meta: break;
+                    default: throw new ArgumentOutOfRangeException();
                 }
             }
 
             ShowShortcutsByModifierType();
-          
         }
 
+        /// <summary>
+        /// Applies the background color and text to the keyboard buttons based on the shortcut list passed in.
+        /// </summary>
+        /// <param name="shortCutList"></param>
+        /// <param name="backColor"></param>
+        private void ApplyShortcutsBasedOnKeys(Dictionary<int, Shortcut> shortCutList, Color backColor)
+        {
+            var dictionary = KeyCodes.KeyCodesDictionaryByIndex();
+            foreach (var v in shortCutList)
+            {
+                var kc = dictionary[v.Key];
+                var button = KeyButtons.GetButton(_view, kc.KeyName);
+                button.BackColor = backColor;
+                button.Text = v.Value.Hint;
+            }
+        }
+
+        /// <summary>
+        /// Clears any existing background color and text from the keyboard buttons.
+        /// Sets the background color and text based on the modifier keys selected.
+        /// </summary>
         private void ShowShortcutsByModifierType()
         {
+            Color orange = Color.Orange;
+            Color orchid = Color.Orchid;
+            Color cornflowerBlue = Color.CornflowerBlue;
+            Color darkSeaGreen = Color.DarkSeaGreen;
+            Color chartreuse = Color.Chartreuse;
+            
             // clear all selections except modifier keys
-            foreach (var key in KeyButtons.ButtonDictionaryExcModifiers(_view))
-            {
-                key.Value.BackColor = Color.Empty;
-                key.Value.Text = "";
-            }
-            var dictionary = KeyCodes.KeyCodesDictionaryByIndex();
+            ClearBackgroundColorsAndText(KeyButtons.ButtonDictionaryExcModifiers(_view));
+            
             if (_isCtrlSelected && _isAltSelected && _isShiftSelected)
             {
-                foreach (var v in _shortcutLists.CtrlAltShiftShortcuts)
-                {
-                    KeyCodes kc = dictionary[v.Key];
-                    KeyButtons.GetButton(_view, kc.KeyName).BackColor = Color.Orange;
-                    KeyButtons.GetButton(_view, kc.KeyName).Text = v.Value.Hint;
-                }
+                ApplyShortcutsBasedOnKeys(_shortcutLists.CtrlAltShiftShortcuts, orange);
             }
             else if (_isCtrlSelected && _isAltSelected)
             {
-                foreach (var v in _shortcutLists.CtrlAltShortcuts)
-                {
-                    KeyCodes kc = dictionary[v.Key];
-                    KeyButtons.GetButton(_view, kc.KeyName).BackColor = Color.Orange;
-                    KeyButtons.GetButton(_view, kc.KeyName).Text = v.Value.Hint;
-                }
+                ApplyShortcutsBasedOnKeys(_shortcutLists.CtrlAltShortcuts, orange);
             }
             else if (_isCtrlSelected && _isShiftSelected)
             {
-                foreach (var v in _shortcutLists.CtrlShiftShortcuts)
-                {
-                    KeyCodes kc = dictionary[v.Key];
-                    KeyButtons.GetButton(_view, kc.KeyName).BackColor = Color.Orange;
-                    KeyButtons.GetButton(_view, kc.KeyName).Text = v.Value.Hint;
-                }
+                ApplyShortcutsBasedOnKeys(_shortcutLists.CtrlShiftShortcuts, orange);
             }
             else if (_isAltSelected && _isShiftSelected)
             {
-                foreach (var v in _shortcutLists.AltShiftShortcuts)
-                {
-                    KeyCodes kc = dictionary[v.Key];
-                    KeyButtons.GetButton(_view, kc.KeyName).BackColor = Color.Orange;
-                    KeyButtons.GetButton(_view, kc.KeyName).Text = v.Value.Hint;
-                }
+                ApplyShortcutsBasedOnKeys(_shortcutLists.AltShiftShortcuts, orange);
             }
             else if (_isCtrlSelected)
             {
-                foreach (var v in _shortcutLists.CtrlShortcuts)
-                {
-                    KeyCodes kc = dictionary[v.Key];
-                    KeyButtons.GetButton(_view, kc.KeyName).BackColor = Color.Orchid;
-                    KeyButtons.GetButton(_view, kc.KeyName).Text = v.Value.Hint;
-                }
+                ApplyShortcutsBasedOnKeys(_shortcutLists.CtrlShortcuts, orchid);
             }
             else if (_isAltSelected)
             {
-                foreach (var v in _shortcutLists.AltShortcuts)
-                {
-                    KeyCodes kc = dictionary[v.Key];
-                    KeyButtons.GetButton(_view, kc.KeyName).BackColor = Color.CornflowerBlue;
-                    KeyButtons.GetButton(_view, kc.KeyName).Text = v.Value.Hint;
-                }
+                ApplyShortcutsBasedOnKeys(_shortcutLists.AltShortcuts, cornflowerBlue);
             }
             else if (_isShiftSelected)
             {
-                foreach (var v in _shortcutLists.ShiftShortcuts)
-                {
-                    KeyCodes kc = dictionary[v.Key];
-                    KeyButtons.GetButton(_view, kc.KeyName).BackColor = Color.DarkSeaGreen;
-                    KeyButtons.GetButton(_view, kc.KeyName).Text = v.Value.Hint;
-                }
+                ApplyShortcutsBasedOnKeys(_shortcutLists.ShiftShortcuts, darkSeaGreen);
             }
             else
             {
-                foreach (var v in _shortcutLists.NoModifierShortcuts)
-                {
-                    KeyCodes kc = dictionary[v.Key];
-                    KeyButtons.GetButton(_view, kc.KeyName).BackColor = Color.Chartreuse;
-                    KeyButtons.GetButton(_view, kc.KeyName).Text = v.Value.Hint;
-                }
+                ApplyShortcutsBasedOnKeys(_shortcutLists.NoModifierShortcuts, chartreuse);
             }
         }
 
@@ -200,6 +215,10 @@ namespace Bolsover.Shortcuts.Presenter
             _view.ProfileComboBox.Items.AddRange(workspacePrefixes);
         }
 
+        /// <summary>
+        /// Sets the font of the text overlay on the key buttons.
+        /// </summary>
+        /// <param name="font"></param>
         private void TextOverlayFont(Font font)
         {
             foreach (var key in KeyButtons.ButtonDictionary(_view))
@@ -208,6 +227,9 @@ namespace Bolsover.Shortcuts.Presenter
             }
         }
 
+        /// <summary>
+        /// Sets the location of the text overlay on the key buttons to the top left.
+        /// </summary>
         private void TextOverlayLocation()
         {
             foreach (var key in KeyButtons.ButtonDictionary(_view))
@@ -229,6 +251,7 @@ namespace Bolsover.Shortcuts.Presenter
                 _view.LeftCtrlKey.BackColor = Color.Orchid;
                 _view.RightCtrlKey.BackColor = Color.Orchid;
             }
+
             ShowShortcutsByModifierType();
         }
 
@@ -245,6 +268,7 @@ namespace Bolsover.Shortcuts.Presenter
                 _view.LeftAltKey.BackColor = Color.CornflowerBlue;
                 _view.AltGrKey.BackColor = Color.CornflowerBlue;
             }
+
             ShowShortcutsByModifierType();
         }
 
@@ -261,6 +285,7 @@ namespace Bolsover.Shortcuts.Presenter
                 _view.LeftShiftKey.BackColor = Color.DarkSeaGreen;
                 _view.RightShiftKey.BackColor = Color.DarkSeaGreen;
             }
+
             ShowShortcutsByModifierType();
         }
 
@@ -295,14 +320,20 @@ namespace Bolsover.Shortcuts.Presenter
             key.DataBindings.Add(new Binding("Text", _keyText, keyTextName, true, DataSourceUpdateMode.OnPropertyChanged));
         }
 
+        /// <summary>
+        /// Binds the text property of the key buttons to the KeyText class.
+        /// </summary>
         private void DoDataBindings()
         {
             foreach (KeyValuePair<string, Button> key in KeyButtons.ButtonDictionary(_view))
             {
-                DoDataBinding(key.Value as Control, key.Key.ToString() + "Text");
+                DoDataBinding(key.Value, key.Key + "Text");
             }
         }
 
+        /// <summary>
+        /// Clears any default text from the keys.
+        /// </summary>
         private void ClearDefaultText()
         {
             foreach (KeyValuePair<string, Button> key in KeyButtons.ButtonDictionary(_view))
@@ -311,11 +342,14 @@ namespace Bolsover.Shortcuts.Presenter
             }
         }
 
+        /// <summary>
+        /// Sets the location of the text overlay on the key images to the bottom right.
+        /// </summary>
         private void SetupKeyImageLocation()
         {
             foreach (KeyValuePair<string, Button> key in KeyButtons.ButtonDictionary(_view))
             {
-                key.Value.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+                key.Value.ImageAlign = ContentAlignment.BottomRight;
             }
         }
 

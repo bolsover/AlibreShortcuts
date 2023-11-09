@@ -11,18 +11,20 @@
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CProgram_0020Files_005CAlibre_0020Design_002027_002E0_002E0_002E27038_005CProgram_005Cgenerics_005FNET_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CProgram_0020Files_005CAlibre_0020Design_002027_002E0_002E0_002E27038_005CProgram_005Cha_005Flicense_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CProgram_0020Files_005CAlibre_0020Design_002027_002E0_002E0_002E27038_005CProgram_005CSupportClass_002Edll/@EntryIndexedValue">True</s:Boolean>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=500db9de_002D1a9c_002D4b8a_002D84ca_002Df4239a02ae4a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestKeyboardControl #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=500db9de_002D1a9c_002D4b8a_002D84ca_002Df4239a02ae4a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestKeyboardControl #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::80A40A7C-78FF-437D-86F3-A8464DDBF648::.NETFramework,Version=v4.8.1::UnitTests.KeyboardTests.TestKeyboardControl&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::80A40A7C-78FF-437D-86F3-A8464DDBF648::.NETFramework,Version=v4.8.1::UnitTests.KeyboardTests.TestColorPreferences&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=595d1750_002Dceec_002D4aa5_002Dbf55_002D7da3a0788538/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestKeyboardControl" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=595d1750_002Dceec_002D4aa5_002Dbf55_002D7da3a0788538/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestKeyboardControl" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::80A40A7C-78FF-437D-86F3-A8464DDBF648::.NETFramework,Version=v4.8.1::UnitTests.KeyboardTests.TestKeyboardControl&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::80A40A7C-78FF-437D-86F3-A8464DDBF648::.NETFramework,Version=v4.8.1::UnitTests.KeyboardTests.TestDeconstructKeyCode&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::80A40A7C-78FF-437D-86F3-A8464DDBF648::.NETFramework,Version=v4.8.1::UnitTests.KeyboardTests.TestKeyButtons&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::80A40A7C-78FF-437D-86F3-A8464DDBF648::.NETFramework,Version=v4.8.1::UnitTests.KeyboardTests.KeyboardKeyTestForm&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::80A40A7C-78FF-437D-86F3-A8464DDBF648::.NETFramework,Version=v4.8.1::UnitTests.KeyboardTests.GenerateKeycodesDictionary&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::80A40A7C-78FF-437D-86F3-A8464DDBF648::.NETFramework,Version=v4.8.1::UnitTests.KeyboardTests.TestColorPreferences&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a6f8f0b9_002D44ca_002D4e47_002D9fc0_002D9c973ba532df/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestProfile" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
@@ -36,6 +38,11 @@
     &lt;TestId&gt;NUnit3x::80A40A7C-78FF-437D-86F3-A8464DDBF648::.NETFramework,Version=v4.8.1::UnitTests.KeyboardTests.TestKeysConverterGetStandard&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::80A40A7C-78FF-437D-86F3-A8464DDBF648::.NETFramework,Version=v4.8.1::UnitTests.KeyboardTests.TestKeysEnum&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::80A40A7C-78FF-437D-86F3-A8464DDBF648::.NETFramework,Version=v4.8.1::UnitTests.KeyboardTests.TestKeyboardControl&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e0a06755_002Dd523_002D44f0_002Db360_002Df59597ccac9b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestColorPreferences" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::80A40A7C-78FF-437D-86F3-A8464DDBF648::.NETFramework,Version=v4.8.1::UnitTests.KeyboardTests.TestColorPreferences&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	

@@ -176,10 +176,12 @@ namespace Shortcuts
             {
                 keyboardForm = KeyboardForm.Instance();
                 keyboardForm.keyboardControl1.ProfileComboBox.SelectedIndex = 0;
+                keyboardForm.TopMost = true;
             }
             else
             {
                 keyboardForm.Visible = true;
+                keyboardForm.TopMost = true;
             }
             return null;
         }
@@ -195,10 +197,12 @@ namespace Shortcuts
             {
                 keyboardShortcutForm = KeyboardShortcutForm.Instance();
                 keyboardShortcutForm.comboBox1.SelectedIndex = 0;
+                keyboardShortcutForm.TopMost = true;
             }
             else
             {
                 keyboardShortcutForm.Visible = true;
+                keyboardShortcutForm.TopMost = true;
             }
             return null;
         }

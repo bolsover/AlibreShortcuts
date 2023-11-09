@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlibreBOM.Properties {
+namespace AlibreShortcuts.Properties {
     using System;
     
     
