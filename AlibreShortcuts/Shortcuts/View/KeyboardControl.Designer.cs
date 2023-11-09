@@ -138,6 +138,7 @@ namespace Bolsover.Shortcuts.View
             this.PauseBreakKey = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.ProfileComboBox = new System.Windows.Forms.ComboBox();
+            this.ModifierText = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // QKey
@@ -1297,16 +1298,24 @@ namespace Bolsover.Shortcuts.View
             // ProfileComboBox
             // 
             this.ProfileComboBox.FormattingEnabled = true;
-            this.ProfileComboBox.Location = new System.Drawing.Point(1308, 31);
+            this.ProfileComboBox.Location = new System.Drawing.Point(1308, 0);
             this.ProfileComboBox.Name = "ProfileComboBox";
             this.ProfileComboBox.Size = new System.Drawing.Size(277, 24);
             this.ProfileComboBox.TabIndex = 104;
             this.ProfileComboBox.SelectedIndexChanged += new System.EventHandler(this.ProfileComboBox_SelectedIndexChanged);
             // 
+            // ModifierText
+            // 
+            this.ModifierText.Location = new System.Drawing.Point(1311, 47);
+            this.ModifierText.Name = "ModifierText";
+            this.ModifierText.Size = new System.Drawing.Size(277, 23);
+            this.ModifierText.TabIndex = 105;
+            // 
             // KeyboardControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.ModifierText);
             this.Controls.Add(this.ProfileComboBox);
             this.Controls.Add(this.PauseBreakKey);
             this.Controls.Add(this.ScrollLockKey);
@@ -1416,6 +1425,8 @@ namespace Bolsover.Shortcuts.View
             this.Size = new System.Drawing.Size(1588, 430);
             this.ResumeLayout(false);
         }
+
+        public System.Windows.Forms.Label ModifierText;
 
         public System.Windows.Forms.ComboBox ProfileComboBox;
 

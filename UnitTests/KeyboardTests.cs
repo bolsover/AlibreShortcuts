@@ -90,32 +90,34 @@ namespace UnitTests
         // }
 
 
-        // [Test]
-        // public void GenerateKeycodesDictionary()
-        // {
-        //     StringBuilder sb = new StringBuilder();
-        //     foreach (var key in KeyCodes.KeyCodesDictionary())
-        //     {
-        //         sb.Append("{");
-        //         sb.Append(key.Value.KeyCode);
-        //         sb.Append(", ");
-        //         sb.Append("new KeyCodes() { KeyCode = ");
-        //         sb.Append(key.Value.KeyCode);
-        //         sb.Append(", KeyName = \"");
-        //         sb.Append(key.Value.Description);
-        //         sb.Append("\", Description = \"");
-        //         sb.Append(key.Value.KeyName);
-        //         sb.Append("\", Code = \"");
-        //         sb.Append(key.Value.Code);
-        //         sb.Append("\" } },");
-        //         sb.AppendLine();
-        //      //   io.WriteLine(key.Key + " " + key.Value);
-        //     }
-        //     
-        //     io.WriteLine(sb.ToString());
-        //    
-        // }
-
+        [Test]
+        public void GenerateKeycodesDictionary()
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (var key in KeyCodes.KeyCodesDictionary())
+            {
+                sb.Append("{");
+                sb.Append(key.Value.KeyCode);
+                sb.Append(", ");
+                sb.Append("new KeyCodes() { KeyCode = ");
+                sb.Append(key.Value.KeyCode);
+                sb.Append(", KeyName = \"");
+                sb.Append(key.Value.Description);
+                sb.Append("\", Description = \"");
+                sb.Append(key.Value.KeyName);
+                sb.Append("\", Code = \"");
+                sb.Append(key.Value.Code);
+                sb.Append("\", KeyImage = ");
+                sb.Append("KeyStrings." + key.Value.Description);
+                sb.Append(" } },");
+                sb.AppendLine();
+             //   io.WriteLine(key.Key + " " + key.Value);
+            }
+            
+            io.WriteLine(sb.ToString());
+           
+        }
+     
         
     }
 }

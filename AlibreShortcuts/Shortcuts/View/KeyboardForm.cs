@@ -1,3 +1,4 @@
+using System.Reflection;
 using System.Windows.Forms;
 using Shortcuts;
 
@@ -11,9 +12,9 @@ namespace Bolsover.Shortcuts.View
         {
             InitializeComponent();
             Icon = Globals.Icon;
-           // InitDropDown();
-
-
+          
+          this.Text = "Keyboard Shortcuts Version: " + Assembly.GetExecutingAssembly().GetName().Version;
+         
             FormClosing += (sender, args) =>
             {
                 ((KeyboardForm) sender).Visible = false;

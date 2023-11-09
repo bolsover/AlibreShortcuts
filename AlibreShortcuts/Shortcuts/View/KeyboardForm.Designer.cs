@@ -33,7 +33,6 @@ namespace Bolsover.Shortcuts.View
         private void InitializeComponent()
         {
             this.keyboardControl1 = new Bolsover.Shortcuts.View.KeyboardControl();
-            // this.keyboardControl2 = new Bolsover.Shortcuts.View.KeyboardControl();
             this.SuspendLayout();
             // 
             // keyboardControl1
@@ -43,28 +42,19 @@ namespace Bolsover.Shortcuts.View
             this.keyboardControl1.Name = "keyboardControl1";
             this.keyboardControl1.Size = new System.Drawing.Size(1591, 431);
             this.keyboardControl1.TabIndex = 0;
-            // // 
-            // // keyboardControl2
-            // // 
-            // this.keyboardControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            // this.keyboardControl2.Location = new System.Drawing.Point(0, 0);
-            // this.keyboardControl2.Name = "keyboardControl2";
-            // this.keyboardControl2.Size = new System.Drawing.Size(1591, 431);
-            // this.keyboardControl2.TabIndex = 1;
+         
             // 
             // KeyboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1591, 431);
-            // this.Controls.Add(this.keyboardControl2);
+
             this.Controls.Add(this.keyboardControl1);
             this.Name = "KeyboardForm";
             this.Text = "Keyboard Shortcuts";
             this.ResumeLayout(false);
         }
-
-        // public Bolsover.Shortcuts.View.KeyboardControl keyboardControl2;
 
         public KeyboardControl keyboardControl1;
 
