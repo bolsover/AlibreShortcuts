@@ -60,7 +60,7 @@ namespace Bolsover.Shortcuts.Calculator
         public ArrayList RetrieveUserShortcutsByProfile(string profile)
         {
             ArrayList shortcuts = RetrieveUserShortcuts();
-            // XElement xml = ProfileToXml(RetrieveUserProfile());
+          //  XElement xml = ProfileToXml(RetrieveUserProfile());
             ArrayList profileShortcuts = new ArrayList();
             foreach (var sc in shortcuts)
             {

@@ -132,6 +132,7 @@ namespace Bolsover.Shortcuts.Calculator
             return tables;
         }
 
+       
         private string ToAbbreviatedTable(ArrayList shortcuts, Dictionary<string, Shortcut> standardShortcuts)
         {
             StringBuilder sb = new StringBuilder();
@@ -139,65 +140,31 @@ namespace Bolsover.Shortcuts.Calculator
 
             foreach (Shortcut sc in shortcuts)
             {
-                Shortcut standardShortcut = null;
-                if (standardShortcuts.ContainsKey(sc.Profile + "." + sc.Command))
+                if (standardShortcuts.TryGetValue(sc.Profile + "." + sc.Command, out Shortcut standardShortcut))
                 {
-                    standardShortcut = standardShortcuts[sc.Profile + "." + sc.Command];
+                    sc.ShortcutType = standardShortcut.KeyChar == sc.KeyChar ? ShortcutType.Default : ShortcutType.Override;
                 }
-
-                if (standardShortcut != null && standardShortcut.KeyChar == sc.KeyChar)
-                {
-                    sc.ShortcutType = ShortcutType.Default;
-                }
-
-                if (standardShortcut != null && standardShortcut.KeyChar != sc.KeyChar)
-                {
-                    sc.ShortcutType = ShortcutType.Override;
-                }
-
-                if (standardShortcut == null)
+                else
                 {
                     sc.ShortcutType = ShortcutType.Custom;
                 }
 
-
-                if (priorShortcut == null | (priorShortcut != null && priorShortcut.Profile != sc.Profile))
+                if (priorShortcut == null || priorShortcut.Profile != sc.Profile)
                 {
-                    sb.Append("<table>");
-                    sb.Append("<tr>");
-                    sb.Append("<th>");
-                    sb.Append("Hint");
-                    sb.Append("</th>");
-                    sb.Append("<th>");
-                    sb.Append("Shortcut");
-                    sb.Append("</th>");
-                    sb.Append("</tr>");
+                    sb.Append("<table><tr><th>Hint</th><th>Shortcut</th></tr>");
                 }
-                else
-                {
-                    if (!string.IsNullOrEmpty(sc.Hint))
-                    {
-                        switch (sc.ShortcutType)
-                        {
-                            case ShortcutType.Default:
-                                sb.Append("<tr>");
-                                break;
-                            case ShortcutType.Custom:
-                                sb.Append("<tr style=\"color:#0000ff\">");
-                                break;
-                            case ShortcutType.Override:
-                                sb.Append("<tr style=\"color:#ff0000\">");
-                                break;
-                        }
 
-                        sb.Append("<td>");
-                        sb.Append(sc.Hint);
-                        sb.Append("</td>");
-                        sb.Append("<td>");
-                        sb.Append(sc.KeyChar);
-                        sb.Append("</td>");
-                        sb.Append("</tr>");
-                    }
+                if (!sc.KeyChar.Equals("None") && !string.IsNullOrEmpty(sc.Hint)  )
+                {
+                    string color = sc.ShortcutType switch
+                    {
+                        ShortcutType.Default => "",
+                        ShortcutType.Custom => " style=\"color:#0000ff\"",
+                        ShortcutType.Override => " style=\"color:#ff0000\"",
+                        _ => ""
+                    };
+
+                    sb.Append($"<tr{color}><td>{sc.Hint}</td><td>{sc.KeyChar}</td></tr>");
                 }
 
                 priorShortcut = sc;
@@ -207,6 +174,7 @@ namespace Bolsover.Shortcuts.Calculator
 
             return sb.ToString();
         }
+       
 
         private string AddHtmlHeaderFooter(string html, string profile)
         {

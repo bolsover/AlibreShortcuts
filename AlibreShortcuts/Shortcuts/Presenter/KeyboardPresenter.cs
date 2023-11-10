@@ -59,30 +59,15 @@ namespace Bolsover.Shortcuts.Presenter
             }
         }
 
+        
         /// <summary>
-        /// Adds the shortcut to the required shortcut list with the key being the keycode for the key button to be highlighted.
+        /// Event handler for the ProfileComboBox's SelectedIndexChanged event.
+        /// This method is triggered when the selected item in the ProfileComboBox is changed.
+        /// It retrieves the shortcuts for the selected profile, initializes the shortcut lists,
+        /// clears the background colors and text of the keyboard buttons, and then applies the shortcuts to the keyboard.
         /// </summary>
-        /// <param name="shortcutList"></param>
-        /// <param name="nonModifierCode"></param>
-        /// <param name="sc"></param>
-        private static void AddShortcut(Dictionary<int, Shortcut> shortcutList, int nonModifierCode, Shortcut sc)
-        {
-            try
-            {
-                if (shortcutList.ContainsKey(nonModifierCode))
-                {
-                    shortcutList.Remove(nonModifierCode);
-                }
-
-                shortcutList.Add(nonModifierCode, sc);
-            }
-            catch (ArgumentException e1)
-            {
-                // Console.WriteLine(e1);
-                MessageBox.Show("Duplicate key code: " + nonModifierCode + " for shortcut: " + sc.Hint);
-            }
-        }
-
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">An EventArgs that contains the event data.</param>
         public void ProfileComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var profile = _view.ProfileComboBox.SelectedItem.ToString();
@@ -92,17 +77,7 @@ namespace Bolsover.Shortcuts.Presenter
             {
                 shortcuts = _shortcutsCalculator.RetrieveStandardShortcutsByProfile(profile);
             }
-
-// initialize the shortcut lists
-            _shortcutLists.AltShortcuts = new Dictionary<int, Shortcut>();
-            _shortcutLists.AltShiftShortcuts = new Dictionary<int, Shortcut>();
-            _shortcutLists.CtrlShortcuts = new Dictionary<int, Shortcut>();
-            _shortcutLists.CtrlAltShortcuts = new Dictionary<int, Shortcut>();
-            _shortcutLists.CtrlAltShiftShortcuts = new Dictionary<int, Shortcut>();
-            _shortcutLists.CtrlShiftShortcuts = new Dictionary<int, Shortcut>();
-            _shortcutLists.ShiftShortcuts = new Dictionary<int, Shortcut>();
-            _shortcutLists.NoModifierShortcuts = new Dictionary<int, Shortcut>();
-            // clear all selections except modifer keys
+            _shortcutLists.InitializeShortcutLists();
             ClearBackgroundColorsAndText(KeyButtons.ButtonDictionaryExcModifiers(_view));
 
             foreach (Shortcut sc in shortcuts)
@@ -114,35 +89,7 @@ namespace Bolsover.Shortcuts.Presenter
                 }
 
                 var nonModifierCode = sc.GetNonModifierCode(sc.Keycode, out var shortcutModifierType);
-                switch (shortcutModifierType)
-                {
-                    case ShortcutModifierType.Alt:
-                        AddShortcut(_shortcutLists.AltShortcuts, nonModifierCode, sc);
-                        break;
-                    case ShortcutModifierType.AltShift:
-                        AddShortcut(_shortcutLists.AltShiftShortcuts, nonModifierCode, sc);
-                        break;
-                    case ShortcutModifierType.Ctrl:
-                        AddShortcut(_shortcutLists.CtrlShortcuts, nonModifierCode, sc);
-                        break;
-                    case ShortcutModifierType.CtrlAlt:
-                        AddShortcut(_shortcutLists.CtrlAltShortcuts, nonModifierCode, sc);
-                        break;
-                    case ShortcutModifierType.CtrlAltShift:
-                        AddShortcut(_shortcutLists.CtrlAltShiftShortcuts, nonModifierCode, sc);
-                        break;
-                    case ShortcutModifierType.CtrlShift:
-                        AddShortcut(_shortcutLists.CtrlShiftShortcuts, nonModifierCode, sc);
-                        break;
-                    case ShortcutModifierType.Shift:
-                        AddShortcut(_shortcutLists.ShiftShortcuts, nonModifierCode, sc);
-                        break;
-                    case ShortcutModifierType.None:
-                        AddShortcut(_shortcutLists.NoModifierShortcuts, nonModifierCode, sc);
-                        break;
-                    case ShortcutModifierType.Meta: break;
-                    default: throw new ArgumentOutOfRangeException();
-                }
+                _shortcutLists.AddShortcutToAppropriateList(shortcutModifierType, nonModifierCode, sc);
             }
 
             ShowShortcutsByModifierType();
@@ -151,44 +98,34 @@ namespace Bolsover.Shortcuts.Presenter
         /// <summary>
         /// Applies the background color and text to the keyboard buttons based on the shortcut list passed in.
         /// </summary>
-        /// <param name="shortCutList"></param>
-        /// <param name="backColor"></param>
+        /// <param name="shortCutList">A dictionary of key-value pairs where the key is the key code and the value is the Shortcut object.</param>
+        /// <param name="backColor">The background color to be applied to the keyboard buttons.</param>
         private void ApplyShortcutsBasedOnKeys(Dictionary<int, Shortcut> shortCutList, Color backColor)
         {
+            // Get the dictionary of key codes by index
             var dictionary = KeyCodes.KeyCodesDictionaryByIndex();
+
+            // Iterate over each item in the shortcut list
             foreach (var v in shortCutList)
             {
-                KeyCodes kc = null;
-                try
+                // Try to get the KeyCodes object from the dictionary using the key from the shortcut list
+                // If the key is not found in the dictionary, skip the current iteration
+                if (!dictionary.TryGetValue(v.Key, out KeyCodes kc))
                 {
-                    kc = dictionary[v.Key];
-                }
-                catch (KeyNotFoundException e)
-                {
-                    // Console.WriteLine(e);
-                    MessageBox.Show("KeyCode not found: " + v.Key + " for shortcut: " + v.Value.Hint + " unable to set key text");
                     continue;
                 }
 
-                if (kc != null)
+                // Get the button corresponding to the key name from the KeyButtons class
+                // If the button is not found, skip the current iteration
+                Button button = KeyButtons.GetButton(_view, kc.KeyName);
+                if (button == null)
                 {
-                    Button button = null;
-                    try
-                    {
-                        button = KeyButtons.GetButton(_view, kc.KeyName);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Button not found: " + v.Key + " for shortcut: " + v.Value.Hint + " unable to set key text");
-                        continue;
-                    }
-                    if (button != null)
-                    {
-                        button.BackColor = backColor;
-                        button.Text = v.Value.Hint;
-                            
-                    }
+                    continue;
                 }
+
+                // Set the background color and text of the button
+                button.BackColor = backColor;
+                button.Text = v.Value.Hint;
             }
         }
 

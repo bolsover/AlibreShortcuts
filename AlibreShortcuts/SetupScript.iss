@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "AlibreShortcuts"
-#define MyAppVersion "2.2.0.0"
+#define MyAppVersion "2.3.0.0"
 #define MyAppPublisher "David Bolsover"
 
 [Setup]
