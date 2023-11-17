@@ -32,110 +32,110 @@ namespace Bolsover.Shortcuts.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.QKey = new System.Windows.Forms.Button();
-            this.WKey = new System.Windows.Forms.Button();
-            this.EKey = new System.Windows.Forms.Button();
-            this.RKey = new System.Windows.Forms.Button();
-            this.TKey = new System.Windows.Forms.Button();
-            this.YKey = new System.Windows.Forms.Button();
-            this.UKey = new System.Windows.Forms.Button();
-            this.IKey = new System.Windows.Forms.Button();
-            this.OKey = new System.Windows.Forms.Button();
-            this.PKey = new System.Windows.Forms.Button();
-            this.LeftBracketKey = new System.Windows.Forms.Button();
-            this.RightBracketKey = new System.Windows.Forms.Button();
-            this.TabKey = new System.Windows.Forms.Button();
-            this.AKey = new System.Windows.Forms.Button();
-            this.SKey = new System.Windows.Forms.Button();
-            this.DKey = new System.Windows.Forms.Button();
-            this.FKey = new System.Windows.Forms.Button();
-            this.GKey = new System.Windows.Forms.Button();
-            this.HKey = new System.Windows.Forms.Button();
-            this.JKey = new System.Windows.Forms.Button();
-            this.KKey = new System.Windows.Forms.Button();
-            this.LKey = new System.Windows.Forms.Button();
-            this.SemicolonKey = new System.Windows.Forms.Button();
-            this.ApostropheKey = new System.Windows.Forms.Button();
-            this.ZKey = new System.Windows.Forms.Button();
-            this.XKey = new System.Windows.Forms.Button();
-            this.CKey = new System.Windows.Forms.Button();
-            this.VKey = new System.Windows.Forms.Button();
-            this.BKey = new System.Windows.Forms.Button();
-            this.NKey = new System.Windows.Forms.Button();
-            this.MKey = new System.Windows.Forms.Button();
-            this.CommaKey = new System.Windows.Forms.Button();
-            this.PeriodKey = new System.Windows.Forms.Button();
-            this.SlashKey = new System.Windows.Forms.Button();
-            this.CapsLockKey = new System.Windows.Forms.Button();
-            this.LeftShiftKey = new System.Windows.Forms.Button();
-            this.BackslashKey = new System.Windows.Forms.Button();
-            this.RightShiftKey = new System.Windows.Forms.Button();
-            this.BackspaceKey = new System.Windows.Forms.Button();
-            this.EnterKey = new System.Windows.Forms.Button();
-            this.GraveKey = new System.Windows.Forms.Button();
-            this.OneKey = new System.Windows.Forms.Button();
-            this.TwoKey = new System.Windows.Forms.Button();
-            this.ThreeKey = new System.Windows.Forms.Button();
-            this.FourKey = new System.Windows.Forms.Button();
-            this.FiveKey = new System.Windows.Forms.Button();
-            this.SixKey = new System.Windows.Forms.Button();
-            this.EightKey = new System.Windows.Forms.Button();
-            this.NineKey = new System.Windows.Forms.Button();
-            this.ZeroKey = new System.Windows.Forms.Button();
-            this.SevenKey = new System.Windows.Forms.Button();
-            this.MinusKey = new System.Windows.Forms.Button();
-            this.EqualKey = new System.Windows.Forms.Button();
-            this.Num4Key = new System.Windows.Forms.Button();
-            this.Num5Key = new System.Windows.Forms.Button();
-            this.Num6Key = new System.Windows.Forms.Button();
-            this.Num7Key = new System.Windows.Forms.Button();
-            this.Num8Key = new System.Windows.Forms.Button();
-            this.Num9Key = new System.Windows.Forms.Button();
-            this.Num0Key = new System.Windows.Forms.Button();
-            this.NumDecimalKey = new System.Windows.Forms.Button();
-            this.Num1Key = new System.Windows.Forms.Button();
-            this.Num2Key = new System.Windows.Forms.Button();
-            this.Num3Key = new System.Windows.Forms.Button();
-            this.NumLockKey = new System.Windows.Forms.Button();
-            this.NumDivideKey = new System.Windows.Forms.Button();
-            this.NumMultiplyKey = new System.Windows.Forms.Button();
-            this.NumMinusKey = new System.Windows.Forms.Button();
-            this.NumPlusKey = new System.Windows.Forms.Button();
-            this.NumEnterKey = new System.Windows.Forms.Button();
-            this.SpaceKey = new System.Windows.Forms.Button();
-            this.WindowKey = new System.Windows.Forms.Button();
-            this.FnKey = new System.Windows.Forms.Button();
-            this.LeftAltKey = new System.Windows.Forms.Button();
-            this.RightCtrlKey = new System.Windows.Forms.Button();
-            this.AltGrKey = new System.Windows.Forms.Button();
-            this.LeftCtrlKey = new System.Windows.Forms.Button();
-            this.EscapeKey = new System.Windows.Forms.Button();
-            this.HashKey = new System.Windows.Forms.Button();
-            this.F1Key = new System.Windows.Forms.Button();
-            this.F2Key = new System.Windows.Forms.Button();
-            this.F3Key = new System.Windows.Forms.Button();
-            this.F4Key = new System.Windows.Forms.Button();
-            this.F5Key = new System.Windows.Forms.Button();
-            this.F6Key = new System.Windows.Forms.Button();
-            this.F7Key = new System.Windows.Forms.Button();
-            this.F8Key = new System.Windows.Forms.Button();
-            this.F9Key = new System.Windows.Forms.Button();
-            this.F10Key = new System.Windows.Forms.Button();
-            this.F11Key = new System.Windows.Forms.Button();
-            this.F12Key = new System.Windows.Forms.Button();
-            this.LeftKey = new System.Windows.Forms.Button();
-            this.DownKey = new System.Windows.Forms.Button();
-            this.RightKey = new System.Windows.Forms.Button();
-            this.UpKey = new System.Windows.Forms.Button();
-            this.InsertKey = new System.Windows.Forms.Button();
-            this.HomeKey = new System.Windows.Forms.Button();
-            this.PageUpKey = new System.Windows.Forms.Button();
-            this.DeleteKey = new System.Windows.Forms.Button();
-            this.EndKey = new System.Windows.Forms.Button();
-            this.PageDownKey = new System.Windows.Forms.Button();
-            this.PrintScreenKey = new System.Windows.Forms.Button();
-            this.ScrollLockKey = new System.Windows.Forms.Button();
-            this.PauseBreakKey = new System.Windows.Forms.Button();
+            this.QKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.WKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.EKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.RKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.TKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.YKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.UKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.IKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.OKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.PKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.LeftBracketKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.RightBracketKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.TabKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.AKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.SKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.DKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.FKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.GKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.HKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.JKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.KKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.LKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.SemicolonKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.ApostropheKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.ZKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.XKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.CKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.VKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.BKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.NKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.MKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.CommaKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.PeriodKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.SlashKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.CapsLockKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.LeftShiftKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.BackslashKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.RightShiftKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.BackspaceKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.EnterKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.GraveKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.OneKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.TwoKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.ThreeKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.FourKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.FiveKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.SixKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.EightKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.NineKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.ZeroKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.SevenKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.MinusKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.EqualKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.Num4Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.Num5Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.Num6Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.Num7Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.Num8Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.Num9Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.Num0Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.NumDecimalKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.Num1Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.Num2Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.Num3Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.NumLockKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.NumDivideKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.NumMultiplyKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.NumMinusKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.NumPlusKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.NumEnterKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.SpaceKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.WindowKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.FnKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.LeftAltKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.RightCtrlKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.AltGrKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.LeftCtrlKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.EscapeKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.HashKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.F1Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.F2Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.F3Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.F4Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.F5Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.F6Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.F7Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.F8Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.F9Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.F10Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.F11Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.F12Key = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.LeftKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.DownKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.RightKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.UpKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.InsertKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.HomeKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.PageUpKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.DeleteKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.EndKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.PageDownKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.PrintScreenKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.ScrollLockKey = new Bolsover.Shortcuts.View.ShortcutButton();
+            this.PauseBreakKey = new Bolsover.Shortcuts.View.ShortcutButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.ProfileComboBox = new System.Windows.Forms.ComboBox();
             this.ModifierText = new System.Windows.Forms.Label();
@@ -143,6 +143,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // QKey
             // 
+            this.QKey.AlibreShortcut = null;
             this.QKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.QKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.QKey.Location = new System.Drawing.Point(105, 150);
@@ -154,6 +155,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // WKey
             // 
+            this.WKey.AlibreShortcut = null;
             this.WKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.WKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.WKey.Location = new System.Drawing.Point(175, 150);
@@ -165,6 +167,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // EKey
             // 
+            this.EKey.AlibreShortcut = null;
             this.EKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.EKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.EKey.Location = new System.Drawing.Point(245, 150);
@@ -176,6 +179,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // RKey
             // 
+            this.RKey.AlibreShortcut = null;
             this.RKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.RKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.RKey.Location = new System.Drawing.Point(315, 150);
@@ -187,6 +191,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // TKey
             // 
+            this.TKey.AlibreShortcut = null;
             this.TKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.TKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.TKey.Location = new System.Drawing.Point(385, 150);
@@ -198,6 +203,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // YKey
             // 
+            this.YKey.AlibreShortcut = null;
             this.YKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.YKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.YKey.Location = new System.Drawing.Point(455, 150);
@@ -209,6 +215,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // UKey
             // 
+            this.UKey.AlibreShortcut = null;
             this.UKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.UKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.UKey.Location = new System.Drawing.Point(525, 150);
@@ -220,6 +227,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // IKey
             // 
+            this.IKey.AlibreShortcut = null;
             this.IKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.IKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.IKey.Location = new System.Drawing.Point(595, 150);
@@ -231,6 +239,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // OKey
             // 
+            this.OKey.AlibreShortcut = null;
             this.OKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.OKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.OKey.Location = new System.Drawing.Point(665, 150);
@@ -242,6 +251,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // PKey
             // 
+            this.PKey.AlibreShortcut = null;
             this.PKey.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.PKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.PKey.Location = new System.Drawing.Point(735, 150);
@@ -254,6 +264,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // LeftBracketKey
             // 
+            this.LeftBracketKey.AlibreShortcut = null;
             this.LeftBracketKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.LeftBracketKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.LeftBracketKey.Location = new System.Drawing.Point(805, 150);
@@ -265,6 +276,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // RightBracketKey
             // 
+            this.RightBracketKey.AlibreShortcut = null;
             this.RightBracketKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.RightBracketKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.RightBracketKey.Location = new System.Drawing.Point(875, 150);
@@ -276,6 +288,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // TabKey
             // 
+            this.TabKey.AlibreShortcut = null;
             this.TabKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.TabKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.TabKey.Location = new System.Drawing.Point(0, 150);
@@ -287,6 +300,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // AKey
             // 
+            this.AKey.AlibreShortcut = null;
             this.AKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.AKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.AKey.Location = new System.Drawing.Point(120, 220);
@@ -298,6 +312,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // SKey
             // 
+            this.SKey.AlibreShortcut = null;
             this.SKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.SKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.SKey.Location = new System.Drawing.Point(190, 220);
@@ -309,6 +324,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // DKey
             // 
+            this.DKey.AlibreShortcut = null;
             this.DKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.DKey.Location = new System.Drawing.Point(260, 220);
             this.DKey.Name = "DKey";
@@ -319,6 +335,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // FKey
             // 
+            this.FKey.AlibreShortcut = null;
             this.FKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.FKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.FKey.Location = new System.Drawing.Point(330, 220);
@@ -330,6 +347,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // GKey
             // 
+            this.GKey.AlibreShortcut = null;
             this.GKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.GKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.GKey.Location = new System.Drawing.Point(400, 220);
@@ -341,6 +359,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // HKey
             // 
+            this.HKey.AlibreShortcut = null;
             this.HKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.HKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.HKey.Location = new System.Drawing.Point(470, 220);
@@ -352,6 +371,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // JKey
             // 
+            this.JKey.AlibreShortcut = null;
             this.JKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.JKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.JKey.Location = new System.Drawing.Point(540, 220);
@@ -363,6 +383,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // KKey
             // 
+            this.KKey.AlibreShortcut = null;
             this.KKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.KKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.KKey.Location = new System.Drawing.Point(610, 220);
@@ -374,6 +395,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // LKey
             // 
+            this.LKey.AlibreShortcut = null;
             this.LKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.LKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.LKey.Location = new System.Drawing.Point(680, 220);
@@ -385,6 +407,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // SemicolonKey
             // 
+            this.SemicolonKey.AlibreShortcut = null;
             this.SemicolonKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.SemicolonKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.SemicolonKey.Location = new System.Drawing.Point(750, 220);
@@ -396,6 +419,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // ApostropheKey
             // 
+            this.ApostropheKey.AlibreShortcut = null;
             this.ApostropheKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.ApostropheKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.ApostropheKey.Location = new System.Drawing.Point(820, 220);
@@ -407,6 +431,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // ZKey
             // 
+            this.ZKey.AlibreShortcut = null;
             this.ZKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.ZKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.ZKey.Location = new System.Drawing.Point(160, 290);
@@ -418,6 +443,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // XKey
             // 
+            this.XKey.AlibreShortcut = null;
             this.XKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.XKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.XKey.Location = new System.Drawing.Point(230, 290);
@@ -429,6 +455,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // CKey
             // 
+            this.CKey.AlibreShortcut = null;
             this.CKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.CKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.CKey.Location = new System.Drawing.Point(300, 290);
@@ -440,6 +467,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // VKey
             // 
+            this.VKey.AlibreShortcut = null;
             this.VKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.VKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.VKey.Location = new System.Drawing.Point(370, 290);
@@ -451,6 +479,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // BKey
             // 
+            this.BKey.AlibreShortcut = null;
             this.BKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.BKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.BKey.Location = new System.Drawing.Point(440, 290);
@@ -462,6 +491,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // NKey
             // 
+            this.NKey.AlibreShortcut = null;
             this.NKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.NKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.NKey.Location = new System.Drawing.Point(510, 290);
@@ -473,6 +503,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // MKey
             // 
+            this.MKey.AlibreShortcut = null;
             this.MKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.MKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.MKey.Location = new System.Drawing.Point(580, 290);
@@ -484,6 +515,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // CommaKey
             // 
+            this.CommaKey.AlibreShortcut = null;
             this.CommaKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.CommaKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.CommaKey.Location = new System.Drawing.Point(650, 290);
@@ -495,6 +527,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // PeriodKey
             // 
+            this.PeriodKey.AlibreShortcut = null;
             this.PeriodKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.PeriodKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.PeriodKey.Location = new System.Drawing.Point(720, 290);
@@ -506,6 +539,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // SlashKey
             // 
+            this.SlashKey.AlibreShortcut = null;
             this.SlashKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.SlashKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.SlashKey.Location = new System.Drawing.Point(790, 290);
@@ -517,6 +551,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // CapsLockKey
             // 
+            this.CapsLockKey.AlibreShortcut = null;
             this.CapsLockKey.Enabled = false;
             this.CapsLockKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.CapsLockKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -529,6 +564,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // LeftShiftKey
             // 
+            this.LeftShiftKey.AlibreShortcut = null;
             this.LeftShiftKey.BackColor = System.Drawing.Color.Transparent;
             this.LeftShiftKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.LeftShiftKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -542,6 +578,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // BackslashKey
             // 
+            this.BackslashKey.AlibreShortcut = null;
             this.BackslashKey.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BackslashKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.BackslashKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -554,6 +591,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // RightShiftKey
             // 
+            this.RightShiftKey.AlibreShortcut = null;
             this.RightShiftKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.RightShiftKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.RightShiftKey.Location = new System.Drawing.Point(859, 290);
@@ -566,6 +604,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // BackspaceKey
             // 
+            this.BackspaceKey.AlibreShortcut = null;
             this.BackspaceKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.BackspaceKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.BackspaceKey.Location = new System.Drawing.Point(910, 80);
@@ -577,6 +616,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // EnterKey
             // 
+            this.EnterKey.AlibreShortcut = null;
             this.EnterKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.EnterKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.EnterKey.Location = new System.Drawing.Point(966, 150);
@@ -588,6 +628,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // GraveKey
             // 
+            this.GraveKey.AlibreShortcut = null;
             this.GraveKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.GraveKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.GraveKey.Location = new System.Drawing.Point(0, 80);
@@ -599,6 +640,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // OneKey
             // 
+            this.OneKey.AlibreShortcut = null;
             this.OneKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.OneKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.OneKey.Location = new System.Drawing.Point(70, 80);
@@ -610,6 +652,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // TwoKey
             // 
+            this.TwoKey.AlibreShortcut = null;
             this.TwoKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.TwoKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.TwoKey.Location = new System.Drawing.Point(140, 80);
@@ -621,6 +664,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // ThreeKey
             // 
+            this.ThreeKey.AlibreShortcut = null;
             this.ThreeKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.ThreeKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.ThreeKey.Location = new System.Drawing.Point(210, 80);
@@ -632,6 +676,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // FourKey
             // 
+            this.FourKey.AlibreShortcut = null;
             this.FourKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.FourKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.FourKey.Location = new System.Drawing.Point(280, 80);
@@ -643,6 +688,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // FiveKey
             // 
+            this.FiveKey.AlibreShortcut = null;
             this.FiveKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.FiveKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.FiveKey.Location = new System.Drawing.Point(350, 80);
@@ -654,6 +700,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // SixKey
             // 
+            this.SixKey.AlibreShortcut = null;
             this.SixKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.SixKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.SixKey.Location = new System.Drawing.Point(420, 80);
@@ -665,6 +712,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // EightKey
             // 
+            this.EightKey.AlibreShortcut = null;
             this.EightKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.EightKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.EightKey.Location = new System.Drawing.Point(560, 80);
@@ -676,6 +724,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // NineKey
             // 
+            this.NineKey.AlibreShortcut = null;
             this.NineKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.NineKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.NineKey.Location = new System.Drawing.Point(630, 80);
@@ -687,6 +736,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // ZeroKey
             // 
+            this.ZeroKey.AlibreShortcut = null;
             this.ZeroKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.ZeroKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.ZeroKey.Location = new System.Drawing.Point(700, 80);
@@ -698,6 +748,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // SevenKey
             // 
+            this.SevenKey.AlibreShortcut = null;
             this.SevenKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.SevenKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.SevenKey.Location = new System.Drawing.Point(490, 80);
@@ -709,6 +760,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // MinusKey
             // 
+            this.MinusKey.AlibreShortcut = null;
             this.MinusKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.MinusKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.MinusKey.Location = new System.Drawing.Point(770, 80);
@@ -720,6 +772,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // EqualKey
             // 
+            this.EqualKey.AlibreShortcut = null;
             this.EqualKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.EqualKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.EqualKey.Location = new System.Drawing.Point(840, 80);
@@ -731,6 +784,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // Num4Key
             // 
+            this.Num4Key.AlibreShortcut = null;
             this.Num4Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.Num4Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num4Key.Location = new System.Drawing.Point(1308, 220);
@@ -742,6 +796,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // Num5Key
             // 
+            this.Num5Key.AlibreShortcut = null;
             this.Num5Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.Num5Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num5Key.Location = new System.Drawing.Point(1378, 220);
@@ -753,6 +808,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // Num6Key
             // 
+            this.Num6Key.AlibreShortcut = null;
             this.Num6Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.Num6Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num6Key.Location = new System.Drawing.Point(1448, 220);
@@ -764,6 +820,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // Num7Key
             // 
+            this.Num7Key.AlibreShortcut = null;
             this.Num7Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.Num7Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num7Key.Location = new System.Drawing.Point(1308, 150);
@@ -775,6 +832,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // Num8Key
             // 
+            this.Num8Key.AlibreShortcut = null;
             this.Num8Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.Num8Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num8Key.Location = new System.Drawing.Point(1378, 150);
@@ -786,6 +844,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // Num9Key
             // 
+            this.Num9Key.AlibreShortcut = null;
             this.Num9Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.Num9Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num9Key.Location = new System.Drawing.Point(1448, 150);
@@ -797,6 +856,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // Num0Key
             // 
+            this.Num0Key.AlibreShortcut = null;
             this.Num0Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.Num0Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num0Key.Location = new System.Drawing.Point(1308, 360);
@@ -808,6 +868,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // NumDecimalKey
             // 
+            this.NumDecimalKey.AlibreShortcut = null;
             this.NumDecimalKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.NumDecimalKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.NumDecimalKey.Location = new System.Drawing.Point(1448, 360);
@@ -819,6 +880,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // Num1Key
             // 
+            this.Num1Key.AlibreShortcut = null;
             this.Num1Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.Num1Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num1Key.Location = new System.Drawing.Point(1308, 290);
@@ -830,6 +892,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // Num2Key
             // 
+            this.Num2Key.AlibreShortcut = null;
             this.Num2Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.Num2Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num2Key.Location = new System.Drawing.Point(1378, 290);
@@ -841,6 +904,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // Num3Key
             // 
+            this.Num3Key.AlibreShortcut = null;
             this.Num3Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.Num3Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.Num3Key.Location = new System.Drawing.Point(1449, 290);
@@ -852,6 +916,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // NumLockKey
             // 
+            this.NumLockKey.AlibreShortcut = null;
             this.NumLockKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.NumLockKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.NumLockKey.Location = new System.Drawing.Point(1308, 80);
@@ -863,6 +928,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // NumDivideKey
             // 
+            this.NumDivideKey.AlibreShortcut = null;
             this.NumDivideKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.NumDivideKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.NumDivideKey.Location = new System.Drawing.Point(1378, 80);
@@ -874,6 +940,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // NumMultiplyKey
             // 
+            this.NumMultiplyKey.AlibreShortcut = null;
             this.NumMultiplyKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.NumMultiplyKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.NumMultiplyKey.Location = new System.Drawing.Point(1448, 80);
@@ -885,6 +952,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // NumMinusKey
             // 
+            this.NumMinusKey.AlibreShortcut = null;
             this.NumMinusKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.NumMinusKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.NumMinusKey.Location = new System.Drawing.Point(1518, 80);
@@ -896,6 +964,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // NumPlusKey
             // 
+            this.NumPlusKey.AlibreShortcut = null;
             this.NumPlusKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.NumPlusKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.NumPlusKey.Location = new System.Drawing.Point(1518, 150);
@@ -907,6 +976,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // NumEnterKey
             // 
+            this.NumEnterKey.AlibreShortcut = null;
             this.NumEnterKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.NumEnterKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.NumEnterKey.Location = new System.Drawing.Point(1518, 290);
@@ -918,6 +988,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // SpaceKey
             // 
+            this.SpaceKey.AlibreShortcut = null;
             this.SpaceKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.SpaceKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.SpaceKey.Location = new System.Drawing.Point(285, 360);
@@ -928,6 +999,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // WindowKey
             // 
+            this.WindowKey.AlibreShortcut = null;
             this.WindowKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.WindowKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.WindowKey.Location = new System.Drawing.Point(105, 360);
@@ -939,6 +1011,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // FnKey
             // 
+            this.FnKey.AlibreShortcut = null;
             this.FnKey.Enabled = false;
             this.FnKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.FnKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -951,6 +1024,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // LeftAltKey
             // 
+            this.LeftAltKey.AlibreShortcut = null;
             this.LeftAltKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.LeftAltKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.LeftAltKey.Location = new System.Drawing.Point(195, 360);
@@ -963,6 +1037,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // RightCtrlKey
             // 
+            this.RightCtrlKey.AlibreShortcut = null;
             this.RightCtrlKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.RightCtrlKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.RightCtrlKey.Location = new System.Drawing.Point(910, 360);
@@ -975,6 +1050,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // AltGrKey
             // 
+            this.AltGrKey.AlibreShortcut = null;
             this.AltGrKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.AltGrKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.AltGrKey.Location = new System.Drawing.Point(700, 359);
@@ -987,6 +1063,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // LeftCtrlKey
             // 
+            this.LeftCtrlKey.AlibreShortcut = null;
             this.LeftCtrlKey.BackColor = System.Drawing.Color.Transparent;
             this.LeftCtrlKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.LeftCtrlKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -1000,6 +1077,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // EscapeKey
             // 
+            this.EscapeKey.AlibreShortcut = null;
             this.EscapeKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.EscapeKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.EscapeKey.Location = new System.Drawing.Point(0, 0);
@@ -1011,6 +1089,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // HashKey
             // 
+            this.HashKey.AlibreShortcut = null;
             this.HashKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.HashKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.HashKey.Location = new System.Drawing.Point(890, 220);
@@ -1022,6 +1101,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // F1Key
             // 
+            this.F1Key.AlibreShortcut = null;
             this.F1Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.F1Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F1Key.Location = new System.Drawing.Point(116, 0);
@@ -1033,6 +1113,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // F2Key
             // 
+            this.F2Key.AlibreShortcut = null;
             this.F2Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.F2Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F2Key.Location = new System.Drawing.Point(186, 0);
@@ -1044,6 +1125,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // F3Key
             // 
+            this.F3Key.AlibreShortcut = null;
             this.F3Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.F3Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F3Key.Location = new System.Drawing.Point(256, 0);
@@ -1055,6 +1137,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // F4Key
             // 
+            this.F4Key.AlibreShortcut = null;
             this.F4Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.F4Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F4Key.Location = new System.Drawing.Point(326, 0);
@@ -1066,6 +1149,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // F5Key
             // 
+            this.F5Key.AlibreShortcut = null;
             this.F5Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.F5Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F5Key.Location = new System.Drawing.Point(442, 0);
@@ -1077,6 +1161,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // F6Key
             // 
+            this.F6Key.AlibreShortcut = null;
             this.F6Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.F6Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F6Key.Location = new System.Drawing.Point(512, 0);
@@ -1088,6 +1173,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // F7Key
             // 
+            this.F7Key.AlibreShortcut = null;
             this.F7Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.F7Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F7Key.Location = new System.Drawing.Point(582, 0);
@@ -1099,6 +1185,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // F8Key
             // 
+            this.F8Key.AlibreShortcut = null;
             this.F8Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.F8Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F8Key.Location = new System.Drawing.Point(652, 0);
@@ -1110,6 +1197,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // F9Key
             // 
+            this.F9Key.AlibreShortcut = null;
             this.F9Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.F9Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F9Key.Location = new System.Drawing.Point(768, 0);
@@ -1121,6 +1209,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // F10Key
             // 
+            this.F10Key.AlibreShortcut = null;
             this.F10Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.F10Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F10Key.Location = new System.Drawing.Point(838, 0);
@@ -1132,6 +1221,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // F11Key
             // 
+            this.F11Key.AlibreShortcut = null;
             this.F11Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.F11Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F11Key.Location = new System.Drawing.Point(908, 0);
@@ -1143,6 +1233,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // F12Key
             // 
+            this.F12Key.AlibreShortcut = null;
             this.F12Key.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.F12Key.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.F12Key.Location = new System.Drawing.Point(978, 0);
@@ -1154,6 +1245,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // LeftKey
             // 
+            this.LeftKey.AlibreShortcut = null;
             this.LeftKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.LeftKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.LeftKey.Location = new System.Drawing.Point(1073, 360);
@@ -1165,6 +1257,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // DownKey
             // 
+            this.DownKey.AlibreShortcut = null;
             this.DownKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.DownKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.DownKey.Location = new System.Drawing.Point(1143, 361);
@@ -1176,6 +1269,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // RightKey
             // 
+            this.RightKey.AlibreShortcut = null;
             this.RightKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.RightKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.RightKey.Location = new System.Drawing.Point(1213, 360);
@@ -1187,6 +1281,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // UpKey
             // 
+            this.UpKey.AlibreShortcut = null;
             this.UpKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.UpKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.UpKey.Location = new System.Drawing.Point(1143, 290);
@@ -1198,6 +1293,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // InsertKey
             // 
+            this.InsertKey.AlibreShortcut = null;
             this.InsertKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.InsertKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.InsertKey.Location = new System.Drawing.Point(1073, 80);
@@ -1209,6 +1305,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // HomeKey
             // 
+            this.HomeKey.AlibreShortcut = null;
             this.HomeKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.HomeKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.HomeKey.Location = new System.Drawing.Point(1143, 80);
@@ -1220,6 +1317,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // PageUpKey
             // 
+            this.PageUpKey.AlibreShortcut = null;
             this.PageUpKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.PageUpKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.PageUpKey.Location = new System.Drawing.Point(1213, 80);
@@ -1231,6 +1329,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // DeleteKey
             // 
+            this.DeleteKey.AlibreShortcut = null;
             this.DeleteKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.DeleteKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.DeleteKey.Location = new System.Drawing.Point(1073, 150);
@@ -1242,6 +1341,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // EndKey
             // 
+            this.EndKey.AlibreShortcut = null;
             this.EndKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.EndKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.EndKey.Location = new System.Drawing.Point(1143, 150);
@@ -1253,6 +1353,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // PageDownKey
             // 
+            this.PageDownKey.AlibreShortcut = null;
             this.PageDownKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.PageDownKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.PageDownKey.Location = new System.Drawing.Point(1213, 150);
@@ -1264,6 +1365,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // PrintScreenKey
             // 
+            this.PrintScreenKey.AlibreShortcut = null;
             this.PrintScreenKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.PrintScreenKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.PrintScreenKey.Location = new System.Drawing.Point(1073, 0);
@@ -1275,6 +1377,7 @@ namespace Bolsover.Shortcuts.View
             // 
             // ScrollLockKey
             // 
+            this.ScrollLockKey.AlibreShortcut = null;
             this.ScrollLockKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.ScrollLockKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.ScrollLockKey.Location = new System.Drawing.Point(1143, 0);
@@ -1286,14 +1389,16 @@ namespace Bolsover.Shortcuts.View
             // 
             // PauseBreakKey
             // 
+            this.PauseBreakKey.AlibreShortcut = null;
             this.PauseBreakKey.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Bold);
             this.PauseBreakKey.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.PauseBreakKey.Location = new System.Drawing.Point(1213, 0);
             this.PauseBreakKey.Name = "PauseBreakKey";
             this.PauseBreakKey.Size = new System.Drawing.Size(70, 70);
             this.PauseBreakKey.TabIndex = 76;
-            this.PauseBreakKey.Text = "Pause\r\nBreak";
+            this.PauseBreakKey.Text = "Color";
             this.PauseBreakKey.UseVisualStyleBackColor = true;
+            this.PauseBreakKey.Click += new System.EventHandler(this.PauseBreakKey_Click);
             // 
             // ProfileComboBox
             // 
@@ -1431,110 +1536,110 @@ namespace Bolsover.Shortcuts.View
         public System.Windows.Forms.ComboBox ProfileComboBox;
 
         public System.Windows.Forms.ToolTip toolTip1;
-        public System.Windows.Forms.Button PrintScreenKey;
-        public System.Windows.Forms.Button ScrollLockKey;
-        public System.Windows.Forms.Button PauseBreakKey;
-        public System.Windows.Forms.Button InsertKey;
-        public System.Windows.Forms.Button HomeKey;
-        public System.Windows.Forms.Button PageUpKey;
-        public System.Windows.Forms.Button DeleteKey;
-        public System.Windows.Forms.Button EndKey;
-        public System.Windows.Forms.Button PageDownKey;
-        public System.Windows.Forms.Button UpKey;
-        public System.Windows.Forms.Button LeftKey;
-        public System.Windows.Forms.Button DownKey;
-        public System.Windows.Forms.Button RightKey;
-        public System.Windows.Forms.Button F1Key;
-        public System.Windows.Forms.Button F2Key;
-        public System.Windows.Forms.Button F3Key;
-        public System.Windows.Forms.Button F4Key;
-        public System.Windows.Forms.Button F5Key;
-        public System.Windows.Forms.Button F6Key;
-        public System.Windows.Forms.Button F7Key;
-        public System.Windows.Forms.Button F8Key;
-        public System.Windows.Forms.Button F9Key;
-        public System.Windows.Forms.Button F10Key;
-        public System.Windows.Forms.Button F11Key;
-        public System.Windows.Forms.Button F12Key;
-        public System.Windows.Forms.Button EscapeKey;
-        public System.Windows.Forms.Button HashKey;
-        public System.Windows.Forms.Button LeftCtrlKey;
-        public System.Windows.Forms.Button QKey;
-        public System.Windows.Forms.Button WKey;
-        public System.Windows.Forms.Button EKey;
-        public System.Windows.Forms.Button RKey;
-        public System.Windows.Forms.Button TKey;
-        public System.Windows.Forms.Button YKey;
-        public System.Windows.Forms.Button RightBracketKey;
-        public System.Windows.Forms.Button LeftBracketKey;
-        public System.Windows.Forms.Button PKey;
-        public System.Windows.Forms.Button OKey;
-        public System.Windows.Forms.Button IKey;
-        public System.Windows.Forms.Button UKey;
-        public System.Windows.Forms.Button TabKey;
-        public System.Windows.Forms.Button ApostropheKey;
-        public System.Windows.Forms.Button SemicolonKey;
-        public System.Windows.Forms.Button LKey;
-        public System.Windows.Forms.Button KKey;
-        public System.Windows.Forms.Button JKey;
-        public System.Windows.Forms.Button HKey;
-        public System.Windows.Forms.Button GKey;
-        public System.Windows.Forms.Button FKey;
-        public System.Windows.Forms.Button DKey;
-        public System.Windows.Forms.Button SKey;
-        public System.Windows.Forms.Button AKey;
-        public System.Windows.Forms.Button SlashKey;
-        public System.Windows.Forms.Button PeriodKey;
-        public System.Windows.Forms.Button CommaKey;
-        public System.Windows.Forms.Button MKey;
-        public System.Windows.Forms.Button NKey;
-        public System.Windows.Forms.Button BKey;
-        public System.Windows.Forms.Button VKey;
-        public System.Windows.Forms.Button CKey;
-        public System.Windows.Forms.Button XKey;
-        public System.Windows.Forms.Button ZKey;
-        public System.Windows.Forms.Button CapsLockKey;
-        public System.Windows.Forms.Button LeftShiftKey;
-        public System.Windows.Forms.Button BackslashKey;
-        public System.Windows.Forms.Button RightShiftKey;
-        public System.Windows.Forms.Button BackspaceKey;
-        public System.Windows.Forms.Button EnterKey;
-        public System.Windows.Forms.Button GraveKey;
-        public System.Windows.Forms.Button ZeroKey;
-        public System.Windows.Forms.Button NineKey;
-        public System.Windows.Forms.Button EightKey;
-        public System.Windows.Forms.Button SixKey;
-        public System.Windows.Forms.Button FiveKey;
-        public System.Windows.Forms.Button FourKey;
-        public System.Windows.Forms.Button ThreeKey;
-        public System.Windows.Forms.Button TwoKey;
-        public System.Windows.Forms.Button OneKey;
-        public System.Windows.Forms.Button SevenKey;
-        public System.Windows.Forms.Button EqualKey;
-        public System.Windows.Forms.Button MinusKey;
-        public System.Windows.Forms.Button Num4Key;
-        public System.Windows.Forms.Button Num5Key;
-        public System.Windows.Forms.Button Num6Key;
-        public System.Windows.Forms.Button Num9Key;
-        public System.Windows.Forms.Button Num8Key;
-        public System.Windows.Forms.Button Num7Key;
-        public System.Windows.Forms.Button NumDecimalKey;
-        public System.Windows.Forms.Button Num0Key;
-        public System.Windows.Forms.Button Num3Key;
-        public System.Windows.Forms.Button Num2Key;
-        public System.Windows.Forms.Button Num1Key;
-        public System.Windows.Forms.Button NumMultiplyKey;
-        public System.Windows.Forms.Button NumDivideKey;
-        public System.Windows.Forms.Button NumMinusKey;
-        public System.Windows.Forms.Button NumPlusKey;
-        public System.Windows.Forms.Button NumEnterKey;
-        public System.Windows.Forms.Button SpaceKey;
-        public System.Windows.Forms.Button WindowKey;
-        public System.Windows.Forms.Button FnKey;
-        public System.Windows.Forms.Button LeftAltKey;
-        public System.Windows.Forms.Button RightCtrlKey;
-        public System.Windows.Forms.Button AltGrKey;
-        public System.Windows.Forms.Button NumLockKey;
+        public ShortcutButton PrintScreenKey;
+        public ShortcutButton ScrollLockKey;
+        public ShortcutButton PauseBreakKey;
+        public ShortcutButton InsertKey;
+        public ShortcutButton HomeKey;
+        public ShortcutButton PageUpKey;
+        public ShortcutButton DeleteKey;
+        public ShortcutButton EndKey;
+        public ShortcutButton PageDownKey;
+        public ShortcutButton UpKey;
+        public ShortcutButton LeftKey;
+        public ShortcutButton DownKey;
+        public ShortcutButton RightKey;
+        public ShortcutButton F1Key;
+        public ShortcutButton F2Key;
+        public ShortcutButton F3Key;
+        public ShortcutButton F4Key;
+        public ShortcutButton F5Key;
+        public ShortcutButton F6Key;
+        public ShortcutButton F7Key;
+        public ShortcutButton F8Key;
+        public ShortcutButton F9Key;
+        public ShortcutButton F10Key;
+        public ShortcutButton F11Key;
+        public ShortcutButton F12Key;
+        public ShortcutButton EscapeKey;
+        public ShortcutButton HashKey;
+        public Bolsover.Shortcuts.View.ShortcutButton LeftCtrlKey;
+        public ShortcutButton QKey;
+        public ShortcutButton WKey;
+        public ShortcutButton EKey;
+        public ShortcutButton RKey;
+        public Bolsover.Shortcuts.View.ShortcutButton TKey;
+        public ShortcutButton YKey;
+        public ShortcutButton RightBracketKey;
+        public ShortcutButton LeftBracketKey;
+        public ShortcutButton PKey;
+        public ShortcutButton OKey;
+        public ShortcutButton IKey;
+        public ShortcutButton UKey;
+        public ShortcutButton TabKey;
+        public ShortcutButton ApostropheKey;
+        public ShortcutButton SemicolonKey;
+        public ShortcutButton LKey;
+        public ShortcutButton KKey;
+        public ShortcutButton JKey;
+        public ShortcutButton HKey;
+        public ShortcutButton GKey;
+        public ShortcutButton FKey;
+        public ShortcutButton DKey;
+        public ShortcutButton SKey;
+        public ShortcutButton AKey;
+        public ShortcutButton SlashKey;
+        public ShortcutButton PeriodKey;
+        public ShortcutButton CommaKey;
+        public ShortcutButton MKey;
+        public ShortcutButton NKey;
+        public ShortcutButton BKey;
+        public ShortcutButton VKey;
+        public ShortcutButton CKey;
+        public ShortcutButton XKey;
+        public ShortcutButton ZKey;
+        public Bolsover.Shortcuts.View.ShortcutButton CapsLockKey;
+        public ShortcutButton LeftShiftKey;
+        public ShortcutButton BackslashKey;
+        public ShortcutButton RightShiftKey;
+        public Bolsover.Shortcuts.View.ShortcutButton BackspaceKey;
+        public ShortcutButton EnterKey;
+        public ShortcutButton GraveKey;
+        public ShortcutButton ZeroKey;
+        public ShortcutButton NineKey;
+        public ShortcutButton EightKey;
+        public ShortcutButton SixKey;
+        public ShortcutButton FiveKey;
+        public ShortcutButton FourKey;
+        public ShortcutButton ThreeKey;
+        public ShortcutButton TwoKey;
+        public ShortcutButton OneKey;
+        public ShortcutButton SevenKey;
+        public ShortcutButton EqualKey;
+        public ShortcutButton MinusKey;
+        public ShortcutButton Num4Key;
+        public ShortcutButton Num5Key;
+        public ShortcutButton Num6Key;
+        public ShortcutButton Num9Key;
+        public ShortcutButton Num8Key;
+        public ShortcutButton Num7Key;
+        public ShortcutButton NumDecimalKey;
+        public ShortcutButton Num0Key;
+        public ShortcutButton Num3Key;
+        public ShortcutButton Num2Key;
+        public ShortcutButton Num1Key;
+        public ShortcutButton NumMultiplyKey;
+        public ShortcutButton NumDivideKey;
+        public ShortcutButton NumMinusKey;
+        public ShortcutButton NumPlusKey;
+        public ShortcutButton NumEnterKey;
+        public ShortcutButton SpaceKey;
+        public ShortcutButton WindowKey;
+        public ShortcutButton FnKey;
+        public ShortcutButton LeftAltKey;
+        public ShortcutButton RightCtrlKey;
+        public ShortcutButton AltGrKey;
+        public ShortcutButton NumLockKey;
         #endregion
     }
 }

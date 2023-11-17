@@ -6,21 +6,23 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Bolsover.Shortcuts.Model;
 using com.alibre.client;
 using com.alibre.executive.locale;
 using com.alibre.ui;
 using com.alibre.utils;
-using Shortcut = Bolsover.Shortcuts.Model.Shortcut;
+
 
 namespace Bolsover.Shortcuts.Calculator
 {
     public class ShortcutsCalculator
     {
         private readonly KeyboardShortcutsMediator _mediator = new();
+        private ADResourceManager _adResourceManager = ADResourceManager.Singleton;
 
-        private ArrayList RetrieveUserShortcuts()
+        private List<AlibreShortcut> RetrieveUserShortcuts()
         {
-            var userShortcutList = new ArrayList();
+            var userShortcutList = new List<AlibreShortcut>();
             var userProfile = RetrieveUserProfile();
             if (userProfile == null)
             {
@@ -46,10 +48,10 @@ namespace Bolsover.Shortcuts.Calculator
             return userShortcutList;
         }
 
-        public Dictionary<string, Shortcut> ShortcutsDictionary(ArrayList shortcuts)
+        public Dictionary<string, AlibreShortcut> ShortcutsDictionary(List<AlibreShortcut> shortcuts)
         {
-            Dictionary<string, Shortcut> standardShorcuts = new();
-            foreach (Shortcut sc in shortcuts)
+            Dictionary<string, AlibreShortcut> standardShorcuts = new();
+            foreach (AlibreShortcut sc in shortcuts)
             {
                 standardShorcuts.Add(sc.Profile + "." + sc.Command, sc);
             }
@@ -57,14 +59,14 @@ namespace Bolsover.Shortcuts.Calculator
             return standardShorcuts;
         }
 
-        public ArrayList RetrieveUserShortcutsByProfile(string profile)
+        public List<AlibreShortcut> RetrieveUserShortcutsByProfile(string profile)
         {
-            ArrayList shortcuts = RetrieveUserShortcuts();
+            List<AlibreShortcut> shortcuts = RetrieveUserShortcuts();
           //  XElement xml = ProfileToXml(RetrieveUserProfile());
-            ArrayList profileShortcuts = new ArrayList();
+          List<AlibreShortcut> profileShortcuts = new List<AlibreShortcut>();
             foreach (var sc in shortcuts)
             {
-                if (((Shortcut) sc).Profile == profile)
+                if (((AlibreShortcut) sc).Profile == profile)
                 {
                     profileShortcuts.Add(sc);
                 }
@@ -76,9 +78,9 @@ namespace Bolsover.Shortcuts.Calculator
         public XElement ProfileToXml(Profile profile)
         {
             XElement xml = new XElement("Profile");
-            foreach (var VARIABLE in profile.Mapping.Pairs)
+            foreach (var pairXmlWrapper in profile.Mapping.Pairs)
             {
-                var wrappedObjects = VARIABLE.toWrappedObject();
+                var wrappedObjects = pairXmlWrapper.toWrappedObject();
                 var first = wrappedObjects.first;
                 var second = wrappedObjects.second;
                 var child = first.ToString();
@@ -103,9 +105,9 @@ namespace Bolsover.Shortcuts.Calculator
             return xml;
         }
 
-        public ArrayList RetrieveStandardShortcutsByProfile(string profile)
+        public List<AlibreShortcut> RetrieveStandardShortcutsByProfile(string profile)
         {
-            var standardShortcuts = new ArrayList();
+            var standardShortcuts = new List<AlibreShortcut>();
             switch (profile)
             {
                 case "Design Part Browser":
@@ -137,8 +139,8 @@ namespace Bolsover.Shortcuts.Calculator
                     break;
             }
 
-            var withoutNullOrEmptyHint = new ArrayList();
-            foreach (Shortcut sc in standardShortcuts)
+            var withoutNullOrEmptyHint = new List<AlibreShortcut>();
+            foreach (AlibreShortcut sc in standardShortcuts)
             {
                 if (!string.IsNullOrEmpty(sc.Hint))
                 {
@@ -149,9 +151,9 @@ namespace Bolsover.Shortcuts.Calculator
             return withoutNullOrEmptyHint;
         }
 
-        public ArrayList RetrieveStandardShortcuts()
+        public List<AlibreShortcut> RetrieveStandardShortcuts()
         {
-            var standardShortcuts = new ArrayList();
+            var standardShortcuts = new List<AlibreShortcut>();
 
             DumpStandardProfile(PartStandardShortcuts(), "Design Part Browser", standardShortcuts);
             DumpStandardProfile(BomStandardShortcuts(), "BOM Editor", standardShortcuts);
@@ -166,10 +168,11 @@ namespace Bolsover.Shortcuts.Calculator
             return standardShortcuts;
         }
 
-        private void DumpStandardProfile(Profile profile, string profileName, ArrayList shortcuts)
+        private void DumpStandardProfile(Profile profile, string profileName, List<AlibreShortcut> shortcuts)
         {
             LinearMap mapping = profile.Mapping;
             var kc = new KeysConverter();
+            AlibreShortcut alibreShortcut;
             foreach (var mappingPair in mapping.Pairs)
             {
                 var wrappedObjects = mappingPair.toWrappedObject();
@@ -177,14 +180,17 @@ namespace Bolsover.Shortcuts.Calculator
                 var second = wrappedObjects.second;
                 var keyChar = kc.ConvertToString(second);
                 var hint = LString.getLocalizedString(first.ToString(), LStringToken.ToolbarHint);
-                shortcuts.Add(new Shortcut(profileName, (string) first, hint, (int) second, keyChar));
+                alibreShortcut = new AlibreShortcut(profileName, (string) first, hint, (int) second, keyChar);
+                alibreShortcut.SvgImage = _adResourceManager.GetSvgImage((string) first);
+                shortcuts.Add(alibreShortcut);
             }
         }
 
-        private void DumpUserProfile(Profile profile, string parent, ArrayList shortcuts)
+        private void DumpUserProfile(Profile profile, string parent, List<AlibreShortcut> shortcuts)
         {
             LinearMap mapping = profile.Mapping;
             var kc = new KeysConverter();
+            AlibreShortcut alibreShortcut;
             foreach (var mappingPair in mapping.Pairs)
             {
                 var wrappedObjects = mappingPair.toWrappedObject();
@@ -199,8 +205,9 @@ namespace Bolsover.Shortcuts.Calculator
                     var toRemove = ", SHORTCUTS";
                     var profilep = parent.Remove(parent.IndexOf(toRemove, StringComparison.Ordinal), toRemove.Length);
                     var hint = LString.getLocalizedString(first.ToString(), LStringToken.ToolbarHint);
-
-                    shortcuts.Add(new Shortcut(profilep, (string) first, hint, (int) second, keyChar));
+                    alibreShortcut = new AlibreShortcut(profilep, (string) first, hint, (int) second, keyChar);
+                    alibreShortcut.SvgImage = _adResourceManager.GetSvgImage((string) first);
+                    shortcuts.Add(alibreShortcut);
                 }
 
                 if (mappingPair.toWrappedObject().second is Profile)

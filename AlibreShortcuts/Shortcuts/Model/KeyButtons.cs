@@ -1,18 +1,16 @@
 using System.Collections.Generic;
-using System.Windows.Forms;
+using System.Drawing;
 using Bolsover.Shortcuts.View;
 
 namespace Bolsover.Shortcuts.Model
 {
     public class KeyButtons
     {
-        private KeyboardControl _view;
-        private Dictionary<string, Button> _buttonDictionary;
+        private readonly KeyboardControl _view;
+        private Dictionary<string, ShortcutButton> _buttonDictionary;
         private static KeyButtons _instance;
 
-        
-        
-        private  KeyButtons(KeyboardControl view)
+        private KeyButtons(KeyboardControl view)
         {
             _view = view;
             InitButtonDictionary();
@@ -28,34 +26,106 @@ namespace Bolsover.Shortcuts.Model
             return _instance;
         }
 
-        public static Button GetButton(KeyboardControl view, string key)
+        public static ShortcutButton GetButton(KeyboardControl view, string key)
         {
             return GetInstance(view)._buttonDictionary[key];
         }
 
-        public static Dictionary<string, Button> ButtonDictionary(KeyboardControl view)
+        public static Dictionary<string, ShortcutButton> ButtonDictionary(KeyboardControl view)
 
         {
             return GetInstance(view)._buttonDictionary;
         }
-        public static Dictionary<string, Button> ButtonDictionaryExcModifiers(KeyboardControl view)
+
+        public static Dictionary<string, ShortcutButton> ButtonDictionaryExcModifiers(KeyboardControl view)
 
         {
-            Dictionary<string, Button> temp = GetInstance(view)._buttonDictionary;
+            Dictionary<string, ShortcutButton> temp = new Dictionary<string, ShortcutButton>(GetInstance(view)._buttonDictionary);
+           
             temp.Remove("LeftCtrlKey");
             temp.Remove("RightCtrlKey");
             temp.Remove("LeftShiftKey");
             temp.Remove("RightShiftKey");
             temp.Remove("LeftAltKey");
             temp.Remove("AltGrKey");
-            
+
             return temp;
         }
-        
+
+        public static List<ShortcutButton> CtrlButtons()
+        {
+            var ctrlButtons = new List<ShortcutButton>
+            {
+                _instance.LeftCtrlKey,
+                _instance.RightCtrlKey
+            };
+            return ctrlButtons;
+        }
+
+        public static List<ShortcutButton> ShiftButtons()
+        {
+            var shiftButtons = new List<ShortcutButton>
+            {
+                _instance.LeftShiftKey,
+                _instance.RightShiftKey
+            };
+            return shiftButtons;
+        }
+
+        public static List<ShortcutButton> AltButtons()
+        {
+            var altButtons = new List<ShortcutButton>
+            {
+                _instance.LeftAltKey,
+                _instance.AltGrKey
+            };
+            return altButtons;
+        }
+
+        public static List<ShortcutButton> CtrlAltShiftButtons()
+        {
+            var modifierButtons = new List<ShortcutButton>();
+            modifierButtons.AddRange(CtrlButtons());
+            modifierButtons.AddRange(ShiftButtons());
+            modifierButtons.AddRange(AltButtons());
+            return modifierButtons;
+        }
+
+        public static List<ShortcutButton> CtrlAltButtons()
+        {
+            var modifierButtons = new List<ShortcutButton>();
+            modifierButtons.AddRange(CtrlButtons());
+            modifierButtons.AddRange(AltButtons());
+            return modifierButtons;
+        }
+
+        public static List<ShortcutButton> CtrlShiftButtons()
+        {
+            var modifierButtons = new List<ShortcutButton>();
+            modifierButtons.AddRange(CtrlButtons());
+            modifierButtons.AddRange(ShiftButtons());
+            return modifierButtons;
+        }
+
+        public static List<ShortcutButton> AltShiftButtons()
+        {
+            var modifierButtons = new List<ShortcutButton>();
+            modifierButtons.AddRange(ShiftButtons());
+            modifierButtons.AddRange(AltButtons());
+            return modifierButtons;
+        }
+
+        public static void ApplyBackgroundColor(List<ShortcutButton> buttons, Color backColor)
+        {
+            foreach (ShortcutButton button in buttons)
+            {
+                button.BackColor = backColor;
+            }
+        }
 
         private void InitButtonDictionary()
         {
-            _buttonDictionary = new Dictionary<string, Button>();
+            _buttonDictionary = new Dictionary<string, ShortcutButton>();
             _buttonDictionary.Add("PrintScreenKey", PrintScreenKey);
             _buttonDictionary.Add("ScrollLockKey", ScrollLockKey);
             _buttonDictionary.Add("PauseBreakKey", PauseBreakKey);
@@ -162,522 +232,522 @@ namespace Bolsover.Shortcuts.Model
             _buttonDictionary.Add("NumLockKey", NumLockKey);
         }
 
-        public Button PrintScreenKey
+        public ShortcutButton PrintScreenKey
         {
             get => _view.PrintScreenKey;
         }
 
-        public Button ScrollLockKey
+        public ShortcutButton ScrollLockKey
         {
             get => _view.ScrollLockKey;
         }
 
-        public Button PauseBreakKey
+        public ShortcutButton PauseBreakKey
         {
             get => _view.PauseBreakKey;
         }
 
-        public Button InsertKey
+        public ShortcutButton InsertKey
         {
             get => _view.InsertKey;
         }
 
-        public Button HomeKey
+        public ShortcutButton HomeKey
         {
             get => _view.HomeKey;
         }
 
-        public Button PageUpKey
+        public ShortcutButton PageUpKey
         {
             get => _view.PageUpKey;
         }
 
-        public Button DeleteKey
+        public ShortcutButton DeleteKey
         {
             get => _view.DeleteKey;
         }
 
-        public Button EndKey
+        public ShortcutButton EndKey
         {
             get => _view.EndKey;
         }
 
-        public Button PageDownKey
+        public ShortcutButton PageDownKey
         {
             get => _view.PageDownKey;
         }
 
-        public Button UpKey
+        public ShortcutButton UpKey
         {
             get => _view.UpKey;
         }
 
-        public Button LeftKey
+        public ShortcutButton LeftKey
         {
             get => _view.LeftKey;
         }
 
-        public Button DownKey
+        public ShortcutButton DownKey
         {
             get => _view.DownKey;
         }
 
-        public Button RightKey
+        public ShortcutButton RightKey
         {
             get => _view.RightKey;
         }
 
-        public Button F1Key
+        public ShortcutButton F1Key
         {
             get => _view.F1Key;
         }
 
-        public Button F2Key
+        public ShortcutButton F2Key
         {
             get => _view.F2Key;
         }
 
-        public Button F3Key
+        public ShortcutButton F3Key
         {
             get => _view.F3Key;
         }
 
-        public Button F4Key
+        public ShortcutButton F4Key
         {
             get => _view.F4Key;
         }
 
-        public Button F5Key
+        public ShortcutButton F5Key
         {
             get => _view.F5Key;
         }
 
-        public Button F6Key
+        public ShortcutButton F6Key
         {
             get => _view.F6Key;
         }
 
-        public Button F7Key
+        public ShortcutButton F7Key
         {
             get => _view.F7Key;
         }
 
-        public Button F8Key
+        public ShortcutButton F8Key
         {
             get => _view.F8Key;
         }
 
-        public Button F9Key
+        public ShortcutButton F9Key
         {
             get => _view.F9Key;
         }
 
-        public Button F10Key
+        public ShortcutButton F10Key
         {
             get => _view.F10Key;
         }
 
-        public Button F11Key
+        public ShortcutButton F11Key
         {
             get => _view.F11Key;
         }
 
-        public Button F12Key
+        public ShortcutButton F12Key
         {
             get => _view.F12Key;
         }
 
-        public Button EscapeKey
+        public ShortcutButton EscapeKey
         {
             get => _view.EscapeKey;
         }
 
-        public Button HashKey
+        public ShortcutButton HashKey
         {
             get => _view.HashKey;
         }
 
-        public Button LeftCtrlKey
+        public ShortcutButton LeftCtrlKey
         {
             get => _view.LeftCtrlKey;
         }
 
-        public Button QKey
+        public ShortcutButton QKey
         {
             get => _view.QKey;
         }
 
-        public Button WKey
+        public ShortcutButton WKey
         {
             get => _view.WKey;
         }
 
-        public Button EKey
+        public ShortcutButton EKey
         {
             get => _view.EKey;
         }
 
-        public Button RKey
+        public ShortcutButton RKey
         {
             get => _view.RKey;
         }
 
-        public Button TKey
+        public ShortcutButton TKey
         {
             get => _view.TKey;
         }
 
-        public Button YKey
+        public ShortcutButton YKey
         {
             get => _view.YKey;
         }
 
-        public Button RightBracketKey
+        public ShortcutButton RightBracketKey
         {
             get => _view.RightBracketKey;
         }
 
-        public Button LeftBracketKey
+        public ShortcutButton LeftBracketKey
         {
             get => _view.LeftBracketKey;
         }
 
-        public Button PKey
+        public ShortcutButton PKey
         {
             get => _view.PKey;
         }
 
-        public Button OKey
+        public ShortcutButton OKey
         {
             get => _view.OKey;
         }
 
-        public Button IKey
+        public ShortcutButton IKey
         {
             get => _view.IKey;
         }
 
-        public Button UKey
+        public ShortcutButton UKey
         {
             get => _view.UKey;
         }
 
-        public Button TabKey
+        public ShortcutButton TabKey
         {
             get => _view.TabKey;
         }
 
-        public Button ApostropheKey
+        public ShortcutButton ApostropheKey
         {
             get => _view.ApostropheKey;
         }
 
-        public Button SemicolonKey
+        public ShortcutButton SemicolonKey
         {
             get => _view.SemicolonKey;
         }
 
-        public Button LKey
+        public ShortcutButton LKey
         {
             get => _view.LKey;
         }
 
-        public Button KKey
+        public ShortcutButton KKey
         {
             get => _view.KKey;
         }
 
-        public Button JKey
+        public ShortcutButton JKey
         {
             get => _view.JKey;
         }
 
-        public Button HKey
+        public ShortcutButton HKey
         {
             get => _view.HKey;
         }
 
-        public Button GKey
+        public ShortcutButton GKey
         {
             get => _view.GKey;
         }
 
-        public Button FKey
+        public ShortcutButton FKey
         {
             get => _view.FKey;
         }
 
-        public Button DKey
+        public ShortcutButton DKey
         {
             get => _view.DKey;
         }
 
-        public Button SKey
+        public ShortcutButton SKey
         {
             get => _view.SKey;
         }
 
-        public Button AKey
+        public ShortcutButton AKey
         {
             get => _view.AKey;
         }
 
-        public Button SlashKey
+        public ShortcutButton SlashKey
         {
             get => _view.SlashKey;
         }
 
-        public Button PeriodKey
+        public ShortcutButton PeriodKey
         {
             get => _view.PeriodKey;
         }
 
-        public Button CommaKey
+        public ShortcutButton CommaKey
         {
             get => _view.CommaKey;
         }
 
-        public Button MKey
+        public ShortcutButton MKey
         {
             get => _view.MKey;
         }
 
-        public Button NKey
+        public ShortcutButton NKey
         {
             get => _view.NKey;
         }
 
-        public Button BKey
+        public ShortcutButton BKey
         {
             get => _view.BKey;
         }
 
-        public Button VKey
+        public ShortcutButton VKey
         {
             get => _view.VKey;
         }
 
-        public Button CKey
+        public ShortcutButton CKey
         {
             get => _view.CKey;
         }
 
-        public Button XKey
+        public ShortcutButton XKey
         {
             get => _view.XKey;
         }
 
-        public Button ZKey
+        public ShortcutButton ZKey
         {
             get => _view.ZKey;
         }
 
-        public Button CapsLockKey
+        public ShortcutButton CapsLockKey
         {
             get => _view.CapsLockKey;
         }
 
-        public Button LeftShiftKey
+        public ShortcutButton LeftShiftKey
         {
             get => _view.LeftShiftKey;
         }
 
-        public Button BackslashKey
+        public ShortcutButton BackslashKey
         {
             get => _view.BackslashKey;
         }
 
-        public Button RightShiftKey
+        public ShortcutButton RightShiftKey
         {
             get => _view.RightShiftKey;
         }
 
-        public Button BackspaceKey
+        public ShortcutButton BackspaceKey
         {
             get => _view.BackspaceKey;
         }
 
-        public Button EnterKey
+        public ShortcutButton EnterKey
         {
             get => _view.EnterKey;
         }
 
-        public Button GraveKey
+        public ShortcutButton GraveKey
         {
             get => _view.GraveKey;
         }
 
-        public Button ZeroKey
+        public ShortcutButton ZeroKey
         {
             get => _view.ZeroKey;
         }
 
-        public Button NineKey
+        public ShortcutButton NineKey
         {
             get => _view.NineKey;
         }
 
-        public Button EightKey
+        public ShortcutButton EightKey
         {
             get => _view.EightKey;
         }
 
-        public Button SixKey
+        public ShortcutButton SixKey
         {
             get => _view.SixKey;
         }
 
-        public Button FiveKey
+        public ShortcutButton FiveKey
         {
             get => _view.FiveKey;
         }
 
-        public Button FourKey
+        public ShortcutButton FourKey
         {
             get => _view.FourKey;
         }
 
-        public Button ThreeKey
+        public ShortcutButton ThreeKey
         {
             get => _view.ThreeKey;
         }
 
-        public Button TwoKey
+        public ShortcutButton TwoKey
         {
             get => _view.TwoKey;
         }
 
-        public Button OneKey
+        public ShortcutButton OneKey
         {
             get => _view.OneKey;
         }
 
-        public Button SevenKey
+        public ShortcutButton SevenKey
         {
             get => _view.SevenKey;
         }
 
-        public Button EqualKey
+        public ShortcutButton EqualKey
         {
             get => _view.EqualKey;
         }
 
-        public Button MinusKey
+        public ShortcutButton MinusKey
         {
             get => _view.MinusKey;
         }
 
-        public Button Num4Key
+        public ShortcutButton Num4Key
         {
             get => _view.Num4Key;
         }
 
-        public Button Num5Key
+        public ShortcutButton Num5Key
         {
             get => _view.Num5Key;
         }
 
-        public Button Num6Key
+        public ShortcutButton Num6Key
         {
             get => _view.Num6Key;
         }
 
-        public Button Num9Key
+        public ShortcutButton Num9Key
         {
             get => _view.Num9Key;
         }
 
-        public Button Num8Key
+        public ShortcutButton Num8Key
         {
             get => _view.Num8Key;
         }
 
-        public Button Num7Key
+        public ShortcutButton Num7Key
         {
             get => _view.Num7Key;
         }
 
-        public Button NumDecimalKey
+        public ShortcutButton NumDecimalKey
         {
             get => _view.NumDecimalKey;
         }
 
-        public Button Num0Key
+        public ShortcutButton Num0Key
         {
             get => _view.Num0Key;
         }
 
-        public Button Num3Key
+        public ShortcutButton Num3Key
         {
             get => _view.Num3Key;
         }
 
-        public Button Num2Key
+        public ShortcutButton Num2Key
         {
             get => _view.Num2Key;
         }
 
-        public Button Num1Key
+        public ShortcutButton Num1Key
         {
             get => _view.Num1Key;
         }
 
-        public Button NumMultiplyKey
+        public ShortcutButton NumMultiplyKey
         {
             get => _view.NumMultiplyKey;
         }
 
-        public Button NumDivideKey
+        public ShortcutButton NumDivideKey
         {
             get => _view.NumDivideKey;
         }
 
-        public Button NumMinusKey
+        public ShortcutButton NumMinusKey
         {
             get => _view.NumMinusKey;
         }
 
-        public Button NumPlusKey
+        public ShortcutButton NumPlusKey
         {
             get => _view.NumPlusKey;
         }
 
-        public Button NumEnterKey
+        public ShortcutButton NumEnterKey
         {
             get => _view.NumEnterKey;
         }
 
-        public Button SpaceKey
+        public ShortcutButton SpaceKey
         {
             get => _view.SpaceKey;
         }
 
-        public Button WindowKey
+        public ShortcutButton WindowKey
         {
             get => _view.WindowKey;
         }
 
-        public Button FnKey
+        public ShortcutButton FnKey
         {
             get => _view.FnKey;
         }
 
-        public Button LeftAltKey
+        public ShortcutButton LeftAltKey
         {
             get => _view.LeftAltKey;
         }
 
-        public Button RightCtrlKey
+        public ShortcutButton RightCtrlKey
         {
             get => _view.RightCtrlKey;
         }
 
-        public Button AltGrKey
+        public ShortcutButton AltGrKey
         {
             get => _view.AltGrKey;
         }
 
-        public Button NumLockKey
+        public ShortcutButton NumLockKey
         {
             get => _view.NumLockKey;
         }

@@ -4,8 +4,44 @@
     <Profile Name="(Default)" />
   </Profiles>
   <Settings>
-    <Setting Name="Button1BgColor" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">Blue</Value>
+    <Setting Name="CtrlAltShiftColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="CtrlAltColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Orange</Value>
+    </Setting>
+    <Setting Name="CtrlShiftColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Gold</Value>
+    </Setting>
+    <Setting Name="AltShiftColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Chartreuse</Value>
+    </Setting>
+    <Setting Name="CtrlColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">CornflowerBlue</Value>
+    </Setting>
+    <Setting Name="AltColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">MediumOrchid</Value>
+    </Setting>
+    <Setting Name="ShiftColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Violet</Value>
+    </Setting>
+    <Setting Name="NoModifierColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Bisque</Value>
+    </Setting>
+    <Setting Name="ModifierKeyColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Bisque</Value>
+    </Setting>
+    <Setting Name="TextColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="KeyTextSize" Type="System.Int16" Scope="User">
+      <Value Profile="(Default)">9</Value>
+    </Setting>
+    <Setting Name="AlibreIcon" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.6</Value>
+    </Setting>
+    <Setting Name="HintTextSize" Type="System.Int16" Scope="User">
+      <Value Profile="(Default)">13</Value>
     </Setting>
   </Settings>
 </SettingsFile>

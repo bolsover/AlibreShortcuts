@@ -52,5 +52,15 @@ namespace Bolsover.Shortcuts.View
         {
             _keyboardPresenter.ProfileComboBox_SelectedIndexChanged(sender, e);
         }
+
+        private void PauseBreakKey_Click(object sender, EventArgs e)
+        {
+            ColorPreferencesForm colorPreferencesForm = new ColorPreferencesForm();
+            
+            colorPreferencesForm.TopMost = true;
+            colorPreferencesForm.ShowDialog();
+        }
+
+       
     }
 }

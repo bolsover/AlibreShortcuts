@@ -8,18 +8,26 @@
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CProgram_0020Files_005CAlibre_0020Design_002027_002E0_002E0_002E27038_005CProgram_005Calibre_002Dexecutive_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CProgram_0020Files_005CAlibre_0020Design_002027_002E0_002E0_002E27038_005CProgram_005Calibre_002Dresources_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CProgram_0020Files_005CAlibre_0020Design_002027_002E0_002E0_002E27038_005CProgram_005Calibre_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CProgram_0020Files_005CAlibre_0020Design_002027_002E0_002E0_002E27038_005CProgram_005CDevExpress_002EData_002Ev22_002E1_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CProgram_0020Files_005CAlibre_0020Design_002027_002E0_002E0_002E27038_005CProgram_005CDevExpress_002EUtils_002Ev22_002E1_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CProgram_0020Files_005CAlibre_0020Design_002027_002E0_002E0_002E27038_005CProgram_005Cgenerics_005FNET_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CProgram_0020Files_005CAlibre_0020Design_002027_002E0_002E0_002E27038_005CProgram_005Cha_005Flicense_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CProgram_0020Files_005CAlibre_0020Design_002027_002E0_002E0_002E27038_005CProgram_005CSupportClass_002Edll/@EntryIndexedValue">True</s:Boolean>
-	
-	
-	
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e0a06755_002Dd523_002D44f0_002Db360_002Df59597ccac9b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestColorPreferences" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=02a3412e_002Dfbeb_002D4248_002Dacff_002D7c74d52b2d7f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestColorPreferences" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::80A40A7C-78FF-437D-86F3-A8464DDBF648::.NETFramework,Version=v4.8.1::UnitTests.KeyboardTests.TestColorPreferences&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::80A40A7C-78FF-437D-86F3-A8464DDBF648::.NETFramework,Version=v4.8.1::UnitTests.KeyboardTests.GenerateKeycodesDictionary&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1da3d639_002Df991_002D476d_002Db9aa_002Dabf96bc2c0c4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestColorPreferences #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::80A40A7C-78FF-437D-86F3-A8464DDBF648::.NETFramework,Version=v4.8.1::UnitTests.KeyboardTests.TestColorPreferences&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::80A40A7C-78FF-437D-86F3-A8464DDBF648::.NETFramework,Version=v4.8.1::UnitTests.LinqTests.LinqTest1&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	
+	
+	
+	
 	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AlibreBOM_002FTestForm/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean></wpf:ResourceDictionary>

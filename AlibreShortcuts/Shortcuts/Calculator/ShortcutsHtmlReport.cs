@@ -14,12 +14,12 @@ namespace Bolsover.Shortcuts.Calculator
             string html = null;
             ShortcutsCalculator calculator = new();
 
-            ArrayList userShortcuts = calculator.RetrieveUserShortcutsByProfile(profile);
+            List<AlibreShortcut> userShortcuts = calculator.RetrieveUserShortcutsByProfile(profile);
 
             if (userShortcuts.Count > 0)
             {
-                ArrayList standardShortcuts = calculator.RetrieveStandardShortcuts();
-                Dictionary<string, Shortcut> standardShortcutsDict = calculator.ShortcutsDictionary(standardShortcuts);
+                List<AlibreShortcut> standardShortcuts = calculator.RetrieveStandardShortcuts();
+                Dictionary<string, AlibreShortcut> standardShortcutsDict = calculator.ShortcutsDictionary(standardShortcuts);
                 int tables = userShortcuts.Count / 20;
                 string table = ToAbbreviatedTable(userShortcuts, standardShortcutsDict);
                 if (tables > 1)
@@ -40,7 +40,7 @@ namespace Bolsover.Shortcuts.Calculator
             }
             else
             {
-                ArrayList standardShortcuts = calculator.RetrieveStandardShortcutsByProfile(profile);
+                List<AlibreShortcut> standardShortcuts = calculator.RetrieveStandardShortcutsByProfile(profile);
 
                 int tables = standardShortcuts.Count / 20;
                 string table = ToAbbreviatedTable(standardShortcuts);
@@ -64,7 +64,7 @@ namespace Bolsover.Shortcuts.Calculator
             return html;
         }
 
-        private string ToAbbreviatedTable(ArrayList standardShortcuts)
+        private string ToAbbreviatedTable(List<AlibreShortcut> standardShortcuts)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("<table>");
@@ -76,7 +76,7 @@ namespace Bolsover.Shortcuts.Calculator
             sb.Append("Shortcut");
             sb.Append("</th>");
             sb.Append("</tr>");
-            foreach (Shortcut sc in standardShortcuts)
+            foreach (AlibreShortcut sc in standardShortcuts)
             {
                 sb.Append("<tr>");
                 sb.Append("<td>");
@@ -133,14 +133,14 @@ namespace Bolsover.Shortcuts.Calculator
         }
 
        
-        private string ToAbbreviatedTable(ArrayList shortcuts, Dictionary<string, Shortcut> standardShortcuts)
+        private string ToAbbreviatedTable(List<AlibreShortcut> shortcuts, Dictionary<string, AlibreShortcut> standardShortcuts)
         {
             StringBuilder sb = new StringBuilder();
-            Shortcut priorShortcut = null;
+            AlibreShortcut priorAlibreShortcut = null;
 
-            foreach (Shortcut sc in shortcuts)
+            foreach (AlibreShortcut sc in shortcuts)
             {
-                if (standardShortcuts.TryGetValue(sc.Profile + "." + sc.Command, out Shortcut standardShortcut))
+                if (standardShortcuts.TryGetValue(sc.Profile + "." + sc.Command, out AlibreShortcut standardShortcut))
                 {
                     sc.ShortcutType = standardShortcut.KeyChar == sc.KeyChar ? ShortcutType.Default : ShortcutType.Override;
                 }
@@ -149,7 +149,7 @@ namespace Bolsover.Shortcuts.Calculator
                     sc.ShortcutType = ShortcutType.Custom;
                 }
 
-                if (priorShortcut == null || priorShortcut.Profile != sc.Profile)
+                if (priorAlibreShortcut == null || priorAlibreShortcut.Profile != sc.Profile)
                 {
                     sb.Append("<table><tr><th>Hint</th><th>Shortcut</th></tr>");
                 }
@@ -167,7 +167,7 @@ namespace Bolsover.Shortcuts.Calculator
                     sb.Append($"<tr{color}><td>{sc.Hint}</td><td>{sc.KeyChar}</td></tr>");
                 }
 
-                priorShortcut = sc;
+                priorAlibreShortcut = sc;
             }
 
             sb.Append("</table>");

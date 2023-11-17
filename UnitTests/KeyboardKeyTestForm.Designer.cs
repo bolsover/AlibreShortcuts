@@ -1,8 +1,8 @@
 using System.ComponentModel;
 
-namespace Bolsover.Shortcuts.View
+namespace UnitTests
 {
-    partial class ColorPreferencesForm
+    partial class KeyboardKeyTestForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,29 +31,29 @@ namespace Bolsover.Shortcuts.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.colorPreferences1 = new Bolsover.Shortcuts.View.ColorPreferences();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // colorPreferences1
+            // textBox1
             // 
-            this.colorPreferences1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.colorPreferences1.Location = new System.Drawing.Point(0, 0);
-            this.colorPreferences1.Name = "colorPreferences1";
-            this.colorPreferences1.Size = new System.Drawing.Size(590, 577);
-            this.colorPreferences1.TabIndex = 0;
+            this.textBox1.Location = new System.Drawing.Point(284, 227);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 0;
             // 
-            // ColorPreferencesForm
+            // KeyboardKeyTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 577);
-            this.Controls.Add(this.colorPreferences1);
-            this.Name = "ColorPreferencesForm";
-            this.Text = "Preferences";
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
+            this.Name = "KeyboardKeyTestForm";
+            this.Text = "KeyboardKeyTestForm";
             this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
-        private Bolsover.Shortcuts.View.ColorPreferences colorPreferences1;
+        private System.Windows.Forms.TextBox textBox1;
 
         #endregion
     }

@@ -111,7 +111,7 @@ namespace Shortcuts
         /// <returns></returns>
         public ADDONMenuStates MenuItemState(int menuId, string sessionIdentifier)
         {
-            var session = _alibreRoot.Sessions.Item(sessionIdentifier);
+            //var session = _alibreRoot.Sessions.Item(sessionIdentifier);
             return ADDONMenuStates.ADDON_MENU_ENABLED;
         }
 
@@ -167,7 +167,7 @@ namespace Shortcuts
         }
 
         #endregion
-        
+
         private KeyboardForm keyboardForm;
 
         private IAlibreAddOnCommand DoKeyboard(IADSession session)
@@ -183,9 +183,9 @@ namespace Shortcuts
                 keyboardForm.Visible = true;
                 keyboardForm.TopMost = true;
             }
+
             return null;
         }
-
 
         #region Shortcuts
 
@@ -204,6 +204,7 @@ namespace Shortcuts
                 keyboardShortcutForm.Visible = true;
                 keyboardShortcutForm.TopMost = true;
             }
+
             return null;
         }
 

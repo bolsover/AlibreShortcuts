@@ -15,9 +15,9 @@ namespace AlibreAddOnAssembly
         {
             alibreRoot = (IADRoot) pAutomationHook.Root;
             parentWinHandle = hwnd;
-            string version = alibreRoot.Version.Replace("PRODUCTVERSION ", "");
-            string[] versionarr = version.Split(',');
-            int majorVersion = int.Parse(versionarr[0]);
+            var version = alibreRoot.Version.Replace("PRODUCTVERSION ", "");
+            var versionarr = version.Split(',');
+            var majorVersion = int.Parse(versionarr[0]);
             if (majorVersion < 27)
                 MessageBox.Show(Shortcuts.Globals.AppName + "requires a newer version of Alibre Design", "Error");
 

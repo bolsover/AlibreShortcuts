@@ -2,6 +2,7 @@ namespace Bolsover.Shortcuts.Model
 {
     public static class KeyStrings
     {
+  
         public const string AKey = @"A";
         public const string BKey = @"B";
         public const string CKey = @"C";

@@ -11,6 +11,6 @@ namespace Bolsover.Shortcuts.View
         public Color KeyColor { get; set; }
         public Color TextColor { get; set; }
         public bool IsEnabled { get; set; }
-        public Shortcut Shortcut { get; set; }
+        public AlibreShortcut AlibreShortcut { get; set; }
     }
 }
