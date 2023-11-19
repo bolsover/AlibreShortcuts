@@ -1,6 +1,7 @@
 # AlibreShortcuts
  
 An Add-on for Alibre V27 that displays keyboard shortcuts for any command in Alibre.
+Version 3.0 added Alibre Icons to the Keyboard View and allows the user to set their own color preferences.
 
 ## Installation
 
@@ -18,6 +19,8 @@ An Add-on for Alibre V27 that displays keyboard shortcuts for any command in Ali
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
+All content and branding related to Alibre, Alibre Design, and Alibre Script, including any third-party contributions, are governed by their respective licensing agreements and are the intellectual property of Alibre, LLC.
+
 ## Acknowledgments
 
 * [Alibre](https://www.alibre.com/)
@@ -30,6 +33,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ![Shortcuts](ShortcutsWindow.png)
 
 ![Keyboard](KeyboardShortcuts.png)
+
+![Preferences](Preferences.png)
 
 
 
