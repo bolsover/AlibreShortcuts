@@ -36,7 +36,9 @@ All content and branding related to Alibre, Alibre Design, and Alibre Script, in
 
 ![Preferences](Preferences.png)
 
+## Known Issues
 
+1. The Shortcuts menu item is set to be shown 'Always'; that is it shows in all Alibre profiles: Sheet Metal, Part, Assembly, Drawing, Bill of Material etc. For some currently unknown reason selecting the menu items only works in the Part, Sheet Metal and Assembly profiles.
 
 
 
