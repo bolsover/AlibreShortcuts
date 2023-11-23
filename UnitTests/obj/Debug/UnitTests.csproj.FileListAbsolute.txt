@@ -1,8 +1,0 @@
-D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\UnitTests\bin\Debug\UnitTests.dll
-D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\UnitTests\bin\Debug\UnitTests.pdb
-D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\UnitTests\bin\Debug\generics_NET.dll
-D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\UnitTests\obj\Debug\UnitTests.csproj.AssemblyReference.cache
-D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\UnitTests\obj\Debug\UnitTests.csproj.CoreCompileInputs.cache
-D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\UnitTests\obj\Debug\UnitTests.csproj.CopyComplete
-D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\UnitTests\obj\Debug\UnitTests.dll
-D:\Repository\Jetbrains\Bolsover\AlibreShortcuts\UnitTests\obj\Debug\UnitTests.pdb
