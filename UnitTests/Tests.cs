@@ -1,22 +1,20 @@
-﻿using System;
-using System.IO;
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Windows.Forms;
-using com.alibre.app;
+﻿using com.alibre.app;
 using com.alibre.BOM.app;
 using com.alibre.design.app;
 using com.alibre.drawing.app;
 using com.alibre.executive.locale;
 using com.alibre.globalParam.app;
 using com.alibre.ui;
-using NUnit.Framework;
 using com.alibre.utils;
+using NUnit.Framework;
 using Shortcuts;
-using Array = System.Array;
+using System;
+using System.IO;
+using System.Reflection;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Text;
+using System.Windows.Forms;
 
 namespace UnitTests
 {
@@ -31,7 +29,7 @@ namespace UnitTests
         [Test]
         public void TestProfile()
         {
-            string[] arguments = new[] {"D:/Repository/Jetbrains/Bolsover/UtilitiesForAlibre/User.NET.profile_27"};
+            string[] arguments = new[] { "D:/Repository/Jetbrains/Bolsover/UtilitiesForAlibre/User.NET.profile_27" };
 
             LinearMap mapping;
             {
@@ -43,7 +41,7 @@ namespace UnitTests
 
 
                     fs = new FileStream(arguments[0], FileMode.Open);
-                    Profile o = (Profile) ReadObjectFromFile(fs);
+                    Profile o = (Profile)ReadObjectFromFile(fs);
                     mapping = o.Mapping;
 
                     for (int i = 0; i < mapping.Pairs.Length; i++)
@@ -59,7 +57,7 @@ namespace UnitTests
 
                         if (second is Profile)
                         {
-                            Profile p = (Profile) second;
+                            Profile p = (Profile)second;
                             DumpProfile(p, child);
                         }
                     }
@@ -122,7 +120,7 @@ namespace UnitTests
             formatter.SurrogateSelector = surrogateSelector;
 
 
-            object obj = formatter.Deserialize((Stream) fileStream);
+            object obj = formatter.Deserialize((Stream)fileStream);
 
             return obj;
         }
@@ -166,7 +164,7 @@ namespace UnitTests
 
                 if (mappingPair.toWrappedObject().second is Profile)
                 {
-                    Profile p = (Profile) mappingPair.toWrappedObject().second;
+                    Profile p = (Profile)mappingPair.toWrappedObject().second;
                     DumpProfile(p, child);
                 }
             }
@@ -203,16 +201,16 @@ namespace UnitTests
         [Test]
         public void TestDefaultProfile()
         {
-            PropertyInfo bomStandardPropertyInfo = typeof(BOMProfilePrototype).GetProperty("StandardShortcuts", BindingFlags.Public |System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-            PropertyInfo commandCenterPropertyInfo = typeof(CommandCenterProfilePrototype).GetProperty("StandardShortcuts", BindingFlags.Public |System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-            PropertyInfo assemblyPropertyInfo = typeof(AssemblyProfilePrototype).GetProperty("StandardShortcuts", BindingFlags.Public |System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-            PropertyInfo assemblyExplodedViewPropertyInfo = typeof(AssemblyExplodedViewProfilePrototype).GetProperty("StandardShortcuts", BindingFlags.Public |System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);  
-            PropertyInfo designBooleanPropertyInfo = typeof(DesignBooleanProfilePrototype).GetProperty("StandardShortcuts", BindingFlags.Public |System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            PropertyInfo bomStandardPropertyInfo = typeof(BOMProfilePrototype).GetProperty("StandardShortcuts", BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            PropertyInfo commandCenterPropertyInfo = typeof(CommandCenterProfilePrototype).GetProperty("StandardShortcuts", BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            PropertyInfo assemblyPropertyInfo = typeof(AssemblyProfilePrototype).GetProperty("StandardShortcuts", BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            PropertyInfo assemblyExplodedViewPropertyInfo = typeof(AssemblyExplodedViewProfilePrototype).GetProperty("StandardShortcuts", BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            PropertyInfo designBooleanPropertyInfo = typeof(DesignBooleanProfilePrototype).GetProperty("StandardShortcuts", BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
             PropertyInfo partPropertyInfo = typeof(PartProfilePrototype).GetProperty("StandardShortcuts", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-            PropertyInfo sheetMetalPropertyInfo = typeof(SheetMetalProfilePrototype).GetProperty("StandardShortcuts", BindingFlags.Public |System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-            PropertyInfo drawingPropertyInfo = typeof(DrawingProfilePrototype).GetProperty("StandardShortcuts", BindingFlags.Public |System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-            PropertyInfo globalParamPropertyInfo = typeof(GlobalParamProfilePrototype).GetProperty("StandardShortcuts", BindingFlags.Public |System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-            
+            PropertyInfo sheetMetalPropertyInfo = typeof(SheetMetalProfilePrototype).GetProperty("StandardShortcuts", BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            PropertyInfo drawingPropertyInfo = typeof(DrawingProfilePrototype).GetProperty("StandardShortcuts", BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            PropertyInfo globalParamPropertyInfo = typeof(GlobalParamProfilePrototype).GetProperty("StandardShortcuts", BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+
             BOMProfilePrototype bomProfilePrototype = BOMProfilePrototype.Singleton;
             CommandCenterProfilePrototype commandCentreProfilePrototype = CommandCenterProfilePrototype.Singleton;
             AssemblyProfilePrototype assemblyProfilePrototype = AssemblyProfilePrototype.Singleton;
@@ -222,27 +220,44 @@ namespace UnitTests
             SheetMetalProfilePrototype sheetMetalProfilePrototype = SheetMetalProfilePrototype.Singleton;
             DrawingProfilePrototype drawingProfilePrototype = DrawingProfilePrototype.Singleton;
             GlobalParamProfilePrototype globalParamProfilePrototype = GlobalParamProfilePrototype.Singleton;
-            
-            Profile BOMStandardShortcuts = (Profile) bomStandardPropertyInfo.GetValue(bomProfilePrototype, null);
-            Profile CommandCenterStandardShortcuts = (Profile) commandCenterPropertyInfo.GetValue(commandCentreProfilePrototype, null);
-            Profile AssemblyStandardShortcuts = (Profile) assemblyPropertyInfo.GetValue(assemblyProfilePrototype, null);
-            Profile AssemblyExplodedViewStandardShortcuts = (Profile) assemblyExplodedViewPropertyInfo.GetValue(assemblyExplodedViewProfilePrototype, null);
-            Profile DesignBooleanStandardShortcuts = (Profile) designBooleanPropertyInfo.GetValue(designBooleanProfilePrototype, null);
-            Profile PartStandardShortcuts = (Profile) partPropertyInfo.GetValue(partProfilePrototype, null);
-            Profile SheetMetalStandardShortcuts = (Profile) sheetMetalPropertyInfo.GetValue(sheetMetalProfilePrototype, null);
-            Profile DrawingStandardShortcuts = (Profile) drawingPropertyInfo.GetValue(drawingProfilePrototype, null);
-            Profile GlobalParamStandardShortcuts = (Profile) globalParamPropertyInfo.GetValue(globalParamProfilePrototype, null);
-            
-            
+
+            Profile BOMStandardShortcuts = (Profile)bomStandardPropertyInfo.GetValue(bomProfilePrototype, null);
+            Profile CommandCenterStandardShortcuts = (Profile)commandCenterPropertyInfo.GetValue(commandCentreProfilePrototype, null);
+            Profile AssemblyStandardShortcuts = (Profile)assemblyPropertyInfo.GetValue(assemblyProfilePrototype, null);
+            Profile AssemblyExplodedViewStandardShortcuts = (Profile)assemblyExplodedViewPropertyInfo.GetValue(assemblyExplodedViewProfilePrototype, null);
+            Profile DesignBooleanStandardShortcuts = (Profile)designBooleanPropertyInfo.GetValue(designBooleanProfilePrototype, null);
+            Profile PartStandardShortcuts = (Profile)partPropertyInfo.GetValue(partProfilePrototype, null);
+            Profile SheetMetalStandardShortcuts = (Profile)sheetMetalPropertyInfo.GetValue(sheetMetalProfilePrototype, null);
+            Profile DrawingStandardShortcuts = (Profile)drawingPropertyInfo.GetValue(drawingProfilePrototype, null);
+            Profile GlobalParamStandardShortcuts = (Profile)globalParamPropertyInfo.GetValue(globalParamProfilePrototype, null);
+
+
             io.WriteLine("xxx");
         }
 
         [Test]
         public void TestInstallPath()
         {
-            io.WriteLine(""+136/35);
+            io.WriteLine("" + 136 / 35);
             io.WriteLine(Globals.InstallPath);
         }
-        
+
+
+        [Test]
+        public void TestSvgRetrieval()
+        {
+            ADGlobalUIDesigner adGlobalUiDesigner = new ADGlobalUIDesigner();
+            foreach (var v in adGlobalUiDesigner.GlobalSvgImageCollection.ImageInfos)
+            {
+                io.WriteLine(v.ToString());
+            }
+
+            // IEnumerator svg = ((IEnumerable) adGlobalUiDesigner.GlobalSvgImageCollection).GetEnumerator();
+            // while (svg.MoveNext())
+            // {
+            //    io.WriteLine( svg.Current.ToString());
+            // }
+        }
+
     }
 }

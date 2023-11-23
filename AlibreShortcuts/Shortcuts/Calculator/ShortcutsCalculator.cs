@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
@@ -11,7 +10,6 @@ using com.alibre.client;
 using com.alibre.executive.locale;
 using com.alibre.ui;
 using com.alibre.utils;
-
 
 namespace Bolsover.Shortcuts.Calculator
 {
@@ -62,8 +60,8 @@ namespace Bolsover.Shortcuts.Calculator
         public List<AlibreShortcut> RetrieveUserShortcutsByProfile(string profile)
         {
             List<AlibreShortcut> shortcuts = RetrieveUserShortcuts();
-          //  XElement xml = ProfileToXml(RetrieveUserProfile());
-          List<AlibreShortcut> profileShortcuts = new List<AlibreShortcut>();
+            //  XElement xml = ProfileToXml(RetrieveUserProfile());
+            List<AlibreShortcut> profileShortcuts = new List<AlibreShortcut>();
             foreach (var sc in shortcuts)
             {
                 if (((AlibreShortcut) sc).Profile == profile)
@@ -196,9 +194,7 @@ namespace Bolsover.Shortcuts.Calculator
                 var wrappedObjects = mappingPair.toWrappedObject();
                 var first = wrappedObjects.first;
                 var second = wrappedObjects.second;
-
                 var child = parent + ", " + first;
-
                 var keyChar = kc.ConvertToString(second);
                 if (child.ToUpper().Contains("SHORTCUTS") && !second.ToString().ToUpper().Contains("PROFILE"))
                 {
@@ -207,7 +203,10 @@ namespace Bolsover.Shortcuts.Calculator
                     var hint = LString.getLocalizedString(first.ToString(), LStringToken.ToolbarHint);
                     alibreShortcut = new AlibreShortcut(profilep, (string) first, hint, (int) second, keyChar);
                     alibreShortcut.SvgImage = _adResourceManager.GetSvgImage((string) first);
-                    shortcuts.Add(alibreShortcut);
+                    if (!string.IsNullOrEmpty(alibreShortcut.Hint))
+                    {
+                        shortcuts.Add(alibreShortcut);
+                    }
                 }
 
                 if (mappingPair.toWrappedObject().second is Profile)
@@ -225,7 +224,7 @@ namespace Bolsover.Shortcuts.Calculator
             SurrogateSelector surrogateSelector = new SurrogateSelector();
             surrogateSelector.AddSurrogate(typeof(Profile), new StreamingContext(StreamingContextStates.All), new ProfileSerializationSurrogate());
             formatter.SurrogateSelector = surrogateSelector;
-            object obj = formatter.Deserialize(fileStream);
+            var obj = formatter.Deserialize(fileStream);
 
             return obj;
         }
@@ -237,8 +236,6 @@ namespace Bolsover.Shortcuts.Calculator
             var productRoamingProfilePath = Path.Combine(productRoamingDirectory.FullName + "\\default user", userProfileCurrentVersionFileName);
             return productRoamingProfilePath;
         }
-
-       
 
         private Profile RetrieveUserProfile()
         {

@@ -1,4 +1,3 @@
-using System;
 using System.Windows.Forms;
 
 namespace UnitTests
@@ -11,7 +10,7 @@ namespace UnitTests
             this.KeyDown += new KeyEventHandler(Form1_KeyDown);  // Adds the KeyDown event handler
             this.KeyPreview = true;  // Allows the form to capture key events before they reach any control on the form
         }
-        
+
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             this.textBox1.Text = e.KeyCode.ToString() + " " + e.KeyValue.ToString();

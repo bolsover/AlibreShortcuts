@@ -1,12 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Forms;
-using Bolsover.Shortcuts.Model;
 using Bolsover.Shortcuts.View;
 using NUnit.Framework;
-using Shortcuts.Shortcuts.View;
+using System.Windows.Forms;
 
 namespace UnitTests
 {
@@ -58,7 +52,7 @@ namespace UnitTests
             KeyboardForm keyboardForm = KeyboardForm.Instance();
             Application.Run(keyboardForm);
         }
-        
+
         [Test]
         public void TestColorPreferences()
         {
@@ -67,7 +61,7 @@ namespace UnitTests
             ColorPreferencesForm colorPreferencesForm = new ColorPreferencesForm();
             Application.Run(colorPreferencesForm);
         }
-        
+
         // [Test]
         // public void KeyboardKeyTestForm()
         // {
@@ -118,6 +112,6 @@ namespace UnitTests
         //    
         // }
         //
-        
+
     }
 }

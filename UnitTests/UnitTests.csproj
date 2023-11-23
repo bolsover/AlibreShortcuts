@@ -1,133 +1,198 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Project="..\packages\NUnit.3.14.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.14.0\build\NUnit.props')" />
-    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="..\packages\NUnit.3.14.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.14.0\build\NUnit.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80A40A7C-78FF-437D-86F3-A8464DDBF648}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnitTests</RootNamespace>
+    <AssemblyName>UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <LangVersion>9</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="alibre">
+      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre.dll</HintPath>
+    </Reference>
+    <Reference Include="alibre-client">
+      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre-client.dll</HintPath>
+    </Reference>
+    <Reference Include="alibre-core">
+      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre-core.dll</HintPath>
+    </Reference>
+    <Reference Include="alibre-dom">
+      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre-dom.dll</HintPath>
+    </Reference>
+    <Reference Include="alibre-executive">
+      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre-executive.dll</HintPath>
+    </Reference>
+    <Reference Include="alibre-resources">
+      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre-resources.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AlibreAddOn">
+      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\AlibreAddOn.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AlibreX">
+      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\AlibreX.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v22.1">
+      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\DevExpress.Data.Desktop.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v22.1">
+      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\DevExpress.Data.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Drawing.v22.1">
+      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\DevExpress.Drawing.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v22.1">
+      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\DevExpress.Utils.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v22.1">
+      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\DevExpress.XtraBars.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v22.1">
+      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\DevExpress.XtraEditors.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="generics_NET">
+      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\generics_NET.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="nunit.framework, Version=3.14.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.14.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvokeUtils">
+      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\PInvokeUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="SupportClass">
+      <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\SupportClass.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Expressions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Expressions.4.3.0\lib\net463\System.Linq.Expressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XamlMath.Shared, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\XamlMath.Shared.2.1.0\lib\net462\XamlMath.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConsoleIO.cs" />
+    <Compile Include="KeyboardKeyTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyboardKeyTestForm.Designer.cs">
+      <DependentUpon>KeyboardKeyTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyboardTests.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.8.1.AssemblyAttributes.cs" />
+    <Compile Include="Tests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\AlibreShortcuts.dll.config" />
+    <None Include="bin\Debug\App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AlibreShortcuts\AlibreShortcuts.csproj">
+      <Project>{331d2798-21bf-4173-a33f-5a4f58e0158a}</Project>
+      <Name>AlibreShortcuts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="KeyboardKeyTestForm.resx">
+      <DependentUpon>KeyboardKeyTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\alibre-client.dll" />
+    <Content Include="bin\Debug\alibre-core.dll" />
+    <Content Include="bin\Debug\alibre-dom.dll" />
+    <Content Include="bin\Debug\alibre-executive.dll" />
+    <Content Include="bin\Debug\alibre.dll" />
+    <Content Include="bin\Debug\AlibreShortcuts.adc" />
+    <Content Include="bin\Debug\AlibreShortcuts.dll" />
+    <Content Include="bin\Debug\AlibreShortcuts.pdb" />
+    <Content Include="bin\Debug\Copyright and License.txt" />
+    <Content Include="bin\Debug\DevExpress.Data.Desktop.v22.1.dll" />
+    <Content Include="bin\Debug\DevExpress.Data.v22.1.dll" />
+    <Content Include="bin\Debug\DevExpress.Drawing.v22.1.dll" />
+    <Content Include="bin\Debug\DevExpress.Utils.v22.1.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraBars.v22.1.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraEditors.v22.1.dll" />
+    <Content Include="bin\Debug\generics_NET.dll" />
+    <Content Include="bin\Debug\nunit.framework.dll" />
+    <Content Include="bin\Debug\nunit.framework.xml" />
+    <Content Include="bin\Debug\PInvokeUtils.dll" />
+    <Content Include="bin\Debug\shortcuts.ico" />
+    <Content Include="bin\Debug\shortcuts.svg" />
+    <Content Include="bin\Debug\SupportClass.dll" />
+    <Content Include="bin\Debug\UnitTests.dll" />
+    <Content Include="bin\Debug\UnitTests.pdb" />
+    <Content Include="obj\Debug\UnitTests.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\UnitTests.csproj.AssemblyReference.cache" />
+    <Content Include="obj\Release\UnitTests.csproj.CopyComplete" />
+    <Content Include="obj\Release\UnitTests.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Release\UnitTests.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\UnitTests.csproj.GenerateResource.cache" />
+    <Content Include="obj\Release\UnitTests.dll" />
+    <Content Include="obj\Release\UnitTests.KeyboardKeyTestForm.resources" />
+    <Content Include="obj\Release\UnitTests.pdb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{80A40A7C-78FF-437D-86F3-A8464DDBF648}</ProjectGuid>
-        <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-        <OutputType>Library</OutputType>
-        <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>UnitTests</RootNamespace>
-        <AssemblyName>UnitTests</AssemblyName>
-        <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
-        <FileAlignment>512</FileAlignment>
-        <LangVersion>9</LangVersion>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-        <PlatformTarget>AnyCPU</PlatformTarget>
-        <DebugSymbols>true</DebugSymbols>
-        <DebugType>full</DebugType>
-        <Optimize>false</Optimize>
-        <OutputPath>bin\Debug\</OutputPath>
-        <DefineConstants>DEBUG;TRACE</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-        <PlatformTarget>AnyCPU</PlatformTarget>
-        <DebugType>pdbonly</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>bin\Release\</OutputPath>
-        <DefineConstants>TRACE</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-    </PropertyGroup>
-    <ItemGroup>
-        <Reference Include="alibre">
-          <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre.dll</HintPath>
-          <Private>False</Private>
-        </Reference>
-        <Reference Include="alibre-core">
-          <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre-core.dll</HintPath>
-          <Private>False</Private>
-        </Reference>
-        <Reference Include="alibre-executive">
-          <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre-executive.dll</HintPath>
-          <Private>False</Private>
-        </Reference>
-        <Reference Include="alibre-resources">
-          <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\alibre-resources.dll</HintPath>
-          <Private>False</Private>
-        </Reference>
-        <Reference Include="AlibreAddOn">
-          <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\AlibreAddOn.dll</HintPath>
-          <Private>False</Private>
-        </Reference>
-        <Reference Include="AlibreX">
-          <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\AlibreX.dll</HintPath>
-          <Private>False</Private>
-        </Reference>
-        <Reference Include="generics_NET">
-          <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\generics_NET.dll</HintPath>
-          <Private>False</Private>
-        </Reference>
-        <Reference Include="mscorlib" />
-        <Reference Include="nunit.framework, Version=3.14.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-          <HintPath>..\packages\NUnit.3.14.0\lib\net45\nunit.framework.dll</HintPath>
-        </Reference>
-        <Reference Include="SupportClass">
-          <HintPath>C:\Program Files\Alibre Design 27.0.0.27038\Program\SupportClass.dll</HintPath>
-          <Private>False</Private>
-        </Reference>
-        <Reference Include="System" />
-        <Reference Include="System.Core" />
-        <Reference Include="System.Data" />
-        <Reference Include="System.Drawing" />
-        <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-          <HintPath>..\packages\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
-        </Reference>
-        <Reference Include="System.Linq.Expressions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-          <HintPath>..\packages\System.Linq.Expressions.4.3.0\lib\net463\System.Linq.Expressions.dll</HintPath>
-        </Reference>
-        <Reference Include="System.Windows.Forms" />
-        <Reference Include="System.Xml" />
-        <Reference Include="XamlMath.Shared, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\packages\XamlMath.Shared.2.1.0\lib\net462\XamlMath.Shared.dll</HintPath>
-          <Private>False</Private>
-        </Reference>
-    </ItemGroup>
-    <ItemGroup>
-        <Compile Include="ConsoleIO.cs" />
-        <Compile Include="KeyboardKeyTestForm.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="KeyboardKeyTestForm.Designer.cs">
-          <DependentUpon>KeyboardKeyTestForm.cs</DependentUpon>
-        </Compile>
-        <Compile Include="KeyboardTests.cs" />
-        <Compile Include="LinqTests.cs" />
-        <Compile Include="Tests.cs" />
-        <Compile Include="Properties\AssemblyInfo.cs" />
-    </ItemGroup>
-    <ItemGroup>
-      <None Include="packages.config" />
-    </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="..\AlibreShortcuts\AlibreShortcuts.csproj">
-        <Project>{331d2798-21bf-4173-a33f-5a4f58e0158a}</Project>
-        <Name>AlibreShortcuts</Name>
-      </ProjectReference>
-    </ItemGroup>
-    <ItemGroup>
-      <EmbeddedResource Include="KeyboardKeyTestForm.resx">
-        <DependentUpon>KeyboardKeyTestForm.cs</DependentUpon>
-      </EmbeddedResource>
-    </ItemGroup>
-    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-    <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-      <PropertyGroup>
-        <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
-      </PropertyGroup>
-      <Error Condition="!Exists('..\packages\NUnit.3.14.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.14.0\build\NUnit.props'))" />
-    </Target>
-    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+    <Error Condition="!Exists('..\packages\NUnit.3.14.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.14.0\build\NUnit.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.
     <Target Name="BeforeBuild">
     </Target>
     <Target Name="AfterBuild">
     </Target>
     -->
-
 </Project>

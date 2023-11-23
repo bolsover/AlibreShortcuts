@@ -9,7 +9,7 @@ namespace Shortcuts.Shortcuts.View
     public partial class KeyboardShortcutForm : Form
     {
         private static KeyboardShortcutForm _instance;
-        private readonly ShortcutsHtmlReport _shortcutsHtmlReport = new();
+        private readonly HtmlReport _htmlReport = new();
 
         private KeyboardShortcutForm()
         {
@@ -52,8 +52,8 @@ namespace Shortcuts.Shortcuts.View
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             var profile = comboBox1.SelectedItem.ToString();
-            var html = _shortcutsHtmlReport.BuildHtmlReport(profile);
 
+            var html = _htmlReport.BuildReport(profile);
             webBrowser1.DocumentText = html;
         }
 
@@ -82,7 +82,6 @@ namespace Shortcuts.Shortcuts.View
                     documentStream.CopyTo(fs);
                     documentStream.Close();
                 }
-
 
                 fs.Close();
             }

@@ -2,6 +2,7 @@
  
 An Add-on for Alibre V27 that displays keyboard shortcuts for any command in Alibre.
 Version 3.0 added Alibre Icons to the Keyboard View and allows the user to set their own color preferences.
+Version 3.1 added Alibre Icons to the Shortcuts view. Shortcuts view backing code reworked.
 
 ## Installation
 

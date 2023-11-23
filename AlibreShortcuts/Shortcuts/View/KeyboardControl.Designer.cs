@@ -1549,8 +1549,8 @@ namespace Bolsover.Shortcuts.View
         public ShortcutButton LeftKey;
         public ShortcutButton DownKey;
         public ShortcutButton RightKey;
-        public ShortcutButton F1Key;
-        public ShortcutButton F2Key;
+        public Bolsover.Shortcuts.View.ShortcutButton F1Key;
+        public Bolsover.Shortcuts.View.ShortcutButton F2Key;
         public ShortcutButton F3Key;
         public ShortcutButton F4Key;
         public ShortcutButton F5Key;
@@ -1561,7 +1561,7 @@ namespace Bolsover.Shortcuts.View
         public ShortcutButton F10Key;
         public ShortcutButton F11Key;
         public ShortcutButton F12Key;
-        public ShortcutButton EscapeKey;
+        public Bolsover.Shortcuts.View.ShortcutButton EscapeKey;
         public ShortcutButton HashKey;
         public Bolsover.Shortcuts.View.ShortcutButton LeftCtrlKey;
         public ShortcutButton QKey;
@@ -1604,7 +1604,7 @@ namespace Bolsover.Shortcuts.View
         public ShortcutButton RightShiftKey;
         public Bolsover.Shortcuts.View.ShortcutButton BackspaceKey;
         public ShortcutButton EnterKey;
-        public ShortcutButton GraveKey;
+        public Bolsover.Shortcuts.View.ShortcutButton GraveKey;
         public ShortcutButton ZeroKey;
         public ShortcutButton NineKey;
         public ShortcutButton EightKey;
