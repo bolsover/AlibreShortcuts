@@ -28,7 +28,6 @@ namespace Bolsover.Shortcuts.Presenter
         public KeyboardPresenter(KeyboardControl view)
         {
             _view = view;
-           // SetupKeyImageLocation();
             SetupKeyImages("Arial Narrow", Properties.Settings.Default.KeyTextSize, Color.Empty, Properties.Settings.Default.TextColor);
             SetupColorControl();
             ClearDefaultText();

@@ -37,7 +37,7 @@ namespace Bolsover.Shortcuts.Model
         
         public int NonModifierCode { get; set; }
 
-        public string ToString()
+        public override string ToString()
         {
             return $"{KeyChar} - {Hint}";
         }
