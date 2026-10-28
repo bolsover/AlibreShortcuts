@@ -1,0 +1,10 @@
+<AlibreDesignAddOn specificationVersion="2" friendlyName="Alibre Shortcuts">
+<Author name="David Bolsover" link="https://github.com/bolsover/AlibreShortcuts"/>
+   <Copyright>Copyright (c) 2023. David Bolsover</Copyright>
+   <DLL type="Managed" loadedWhen="Startup" location="Shortcuts.dll"/>
+   <Icon location="shortcuts.svg"/> 
+   <Menu text="Shortcuts"/>
+   <Description>Alibre Shortcuts</Description> 
+   <Workspace type="Always"/>
+   <Property name="Identifier" value="{90170D0D-AF9B-4893-8967-91C980203EA2}"/>
+</AlibreDesignAddOn>

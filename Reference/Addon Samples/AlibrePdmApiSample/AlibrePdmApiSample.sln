@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlibrePdmApiSample", "AlibrePdmApiSample.csproj", "{D569D0D7-B9EE-4D70-94C9-7B1964A9988B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D569D0D7-B9EE-4D70-94C9-7B1964A9988B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D569D0D7-B9EE-4D70-94C9-7B1964A9988B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D569D0D7-B9EE-4D70-94C9-7B1964A9988B}.Debug|x64.ActiveCfg = Debug|x64
+		{D569D0D7-B9EE-4D70-94C9-7B1964A9988B}.Debug|x64.Build.0 = Debug|x64
+		{D569D0D7-B9EE-4D70-94C9-7B1964A9988B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D569D0D7-B9EE-4D70-94C9-7B1964A9988B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D569D0D7-B9EE-4D70-94C9-7B1964A9988B}.Release|x64.ActiveCfg = Release|x64
+		{D569D0D7-B9EE-4D70-94C9-7B1964A9988B}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C611D88-C210-4857-8BD6-4C228E178C02}
+	EndGlobalSection
+EndGlobal

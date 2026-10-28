@@ -1,0 +1,10 @@
+This is intended for use with Claude Code. 
+
+1) Create a directory into which you will put your Visual Studio project.
+2) Copy and paste the contents of this directory (.claude folder and Reference folder) into the project directory
+3) Open Claude Code and make the project directory the active directory.
+4) Create your Visual Studio project in this folder. 
+
+The information in the .claude folder will give Claude a framework for how to help you create an Alibre Design addon and will inform Claude how to find good API reference materials in the Reference folder while it does so.
+
+The first time Claude Code runs in the new folder it will locate your Alibre Design and Visual Studio installations and record them in .claude\machine.md. That file ships blank on purpose: you do not need to fill it in, and it is redone automatically if the folder is later copied to another computer.

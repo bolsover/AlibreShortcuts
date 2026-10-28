@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
+            Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{0E97A06E-AA69-4DFB-8D48-04FFE8D407D8}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>Shortcuts</RootNamespace>
+        <AssemblyName>Shortcuts</AssemblyName>
+        <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <LangVersion>10</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>x64</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>x64</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="alibre">
+          <HintPath>..\..\..\..\AlibreLib\alibre.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="alibre-client">
+          <HintPath>..\..\..\..\AlibreLib\alibre-client.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="alibre-core">
+          <HintPath>..\..\..\..\AlibreLib\alibre-core.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="alibre-executive">
+          <HintPath>..\..\..\..\AlibreLib\alibre-executive.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="AlibreAddOn">
+          <HintPath>..\..\..\..\AlibreLib\AlibreAddOn.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="AlibreX">
+          <HintPath>..\..\..\..\AlibreLib\AlibreX.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="DevExpress.Data.v25.2">
+          <HintPath>..\..\..\..\AlibreLib\DevExpress.Data.v25.2.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="DevExpress.Drawing.v25.2">
+          <HintPath>..\..\..\..\AlibreLib\DevExpress.Drawing.v25.2.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="generics_NET">
+          <HintPath>..\..\..\..\AlibreLib\generics_NET.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="SupportClass">
+          <HintPath>..\..\..\..\AlibreLib\SupportClass.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Drawing" />
+        <Reference Include="System.Windows.Forms" />
+        <Reference Include="System.Xml"/>
+        <Reference Include="System.Xml.Linq" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="AlibreAddOn.cs" />
+        <Compile Include="AlibreShortcuts.cs" />
+        <Compile Include="Calculator\HtmlReport.cs" />
+        <Compile Include="Calculator\ShortcutsCalculator.cs" />
+        <Compile Include="Globals.cs" />
+        <Compile Include="Model\AlibreShortcut.cs" />
+        <Compile Include="Model\WorkspaceCommand.cs" />
+        <Compile Include="Model\KeyButtons.cs" />
+        <Compile Include="Model\KeyCodes.cs" />
+        <Compile Include="Model\KeyStrings.cs" />
+        <Compile Include="Model\KeyText.cs" />
+        <Compile Include="Model\SvgDictionary.cs" />
+        <Compile Include="Presenter\KeyboardPresenter.cs" />
+        <Compile Include="Presenter\Queries.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="Properties\Properties.cs" />
+        <Compile Include="Utils\StringImageUtils.cs" />
+        <Compile Include="View\ColorPreferences.cs" />
+        <Compile Include="View\ColorPreferences.Designer.cs" />
+        <Compile Include="View\ColorPreferencesForm.cs" />
+        <Compile Include="View\ColorPreferencesForm.Designer.cs" />
+        <Compile Include="View\CommandPickerDialog.cs" />
+        <Compile Include="View\CommandPickerDialog.Designer.cs" />
+        <Compile Include="View\KeyboardControl.cs" />
+        <Compile Include="View\KeyboardControl.Designer.cs" />
+        <Compile Include="View\KeyboardForm.cs" />
+        <Compile Include="View\KeyboardForm.Designer.cs" />
+        <Compile Include="View\KeyboardShortcutForm.cs" />
+        <Compile Include="View\KeyboardShortcutForm.Designer.cs" />
+        <Compile Include="View\ShortcutButton.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="View\ColorPreferences.resx" />
+      <EmbeddedResource Include="View\ColorPreferencesForm.resx" />
+      <EmbeddedResource Include="View\KeyboardControl.resx" />
+      <EmbeddedResource Include="View\KeyboardForm.resx" />
+      <EmbeddedResource Include="View\KeyboardShortcutForm.resx" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="shortcuts.ico">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="shortcuts.svg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Include="Shortcuts.adc">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Include="packages.config" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+    <Import Project="..\packages\Microsoft.NETFramework.ReferenceAssemblies.net481.1.0.3\build\Microsoft.NETFramework.ReferenceAssemblies.net481.targets" Condition="Exists('..\packages\Microsoft.NETFramework.ReferenceAssemblies.net481.1.0.3\build\Microsoft.NETFramework.ReferenceAssemblies.net481.targets')" />
+    <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+      <PropertyGroup>
+        <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
+      </PropertyGroup>
+      <Error Condition="!Exists('..\packages\Microsoft.NETFramework.ReferenceAssemblies.net481.1.0.3\build\Microsoft.NETFramework.ReferenceAssemblies.net481.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NETFramework.ReferenceAssemblies.net481.1.0.3\build\Microsoft.NETFramework.ReferenceAssemblies.net481.targets'))" />
+    </Target>
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>
