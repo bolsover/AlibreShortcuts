@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "{90170D0D-AF9B-4893-8967-91C980203EA2}",
+  "name": "Alibre Shortcuts",
+  "folderName": "Shortcuts",
+  "version": "1.0.0",
+  "dllType": "managed",
+  "arch": "x64",
+  "publisher": "David Bolsover",
+  "description": "Alibre Shortcuts"
+}
